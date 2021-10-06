@@ -1,21 +1,57 @@
 # Introduction {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+### NB! Tekst er ikke bearbeidet 
+Denne rapporten presenterer resultatene fra en deliberativ meningsmåling i Bergen våren 2021.
+Arrangementet ble gjennomført som et ledd i det forskningsrådsfinansierte prosjektet *Demokratisk innovasjon i praksis: Forskning på medvirkning og legitimitet i kommunale beslutningsprosesser (Demovate)* (prosjektnummer 295892). 
+Prosjektansvarlig er Bergen kommune, og faglig ledes prosjektet av forskningsinstitusjonen NORCE.  
+Samarbeidspartnere er Universitetet i Bergen og Stanford University. 
+Prosjektet varer fra september 2019 til november 2022.
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Formålet med prosjektet er å utvide verktøykassen for lokaldemokratiet i kommunen ved å ta i bruk nye metoder for involvering av innbyggerne i politikken.
+Deliberativ meningsmåling er velprøvd internasjonalt, men har ikke blitt benyttet i norske kommuner tidligere, og er i så måte et demokratisk innovasjonsprosjekt. 
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+Basert på tilfeldig uttrekk deltok om lag 200 innbyggere i Bergen og uttrykte sin mening om bilfrie soner og arealutviklingen på Dokken.
+Diskusjonen foregikk over nett.    
+Som del av opplegget vil vi gjennomføre en spørreundersøkelse med deltakerne før og etter at de har diskutert sakene, hvor vi spør om deres meninger om de to nevnte sakene pluss andre politiske holdninger, tillit til myndighetene, og sosiale bakgrunnsspørsmål. 
+En kontrollgruppe av tilsvarende størrelse vil svare på spørreundersøkelsene, men ikke delta i diskusjonen.
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+# Bakgrunn og motivasjon
+Tidligere byrådsleder Harald Schjelderup satte i 2017 ned et utvalg, ledet av Prof. Anne Lise Fimreite, med formål å vurdere demokratiets tilstand i Bergen. 
+Utvalget vurderte blant annet hvilke muligheter innbyggerne i Bergen hadde for å påvirke politiske beslutninger i kommunen, og anbefalte at man søkte å utvikle og forbedre disse mulighetene. 
+I utvalgets rapport “Byen og nærdemokratiet” ble såkalte borgerpaneler anbefalt gjennomført, hvor vanlige innbyggere velges ut etter vitenskapelige prinsipper som sikrer mest mulig representativ deltakelse. 
+I etterkant av forsøket med borgerpaneler vedtok Bergen bystyre i møte 24.10.2018, sak 235/18, at «Bystyret ber om at byborgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.» 
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+Prosjektets etablering har altså blitt til dels for å dekke lokal politisk etterspørsel etter demokratisk innovasjon. 
+Også underveis har politikere fulgt opp prosjektet:
+Oppstartsseminaret ble åpnet av daværende byutviklingsbyråd Rune Bakervik i 2019, med deltakelse fra byråds- og bystyrepolitikere og lokalpolitikere utenfor kommunen. 
+Prosjektet har også blitt presentert for Bergensalliansen, som følger prosjektet med interesse av muligheten for å gjennomføre lignende tiltak i egne kommuner. 
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+En sentral motivasjon for prosjektet er nettopp å høste erfaringer i Bergen som kan komme til nytte for andre norske kommuner.
+I en tid hvor demokratiet settes på prøve også i etablerte, vestlige demokratier, er viktigheten av å forske på demokratiske prosesser kanskje viktigere enn noen gang. 
+Bergen kommune og forskningsinstitusjonene NORCE og Universitetet i Bergen har derfor ønsket å arbeide videre med forsøk som kan styrke demokratiet lokalt i Bergen kommune.
+Flere av forskerne som var involvert i lokaldemokratiutvalget er nå med i dette samarbeidsprosjektet, deriblant utvalgets leder og sekretær. 
+Med oss på laget har vi fått kolleger fra Stanford University, som har utviklet deliberativ meningsmåling som metode for å gjennomføre borgerpanel.
+
+# Beskrivelse av deliberativ meningsmåling
+Deliberativ meningsmåling viser til en bestemt prosedyre for å invitere innbyggere til diskusjon og meningsutveksling om forhåndsbestemte politiske spørsmål. 
+Det er et registrert varemerke på prof. James S. Fishkin ved Stanford University. 
+Hovedideen bak bruken av deliberativ meningsmåling i den politiske prosessen er å få vite hva innbyggerne mener når de får tenkt seg om og vurdert argumenter for et politisk forslag.
+I korte trekk går prosessen ut på at man inviterer et representativt utvalg typisk på 150-300 innbyggere til å sette av en til to dager for å diskutere politikk med sine medborgere. 
+De tar stilling til forslag, blir presentert for for- og motargumenter, og diskuterer sakene i mindre grupper på rundt 10 personer. 
+Gruppene ledes av moderatorer som styrer diskusjonen, og sørger for at alle får anledning til å bli hørt.
+Etter diskusjonen får de i en plenumssesjon anledning til å stille spørsmål til fageksperter. 
+Mot slutten av arrangementet svarer de på en spørreundersøkelse om deres holdninger til de politiske temaene som var på agendaen.
+De samme spørsmålene svarte de på før arrangementet, slik at man kan måle effekten av dagens gruppediskusjoner. 
+En kontrollgruppe som ikke har deltatt på arrangementet får samme spørreundersøkelsen på samme tidspunkt.
+
+Siden starten i 1988 har metoden blitt brukt verden over. 
+De aller fleste deliberative høringer har foregått ved at deltakerne fysisk kommer sammen. 
+
+Dette innovasjonsprosjektet  er initiert på bakgrunn av vedtak i Bergen bystyre i møte 24.10.2018, sak 235/18, der bystyret fattet følgende vedtakspunkt: 
+«Bystyret ber om at byborgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.» 
+Prosjektet har deretter blitt etablert med finansiering fra Norges forskningsråd gjennom et FORKOMMUNE-prosjekt for å utvikle lokaldemokratiet i samarbeid med demokratiforskere, med mål å forbedre lokaldemokratiet i sin og andre kommuner. 
+Et tverrsnitt av befolkningen i Bergen skal inviteres til å sammen diskutere to saker som er aktuelle i lokalpolitikken våren 2021: 
+Bilfrie soner og utviklingen av havneområdet på Dokken. 
+Metoden som benyttes er deliberativ meningsmåling, som er et spesialfelt for prosjektpartner Stanford University. 
+Koronapandemien satte en stopper for de opprinnelige planene med fysiske samlinger, og plan B er å gjennomføre et nettbasert alternativ som er skreddersydd for formålet. 
+

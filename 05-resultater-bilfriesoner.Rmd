@@ -1,0 +1,7 @@
+# Resultater Bilfrie soner {# bilfri}
+
+1. Svarfordeling for alle spørsmål om bilfrie soner. Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
+
+2. Tekstanalyse av samtalene
+
+3. Forskjell i svar vis a vis egne svar før deliberasjon og forskjell i endring vis a vis kontrollgruppen. (Skal vi ta med dette i rapporten?)
