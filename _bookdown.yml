@@ -1,5 +1,24 @@
-book_filename: "bookdown-demo"
+book_filename: "Rapport deliberativ meningsmaaling"
 language:
+  label:
+    fig: 'Figur '
+    tab: 'Tabell '
+    eq: 'Ligning '
+    thm: 'Theorem '
+    lem: 'Lemma '
+    cor: 'Corollary '
+    prp: 'Proposition '
+    cnj: 'Conjecture '
+    def: 'Definisjon '
+    exm: 'Eksempel '
+    exr: 'Øving '
+    hyp: 'Hypothese '
+    proof: 'Bevis. '
+    remark: 'Merknad. '
+    solution: 'Løsning. '
   ui:
-    chapter_name: "Chapter "
+    edit: Redigert
+    chapter_name: 'Kapittel '
+    appendix_name: 'Vedlegg '
 delete_merged_file: true
+toc-title: "Innhold"

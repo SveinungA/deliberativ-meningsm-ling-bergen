@@ -1,4 +1,10 @@
-# Resultater Bilfrie soner {# bilfri}
+# Bilfrie soner {#bilfri}
+
+## Forslag
+
+1. Hent fra informasjonsmateriale
+
+## Resultater
 
 1. Svarfordeling for alle spørsmål om bilfrie soner. Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
 

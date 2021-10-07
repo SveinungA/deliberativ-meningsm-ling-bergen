@@ -1,2 +1,24 @@
 # Gjennomføring {#implementation}
 
+## Pretest og posttest med kontrollgruppe
+
+Den deliberative meningsmålingen er satt opp etter et såkalt pretest/posttest kontrollgruppedesign.
+Det vil si at vi målte holdningene til deltakerne både før og etter arrangementet den 12. juni.
+På denne måten kan vi måle om deltakernes holdninger endrer seg etter å ha diskutert sakene og fått tid til å tenke seg om.
+For å utelate at eventuelle holdningsendringer kommer som en konsekvens av andre forhold som har skjedd fra det ene tidspunktet til det andre, har vi med en kontrollgruppe som også gjennomfører spørreundersøkelsene, men som ikke deltar i selve arrangementet.
+Et slikt oppsett er et av de mest vanlige felt-eksperimentelle design [@cook2002experimental].
+
+|         Gruppe            | Pretest | Treatment    | Post-test                           | 
+|--------------------:|--------:|-------------:|-----------:|
+| Kontrollgruppe       |  Spørreundersøkelse |              | Spørreundersøkelse     | 
+| Deltakergruppe     |  Spørreundersøkelse | Gruppediskusjon | Spørreundersøkelse     |
+
+Når vi går gjennom resultatene fokuserer vi på svarene til deltakerne *etter* at de har gjennomført gruppediskusjonene. Det er dette målepunktet som er de autorative svarene, og som skal vurderes av politikerne.
+Samtidig analyserer vi i resultatdelen også i hvilken grad deltakerne endret holdninger fra før gruppediskusjonen, og om disse eventuelle holdningsendringene bevegde seg mer enn eventuelle holdningsendringer i kontrollgruppen.
+
+## Deltakere
+
+| Gruppe       | Presurvey | Deliberation | Postsurvey  |
+|------------:|-------:|-------------:|------------:|
+| Kontrollgruppe     |  N=121     | N=0          | N=108       | 
+| Deltakergruppe   |  N=121     | N=90         | N=101       |

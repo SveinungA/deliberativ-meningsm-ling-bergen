@@ -1,4 +1,10 @@
-# Resultater Dokken {#dokken}
+# Dokken {#dokken}
+
+## Forslag
+
+1. Hent fra informasjonsmateriale
+
+## Resultater
 
 1. Svarfordeling for alle spørsmål om Dokken. Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
 
