@@ -22,3 +22,5 @@ Samtidig analyserer vi i resultatdelen også i hvilken grad deltakerne endret ho
 |------------:|-------:|-------------:|------------:|
 | Kontrollgruppe     |  N=121     | N=0          | N=108       | 
 | Deltakergruppe   |  N=121     | N=90         | N=101       |
+
+

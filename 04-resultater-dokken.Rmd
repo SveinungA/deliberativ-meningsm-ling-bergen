@@ -1,13 +1,134 @@
 # Dokken {#dokken}
 
-## Forslag
+```{r import-dp-surveys}
+#last inn data fra spørreundersøkelsene
+pre <- sjlabelled::read_spss(here("Data", "presurvey.sav"))
+post_c <- sjlabelled::read_spss(here("Data", "post-survey-control.sav"))
+post_t <- sjlabelled::read_spss(here("Data", "post-survey-treatment.sav"))
+```
 
-1. Hent fra informasjonsmateriale
+```{r merge-dp-surveys}
+#slå sammen undersøkelsene til en fil
+post_c <- post_c %>% mutate(survey = 'post_c') %>% var_labels(survey= 'Survey')
+post_t <- post_t %>% mutate(survey = 'post_t') %>% var_labels(survey= 'Survey')
+pre <- pre %>% mutate(survey = 'pre') %>% var_labels(survey= 'Survey')
 
-## Resultater
+dp_c <- full_join(post_c, pre)
+dp_t <- full_join(post_t, pre)
 
-1. Svarfordeling for alle spørsmål om Dokken. Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
+dp_c <- dp_c %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
+dp_t <- dp_t %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
+```
 
-2. Tekstanalyse av samtalene
 
-3. Forskjell i svar vis a vis egne svar før deliberasjon og forskjell i endring vis a vis kontrollgruppen. (Skal vi ta med dette i rapporten?)
+## Gruppediskusjoner
+
+Kvantitativ tekstanalyse av gruppesamtalene om Dokken.
+Grupper på tematikk, plukk ut representative setninger.
+
+## Svarfordeling for alle spørsmål om Dokken. 
+
+Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
+
+## Endring i holdninger
+```{r results-dokken-change}
+#Gjør om "Vet ikke" til missing
+dp_c <- dp_c %>% mutate(Q3 = na_if(Q3, 12),
+                        Q4 = na_if(Q4, 12),
+                        Q5 = na_if(Q5, 12),
+                        Q6 = na_if(Q6, 12),
+                        Q7 = na_if(Q7,12),
+                        Q8 = na_if(Q8,12),
+                        Q9 = na_if(Q9,12)
+                        )
+dp_t <- dp_t %>% mutate(Q3 = na_if(Q3, 12),
+                        Q4 = na_if(Q4, 12),
+                        Q5 = na_if(Q5, 12),
+                        Q6 = na_if(Q6, 12),
+                        Q7 = na_if(Q7,12),
+                        Q8 = na_if(Q8,12),
+                        Q9 = na_if(Q9,12)
+                        )
+#Beregn gjennomsnitt og standarfeil til estimatet
+Q3_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q3, na.rm=TRUE), se=sd(Q3, na.rm = TRUE)/sqrt(length(Q3))) %>% mutate(group = 'control', question = 'Q3')
+Q4_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q4, na.rm=TRUE), se=sd(Q4, na.rm = TRUE)/sqrt(length(Q4))) %>% mutate(group = 'control', question = 'Q4')
+Q5_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q5, na.rm=TRUE), se=sd(Q5, na.rm = TRUE)/sqrt(length(Q5)))  %>% mutate(group = 'control', question = 'Q5')
+Q6_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q6, na.rm=TRUE), se=sd(Q6, na.rm = TRUE)/sqrt(length(Q6))) %>% mutate(group = 'control', question = 'Q6')
+Q7_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q7, na.rm=TRUE), se=sd(Q7, na.rm = TRUE)/sqrt(length(Q7))) %>% mutate(group = 'control', question = 'Q7')
+Q8_c<- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q8, na.rm=TRUE), se=sd(Q8, na.rm = TRUE)/sqrt(length(Q8))) %>% mutate(group = 'control', question = 'Q8')
+Q9_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q9, na.rm=TRUE), se=sd(Q9, na.rm = TRUE)/sqrt(length(Q9))) %>% mutate(group = 'control', question = 'Q9')
+
+Q3_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q3, na.rm=TRUE), se=sd(Q3, na.rm = TRUE)/sqrt(length(Q3))) %>% mutate(group = 'treatment', question = 'Q3')
+Q4_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q4, na.rm=TRUE), se=sd(Q4, na.rm = TRUE)/sqrt(length(Q4))) %>% mutate(group = 'treatment', question = 'Q4')
+Q5_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q5, na.rm=TRUE), se=sd(Q5, na.rm = TRUE)/sqrt(length(Q5))) %>% mutate(group = 'treatment', question = 'Q5')
+Q6_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q6, na.rm=TRUE), se=sd(Q6, na.rm = TRUE)/sqrt(length(Q6))) %>% mutate(group = 'treatment', question = 'Q6')
+Q7_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q7, na.rm=TRUE), se=sd(Q7, na.rm = TRUE)/sqrt(length(Q7))) %>% mutate(group = 'treatment', question = 'Q7')
+Q8_t<- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q8, na.rm=TRUE), se=sd(Q8, na.rm = TRUE)/sqrt(length(Q8))) %>% mutate(group = 'treatment', question = 'Q8')
+Q9_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q9, na.rm=TRUE), se=sd(Q9, na.rm = TRUE)/sqrt(length(Q9))) %>% mutate(group = 'treatment', question = 'Q9')
+
+dokken <- bind_rows(list(Q3_c, Q4_c, Q5_c, Q6_c, Q7_c, Q8_c, Q9_c, Q3_t, Q4_t, Q5_t, Q6_t, Q7_t, Q8_t, Q9_t), .id = "group") %>% 
+ mutate(group = (case_when(group %in% c(1:7) ~ 'control',
+                                               group %in% c(8:14) ~ 'treatment')),
+                            question = (case_when(question == 'Q3' ~ 'Cruise traffic out of city center',
+                                                  question == 'Q4' ~ 'International ferries out of city center',
+                                                  question == 'Q5' ~ 'Expand in sea',
+                                                  question == 'Q6' ~ 'Keep using sea front for port activities or repurpose for recreation',
+                                                  question == 'Q7' ~ 'Regulate housing prizes',
+                                                  question == 'Q8' ~ 'Prioritize general green areas over dedicated sports facilities',
+                                                  question == 'Q9' ~ 'Name new streets after women only')),
+                            survey = case_when(survey == 'pre'~ 'pre',
+                                               survey == 'post_c' ~ 'post',
+                                               survey == 'post_t' ~ 'post'
+                                               )) %>%
+  mutate(avg=mean) %>% 
+  mutate(conf.low = avg-se) %>% 
+  mutate(conf.high = avg+se) %>% 
+  select(-mean) %>% 
+  arrange(question) %>% 
+  relocate(c(question, group, survey, avg, se))
+```
+
+```{r dokken-results-figure1, include=FALSE}
+#Plot
+pd <- position_dodge(1)
+
+plot1 <- ggplot(dokken, aes(x = survey, y = avg, colour=question, group=question)) +
+  geom_errorbar(aes(ymin = avg-se, ymax = avg+se), position = pd, size=1, width=0.1) +
+  geom_line(position=pd) +
+  geom_point(position=pd, size=3) +
+  scale_y_continuous(limits = c(1, 11), breaks=seq(1:11)) +
+  facet_wrap(~group)
+plot1
+```
+
+```{r dokken-results-table1, include=FALSE}
+dokken %>% select(question, group, survey, avg, se) %>% kableExtra::kable(., booktabs = T) %>% kable_styling(c('striped', 'hover')) %>% collapse_rows(columns = c(1:2)) %>% 
+      footnote(general = 'All questions range from 1 to 11. "Do not knows" and "NA" omitted.')
+
+write_csv(dokken, 'Data/Dokken.csv')
+```
+The figure below more clearly displays how the participants in the treatment group changed attitudes after having dicussed the topics.
+The dotted line represents the average in the pre-survey, and the coefficients indicate the difference in attitude from the pre-survey.
+A general pattern emerges where the treatment groups tend to be further away from their original pre-survey responses.
+They are also significantly different changes compared to the post-survey changes in the control group.
+With the caveat that these analyses are very preliminary, it does seem that having discussed the topics related to the Dokken port area clearly has influenced the participants' opinions.
+
+```{r dokken-results-manage-2}
+#Hent bearbeidet excelfil med forskjeller i gjennomsnitt for de ulike gruppene
+postpre <- read_csv('Data/Dokken-postpre.csv')
+postpre <- postpre %>% filter(!is.na(postpre))
+```
+
+```{r dokken-results-figure2}
+#lag figur
+plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
+  geom_errorbar(aes(ymin = postpre-se, ymax = postpre+se), size = 1, width = 0.1) +
+  geom_point(size=3) +
+  coord_flip() +
+  geom_hline(aes(yintercept=0), linetype = 'dotted')
+
+plot2
+
+```
+                      
+

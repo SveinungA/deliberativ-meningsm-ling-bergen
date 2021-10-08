@@ -14,7 +14,7 @@ description: "Rapport til Byrådet i Bergen om gjennomføringen av deliberativ m
 
 ---
 
-```{r setup, include=FALSE, cache=TRUE}
+```{r setup, include=FALSE}
 if(!require("broom")){install.packages("broom");  library(broom)}
 if(!require("ggdag")){install.packages("ggdag");  library(ggdag)}
 if(!require("here")){install.packages("here");  library(here)}
