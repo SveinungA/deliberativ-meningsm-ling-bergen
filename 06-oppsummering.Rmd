@@ -1,3 +1,66 @@
 # Oppsummering {#oppsummering}
 
-- Viktigste funn
+## Viktigste funn
+
+
+## Erfaringer
+
+Korona-pandemien har gjort gjennomføringen av DEMOVATE-prosjektet svært utfordrende. 
+Mye av ideen i prosjektet var å samle innbyggere fysisk til panel av ulik størrelse og varighet for å diskutere politisk viktige saker for kommunen. 
+Gjennom dette ønsket vi å teste ut deliberasjonens betydning for synspunkter. 
+Det er imidlertid også viktig at vi på den måten kan få tak i innbyggernes synspunkter og argument på en grundigere og mer dyptgående måte enn i en ordinær meningsmåling. 
+Det sier seg selv at når fysiske møter ikke kunne arrangeres i stort sett hele prosjektperioden, har dette satt sitt preg på gjennomføringen og mulighetene for å høste erfaringer på de ønskete områdene. 
+At vi har fått teste ut en gjennomføring av en deliberativ meningsmåling online, er likevel en viktig bonus som kan ha overførselsverdi både til senere opplegg i Bergen kommune og til andre kommuner. 
+Vi vil her oppsummere noen av våre viktigste erfaringer fra arrangementet.
+
+Personvernmessige utfordringer knyttet til lagring og overføring av data kom særlig i fokus i vårt opplegg. 
+Det har dels å gjøre med at vi hadde samarbeidspartnere utenfor Europa underlagt annen regulering enn GDPR. 
+Dette ble forsterket av usikkerhet knyttet til nylige dommer i EU-domstolen. 
+Personvernmessige utfordringer har imidlertid også å gjøre med at bruken av digitale løsninger på området knyttet til deliberative samlinger der folk møtes og utveksler synspunkt over nettet, er nokså upløyd mark i Norge. 
+Det viste seg å være et svært krevende arbeid å få dette på plass, et arbeid som krever mye kunnskap både når det gjelder personvern, databehandling og juss.
+Å få utarbeidet gode rutiner og prosedyrer for databehandling og for gjennomføring av selve panelet vil være avgjørende for om denne typen panel skal la seg gjennomføre i fremtiden uten altfor mye forarbeide. 
+
+Kontakten mot Skatteetaten som foretok uttrekk av adresser og mot Statistisk sentralbyrå for å få ytterligere informasjon om deltakerne (kjønn, alder, utdanning etc) har vi som forskningsinstitusjon rutiner for.
+Det har i dette tilfellet gått etter planen, men dette er også tidkrevende og det krever god dokumentasjon og oppfølging fra første kontakt.
+
+Utsending av og håndtering av invitasjoner tar også tid. 
+Vi valgte å sende en postal invitasjon i utgangspunktet og en god del av dette arbeidet må gjøres manuelt. 
+Det er tid- og kostnadskrevende. 
+Den første purringen ble gjort postalt mens den siste ble gjort via sms og telefon. 
+Det er et selvstendig poeng å rekruttere på en måte som treffer flest mulig av innbyggerne. 
+Vi vurderte det til å være via brev. Dette kan vurderes annerledes i andre prosjekt med andre målsetninger, men også en rekruttering via epost, krever oppfølging i invitasjonsfasen og når purringer skal gjennomføres. 
+Vi fikk lave responsrater både på undersøkelsen (13.4) og til panelet (5). 
+Responsraten til undersøkelsen er ikke oppsiktsvekkende lav i forhold til det som kan være tilfellet i denne typen online surveys nå. 
+Til selve panelet som er en nyvinning i norsk sammenheng visste vi ikke hva som kunne forventes når det gjaldt påmelding. 
+Kanskje har korona-pandemien gjort det vanskeligere å rekruttere fordi folk føler seg frakoblet fra samfunnsmessige spørsmål, men det kan like godt være slik at pandemien har gjort det lettere å rekruttere. 
+Folk ønsker gjerne å delta i noe som gir et inntrykk av fellesskap også om det avholdes digitalt. 
+Det er hevet over tvil at den digitale kompetanse hos deltakerne var på et nivå som gjorde et online panel mulig sommeren 2021. 
+Hvordan det hadde vært 2 år tidligere, er ikke godt å vite. 
+Det er antakelig ikke en for spenstig hypotese å anta at kun et fåtall av de som deltok nå ville vært like komfortable med situasjonen da.
+
+Gjennomføringen av selve den deliberative meningsmålingen gikk svært bra. 
+Det var få tekniske problemer og dagsorden ble fulgt til punkt og prikke. 
+Det var enkelt å få deltakere fra plenum og inn i grupper og vise versa. Svært lite tid gikk med til denne typen aktivitet.
+Vi skulle kanskje vært noe rausere med pausene. 
+Også i det digitale rommet trenger folk å koble av, hente påfyll med kaffe og trekke frisk luft. 
+
+Tilbakemeldingene fra moderatorene er at gruppediskusjonene gikk best tidlig på dag og at det var noe tregere å engasjere folk etter lunsj. 
+Dette kan ha med temaene (Dokken vs bilfrie soner) å gjøre. 
+Eller det kan skyldes at to så pass omfattende saker på en dag kan bli utmattende for noen og enhver.
+Kanskje kan begge deler ha spilt inn. 
+
+Den første plenumssesjonen fungerte godt. 
+Ekspertene hadde poengterte og gode innlegg som adresserte forslagene lagt fram i informasjonsmaterialet på en god måte. 
+Det var mange og varierte spørsmål til dem. 
+Vurderingen er at vi hadde satt av for liten tid til denne sesjonen. 
+Tilbakemeldingen fra gruppene er at den påfølgende gruppesesjonen ble noe repeterende.
+Kanskje kunne det vært brukt mer tid på plenum slik at gruppediskusjonen etter plenum kunne vært mer av det oppsummerende slaget.
+
+I og med at opplegget etter lunsj fulgte samme opplegg, er erfaringene og vurderingene stort sett de samme. 
+Plenumssesjonen her hadde noe mindre spørsmål fra gruppene, men det er viktig å understreke at alle gruppene hadde spørsmål til ekspertene som ble besvart. 
+Tilbakemeldingen fra gruppene er at særlig den siste gruppesesjonen her var preget av lite diskusjon og engasjement. 
+En lang og intens dag med mange inntrykk kan som nevnt være en like sannsynlig forklaring på dette som lite engasjement knyttet til temaet. 
+
+Lærdommen fra denne deliberative meningsmålingen er dermed at online panel bør være noe mer konsentrert i tid, og dermed også når det gjelder antall sak som tas opp, enn det erfaringene fra fysiske slike panel tilsier. 
+Når folk møtes fysisk har de feks kaffepauser og lunsj som gjør at deltakerne sees og møtes og får et annet forhold til hverandre i løpet av dagen som kan påvirke «samtalen».  
+Selv om inntrykk er at det absolutt i noen av gruppene utviklet seg et godt gruppefellesskap også i det digitale rommet.

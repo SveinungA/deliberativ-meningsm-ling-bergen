@@ -1,6 +1,83 @@
-# Gjennomføring {#implementation}
+# Gjennomføring av den deliberative meningsmålingen {#implementation}
 
-## Pretest og posttest med kontrollgruppe
+## Plan A, B – og C
+
+DEMOVATE-prosjektet la i utgangspunktet opp til flere innbyggerpanel i løpet av prosjektperioden. 
+Mening var at uttrukne innbyggere skulle møttes fysisk i panelene for å diskutere utvalgte politiske saker med relevans for Bergen kommune. 
+Det var planer om to slike paneler i 2020. 
+Prosessen med å bestemme opplegget for disse og velge ut aktuelle saker de skulle diskutere, var godt i gang da samfunnet stengte ned pga korona-pandemien i mars 2020.
+Alvoret i pandemien gjorde det raskt klart at det ville bli vanskelig å arrangere fysiske innbyggerpanel i 2020. 
+De to planlagte panelene ble i første omgang utsatt til senere i prosjektperioden og er nå besluttet ikke avholdt innenfor rammen av DEMOVATE.
+
+I prosjektet var det videre lagt opp til en større fysisk samling over to dager i april 2021. 
+Universitetsaulaen i Bergen var booket til dette formålet. Vi planla for at denne samlingen skulle ta form av en såkalt deliberativ meningsmåling (se mer under). 
+I løpet av senhøsten 2020 ble det klart at heller ikke denne samlingen kunne avholdes som fysisk arrangement. 
+Arbeidet med alternative måter å avholde innbyggerpanel på ble intensivert. Nettbaserte løsninger ble her - som på så mange andre felt - det åpenbare alternativet. 
+
+Våre samarbeidspartnere ved Stanford Universitetet i California - som har merkevarepatent på deliberativ meningsmåling - har utviklet en nedbasert løsning for en slik meningsmåling kalt Stanford Online Deliberation Platform (SODP). 
+Plattformen ligner i sitt uttrykk Zoom eller Microsoft Teams, men med mer skreddersydde funksjoner for gjennomføring av meningsmålingen.
+SODP var vårt førstevalg for å arrangere en online meningsmåling i regi av DEMOVATE-prosjektet i Bergen. 
+
+Forskningsinstituttet NORCE sitt personvernombud vurderte at SODP var en løsning som kunne velges gitt de spesielle forholdene pandemien gav. 
+Bergen kommunens personvernombud vurderte dette annerledes.
+Vurderingen var basert på at løsningen ikke tilfredsstilte deltakernes personvern godt nok, bla fordi data (innholdsdata, tekniske data og innloggingsdata) samlet inn ila meningsmålingen, ville overføres til og oppbevares på server i USA.
+Dette ble vurdert å være i strid med EUs GDPR-lovgivning. 
+
+SODP-løsningen måtte dermed forlates, og valget falt på å arrangere meningsmålingen online ved bruk av videokonferanseplattformen Zoom.
+Basert på bl.a. nærmere ett års erfaring med undervisning på Zoom, anbefalte personvernombudet ved NORCE denne løsningen som datamessig sikker. 
+Oppsettet av meningsmålingen via Zoom-plattformen og håndteringen av innsamlede data i ettertid ble teknisk og sikkerhetsmessig håndtert av NORCE sin IT-avdeling. 
+Dataene er lagret på sikre servere ved hhv UiB (SAFE) og UiO (TSD). 
+IT-avdelingen sto også for den tekniske støtten ifb med gjennomføringen av panelet 12. juni 2021.
+
+Beslutning om å velge denne løsningen ble tatt relativt sent i prosessen gitt at arrangementet var satt til juni 2021. 
+Da avklaringen rundt den tekniske løsningen var på plass, de nødvendige personvernmessige tillatelser gitt og datasikkerhet ivaretatt, startet arbeidet med å trekke ut og invitere deltakere til panelet. 
+
+## Deliberativ online meningsmåling
+
+Den deliberative meningsmålingen som ble valgt som metode for dette online panelet er en bestemt prosedyre for å invitere innbyggere til diskusjon og meningsutveksling om forhåndsbestemte politiske spørsmål. 
+Grunnideen er den samme som det vi iht prosjektsøknaden planla for den fysiske samlingen våren 2021. 
+Ideen er å få vite hva innbyggerne mener når de har fått tenkt seg om og vurdert argument for et politisk forslag. 
+Et representativt utvalg inviteres for å diskutere med sine medborgere.
+Deltakerne tar i en spørreundersøkelse stilling til en sak, blir presentert for for- og motargument og diskuterer så saken i mindre grupper. 
+Disse gruppene blir ledet av en moderator. 
+Etter diskusjonen får gruppene i en plenumssesjon anledning til å stille spørsmål til fageksperter før de igjen diskuterer saken.
+Mot slutten av arrangementet svarer deltakerne på en spørreundersøkelse lik den de svarte på før arrangementet tok til.
+Dette gir mulighet for å måle effekten av gruppediskusjonene (deliberasjonen).
+En kontrollgruppe som ikke deltar i selve arrangementet får samme undersøkelse på de samme tidspunktene som deltakerne. 
+
+Et tilfeldig uttrekk av 4000 innbyggere med bostedsadresse i Bergen ble gjort fra Folkeregisteret våren 2021.
+Det ble sendt invitasjonsbrev til å delta i første omgang til 2500 innbyggere medio mai 2021. 
+Invitasjonsbrevet hadde to utforminger. 
+Ett brev inviterte til deltakelse kun i spørreundersøkelsen (kontrollgruppe), det andre inviterte i tillegg til å være med på den deliberative meningsmålingen i juni.  
+Alle som ble invitert var med i trekningen av en pengepremie på kr 5000, de som deltok i undersøkelsen var med i trekning av en pengepremie på kr 10 000, mens de som deltok i panelet i tillegg ble tilbudt et honorert på  kr 500. 
+Honoraret ble senere pga rekrutteringsproblemer doblet til kr 1000. 
+
+Det var utfordringer knyttet til rekrutteringen, og det er ikke å legge skjul på at det var vesentlig enklere å rekruttere til deltakelse i undersøkelsen enn til deltakelse i panelet. 
+Ved siden av at flere ble invitert (1500 nye invitasjoner fra reservelisten ble sendt ut) og honoraret økt, var både byrådsleder og prosjektleder aktive i lokale medier for å oppfordre til deltakelse i panelet. 
+Det ble også foretatt to purringer via brev og sms. I underkant av 10 prosent av de inviterte meldte seg til deltakelse i undersøkelsen (168), mens rundt 5 prosent av de inviterte meldte seg til panelet (138).
+121 fra hver av gruppene svarte på undersøkelsen før panelet.
+
+## Deltakere
+
+| Gruppe       | Presurvey | Deliberation | Postsurvey  |
+|------------:|-------:|-------------:|------------:|
+| Kontrollgruppe     |  N=121     | N=0          | N=108       | 
+| Deltakergruppe   |  N=121     | N=90         | N=101       |
+
+## Hva snakket de om?
+
+Sakene som skulle inngå i undersøkelsen og også i den deliberative meningsmålingen ble bestemt av Bergen kommune i samråd med forskerne.
+Det ble valgt ut to saker; fornying av havneområdet Dokken i Bergen sentrum og utvikling av bilfrie områder i Bergen uten om sentrum.
+Det ble utarbeidet et omfattende informasjonsmateriale (se vedlegg) om de to sakene som ble sendt til paneldeltakerne i forkant av arrangementet. 
+I dette materiale ble det gitt informasjon om hva saken dreide seg om. 
+Det ble videre lagt frem konkrete forslag som skulle være diskusjonstema i den deliberative meningsmålingen. 
+Til disse forslagene ble det presentert for- og motargument. 
+Det var sju forslag knyttet til Dokken-utbyggingen og ni knyttet til bilfrie soner. 
+
+I brevet som fulgte informasjonsmaterialet ble det sagt noe om hvordan innspillene fra den deliberative meningsmålingene vil bli behandlet videre i det kommunale systemet. 
+Byrådets vedtak fra april 2021 om nettopp dette ble gjengitt.
+
+## Deliberasjonen
 
 Den deliberative meningsmålingen er satt opp etter et såkalt pretest/posttest kontrollgruppedesign.
 Det vil si at vi målte holdningene til deltakerne både før og etter arrangementet den 12. juni.
@@ -13,14 +90,53 @@ Et slikt oppsett er et av de mest vanlige felt-eksperimentelle design [@cook2002
 | Kontrollgruppe       |  Spørreundersøkelse |              | Spørreundersøkelse     | 
 | Deltakergruppe     |  Spørreundersøkelse | Gruppediskusjon | Spørreundersøkelse     |
 
-Når vi går gjennom resultatene fokuserer vi på svarene til deltakerne *etter* at de har gjennomført gruppediskusjonene. Det er dette målepunktet som er de autorative svarene, og som skal vurderes av politikerne.
+Når vi går gjennom resultatene fokuserer vi på svarene til deltakerne *etter* at de har gjennomført gruppediskusjonene. 
+Det er dette målepunktet som er de autorative svarene, og som skal vurderes av politikerne.
 Samtidig analyserer vi i resultatdelen også i hvilken grad deltakerne endret holdninger fra før gruppediskusjonen, og om disse eventuelle holdningsendringene bevegde seg mer enn eventuelle holdningsendringer i kontrollgruppen.
+Deltakerne i den deliberative meningsmålingen blir delt inn i mindre grupper ledet av en moderator.
+Moderatorene til denne aktuelle meningsmålingen var rekruttert fra prosjektgruppen, men også frivillige studenter fra Institutt for sammenliknende politikk ved UiB bekledde disse postene. 
+I forkant var moderatorene briefet av prosjektleder og en svært erfaren representant for Stanford-teamet.
+I tillegg var det utarbeidet en skriftlig guide for moderatorene slik at gruppene skulle få et mest mulig enhetlig uttrykk. 
+I denne guiden ble tema som hvordan få til gruppesamtaler, hvordan inkludere alle i samtalen, hvordan disponere tiden og hvordan opptre som moderator tatt opp. 
+Den deliberative meningsmålingen ble avholdt digitalt, men det var en fysisk «operasjonssentral» i NORCE sine lokaler på selve dagen.
+Noen av moderatorene var til stede i disse lokaler under avviklingen, mens andre deltok - som deltakerne - digitalt fullt ut.
 
-## Deltakere
+Deltakerne fikk tilsendt en egen zoom-lenke de skulle koble seg opp via arrangement-dagen. 
+Informasjon om dette var sendt ut noen dager i forveien. Arrangement var fra kl 10 til kl 16 (se vedlegg for agenda) og lenken ble åpnet noe før kl 10. 
+Det var på plass teknisk kompetent personale i den fysiske «operasjonssentralen» ved NORCE. 
+Noen tekniske problem støtte vi på, men gitt at det var ca 100 deltakere, var det få alvorlige problem som ikke enkelt lot seg løse.
 
-| Gruppe       | Presurvey | Deliberation | Postsurvey  |
-|------------:|-------:|-------------:|------------:|
-| Kontrollgruppe     |  N=121     | N=0          | N=108       | 
-| Deltakergruppe   |  N=121     | N=90         | N=101       |
+De 100 deltakerne ble ønsket velkommen i plenum og gitt praktisk informasjon om dagsorden og planene for dagen. 
+De ble deretter umiddelbart delt inn i mindre grupper (antall?) hver med moderator. 
+Breakout-funksjonen i Zoom ble brukt her.
+Det fungerte rimelig godt, selv om noen deltakere kom litt sent inn i gruppen sin.
+Den første gruppesamlingen varte 45 minutter. 
+Mot slutten av denne tiden sendt gruppene inn spørsmål de ønsket å stille til ekspertene i den påfølgende plenumssesjonen. 
+Ekspertene til begge plenusmssesjonene hadde i forkant av samlingen møter med plenumsmoderatorene for å avklare så vel selve opplegget som innholdsmessige sider ved sesjonene. 
+Spørsmålene ble sendt til moderatoren for plenumssesjonen fra gruppemoderatorene.
+Både epost og Zooms chat-funksjon ble brukt til dette formålet. 
+Det var også mulig for gruppedeltakerne å stille spørsmål direkte til ekspertene, enten ved «håndsopprekking» eller via chat-funksjonen i løpet av plenumssesjonen. 
+
+Plenumssesjonen startet med at ekspertene som representerte vernemyndighet, reiseliv, byplanlegging og arkitektur holdt korte innlegg om Dokken-utbyggingen fra eget ståsted før spørsmålsrunden. 
+Det kom mange spørsmål til ekspertene, både før panelet og under panelet. 
+Det virket ikke som at deltakerne her var særlig hemmet av det digitale formatet. 
+En god del av spørsmålene kunne ekspertene svare på direkte, men det kom også spørsmål som ikke var innenfor ekspertisefeltet til noen av dem. Etter plenumsrunden var det ny gruppediskusjon. 
+Etter denne gruppesamlingen var det en 45 minutters lunsjpause. 
+
+Arrangementet startet opp igjen etter lunsj med nye gruppesamlinger.
+Denne gangen var temaet bilfrie områder. 
+Opplegget her var nøyaktig repetisjon av det før lunsj. 
+Ekspertene denne gangen var representanter for planmyndigheter og trafikketaten. 
+Inntrykket er at det kom noe færre spørsmål til ekspertene i denne delen av meningsmålingen og tilbakemeldingen fra gruppemoderatorene var også at samtalene fløte noe tregere enn i sesjonene før lunsj. 
+
+Etter siste gruppesamling om bilfrie områder, var det en kort fellessamling, der informasjon om hvordan kommunen vil bruke de synspunkt og anbefalinger som kom frem i den deliberative meningsmålingen ble redegjort for. 
+I den forbindelse ble viktigheten av at deltakerne svarte på den siste undersøkelsen understreket. 
+Deltakerne ble takket for innsatsen. 
+Umiddelbart kom det her en del positive tilbakemeldinger i chat-funksjonen fra deltakere som uttrykte entusiasme for å ha fått være med på denne muligheten og for det opplegget som var valgt. 
+Hvor representative disse er for deltakerne, vet vi selvsagt ingenting om. 
+
+90 av deltakerne svarte på undersøkelsen post-panel, mens 108 fra kontrollgruppen gjorde dette. 
+
+
 
 
