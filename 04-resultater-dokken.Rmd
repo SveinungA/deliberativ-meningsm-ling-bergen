@@ -30,6 +30,135 @@ Grupper på tematikk, plukk ut representative setninger.
 
 Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
 
+### Cruisetrafikk ut av sentrum?
+Spørsmål:
+
+>Nå er det besluttet at havneaktivitet knyttet til gods skal flyttes fra Dokken til nytt anlegg på Ågotnes.
+Selv om godshavnen flyttes er det fremdeles flere andre havneaktiviteter som kan bli værende på Dokken eller et annet sted i Bergen sentrum. Alternativet er å flytte oppgavene ut av sentrum til andre områder, og heller bruke Dokken til andre formål.
+Noen mener at cruisetrafikken bør bli værende i sentrum for å legge til rette for turistnæringen. Andre mener den bør legges utenfor sentrum fordi skipene forurenser og tar opp verdifull plass sentralt i byen. Hva mener du?
+
+```{r hist}
+dp_t_post <- dp_t %>% 
+  filter(survey == 'post_t')
+```
+
+```{r Q3}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q3 %in% 1:5 ~ "Mindretall",
+                                          Q3 == 6 | Q3 == 12 ~ "Ikke medregnet",
+                                          Q3 %in% 7:11 ~ "Flertall"))
+plot <- ggplot(dp_t_post, aes(x = factor(Q3), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+   labs(title = "Cruisetrafikken ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+```
+
+Av de som uttrykte en mening enten for eller mot å flytte cruisetrafikken ut av sentrum mente `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at cruisetrafikken må bli værende i sentrum, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at den må flyttes ut av sentrum.
+Det er også verdt å merke seg at mange av de som mener den må flyttes ut av sentrum mener dette ekstremt sterkt.
+
+### Utenlandsferger ut av sentrum?
+
+Spørsmålstekst:
+
+>Noen mener også at utenlands fergetilbud (som Danskebåten) bør bli værende i sentrum for å legge til rette for turistnæringen. Andre mener den bør legges utenfor sentrum fordi skipene forurenser og tar opp verdifull plass sentralt i byen. Hva mener du?
+
+```{r Q4}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q4 %in% 1:5 ~ "Mindretall",
+                                          Q4 == 6 | Q4 == 12 ~ "Ikke medregnet",
+                                          Q4 %in% 7:11 ~ "Flertall"))
+plot <- ggplot(dp_t_post, aes(x = factor(Q4), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+   labs(title = "Utenlandsferger ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+Av de som uttrykte en mening enten for eller mot å flytte utenlandsfergene ut av sentrum mente `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at utenlandsfergene må bli værende i sentrum, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at de må flyttes ut av sentrum.
+
+### Utfylling i sjø
+
+Spørsmålstekst:
+
+>Utfylling i sjø er en mulighet som vurderes på Dokken. Noen er for dette fordi det gir mer plass til boliger, næring og parker sentralt i byen. 
+Andre er mot dette fordi de ønsker å bevare sjøfronten slik den ser ut i dag og for å spare dyrelivet i sjøen. Hva mener du, bør kommunen fylle ut i sjøen når de fornyer havneområdet på Dokken?
+
+```{r Q5}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q5 %in% 1:5 ~ "Mindretall",
+                                          Q5 == 6 | Q5 == 12 ~ "Ikke medregnet",
+                                          Q5 %in% 7:11 ~ "Flertall"))
+plot <- ggplot(dp_t_post, aes(x = factor(Q5), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+   labs(title = "Utfylling i sjø?", x = 'Svarfordeling fra 0 = Motsetter seg til 10 = Støtter', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+Av de som uttrykte en mening enten for eller mot utfylling i sjø på Dokken er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg forslaget, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent støtter det.
+
+### Hva sjølinjen skal brukes til
+
+Spørsmålstekst:
+
+>Dokken har en 2500 meter lang sjølinje som i dag brukes til havneaktivitet. 
+Noen mener at havneaktiviteten må prioriteres langs sjølinjen på Dokken for å kunne legge til rette for større skip og bedrifter med behov for kai.
+Andre mener sjølinjen må gjøres tilgjengelig for byens innbyggere og besøkende for rekreasjon med for eksempel badeplasser og parker, eller tilrettelegging for natur- og dyreliv. 
+Hva mener du?
+
+```{r Q6}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q6 %in% 1:5 ~ "Mindretall",
+                                          Q6 == 6 | Q6 == 12 ~ "Ikke medregnet",
+                                          Q6 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q6), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Sjølinjen", x = 'Svarfordeling fra 0 = Fortsatt havneaktivitet, til 10 = Rekreasjon eller natur- og dyreliv', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+> Obs! Ingen observasjoner av verdi 2, som gjør at tellingen blir feil. Jobber med saken.
+
+Av de som uttrykte en prioritering angående hva sjølinjen skal brukes til er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker fortsatt havneaktivitet, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at området skal prioriteres til rekreasjon eller natur- og dyreliv.
+
+### Boligpolitikk
+
+Spørsmålstekst:
+
+>Noen mener at prisene på boliger som bygges på Dokken må styres ved at myndighetene tar en aktiv rolle i utviklingen av rimelige boliger folk flest har råd til å bo i. 
+Andre mener at boliger på Dokken bør selges til ordinær markedspris. 
+Hva mener du?
+
+```{r Q7}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q7 %in% 1:5 ~ "Mindretall",
+                                          Q7 == 6 | Q7 == 12 ~ "Ikke medregnet",
+                                          Q7 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q7), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Boligpolitikk", x = 'Svarfordeling fra 0 = Sikre rimelige boliger, til 10 = Ikke blande seg inn', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+> Obs! Ingen observasjoner av verdi 2, som gjør at tellingen blir feil. Jobber med saken.
+
+Av de som uttrykte en mening om hvorvidt kommunen skal sikre rimelige boliger eller om de ikke skal blande seg inn i hva boligene på Dokken skal koste, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at rimelige boliger sikres, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at kommunen ikke skal blande seg inn.
+
 ## Endring i holdninger
 ```{r results-dokken-change}
 #Gjør om "Vet ikke" til missing

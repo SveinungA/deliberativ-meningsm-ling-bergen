@@ -26,13 +26,14 @@ if(!require("naniar")){install.packages("naniar");  library(naniar)}
 if(!require("patchwork")){install.packages("patchwork");  library(patchwork)}
 if(!require("readxl")){install.packages("readxl");  library(readxl)}
 if(!require("sjlabelled")){install.packages("sjlabelled");  library(sjalabelled)}
+if(!require("srvyr")){install.packages("srvyr");  library(srvyr)}
 if(!require("tidyverse")){install.packages("tidyverse");  library(tidyverse)}
 
 ggsave2 <- function(filename, ...) {
   for (format in c(".pdf", ".png")) ggsave(filename = paste0("output/", filename, format), ...)
 }
 
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, digits = 0)
 ```
 
 # Om rapporten
