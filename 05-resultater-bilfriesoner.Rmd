@@ -1,13 +1,293 @@
 # Bilfrie soner {#bilfri}
 
-## Forslag
+## Gruppediskusjoner
 
-1. Hent fra informasjonsmateriale
+Kvantitativ tekstanalyse av gruppesamtalene om Dokken.
+Grupper på tematikk, plukk ut representative setninger.
 
-## Resultater
+## Svarfordeling for alle spørsmål om Dokken. 
 
-1. Svarfordeling for alle spørsmål om bilfrie soner. Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
+### Intro
 
-2. Tekstanalyse av samtalene
+Introduksjonstekst til spørsmål om bilfrie områder:
 
-3. Forskjell i svar vis a vis egne svar før deliberasjon og forskjell i endring vis a vis kontrollgruppen. (Skal vi ta med dette i rapporten?)
+>Du har nå besvart alle spørsmålene som handler om Dokken. Nå går vi over til spørsmål om bilfrie områder i Bergen.
+
+>I enkelte områder i Bergen vil kommunen begrense kjøring og parkering av privatbiler slik at det blir tryggere og mer attraktivt å leke og møtes i gatene. 
+Ved å skape mer plass til folk og legge til rette for møteplasser og aktivitet, er målet å skape mer liv i nærmiljøet. 
+I de samme områdene vil kommunen jobbe for at det blir enklere og mer attraktivt å gå, sykle og bruke andre former for bærekraftig mobilitet, som f.eks. bildeleordninger.
+
+>Bilfrie områder betyr i denne sammenhengen tiltak for å begrense biltrafikk. Bilfrie områder innebærer altså ikke fullstendig fravær av biler. 
+Vi ønsker å vite dine meninger om hvor og hvordan slike områder skal utvikles.
+
+### Bergen sentrum mer bilfritt?
+
+Spørsmål:
+
+>Noen mener at Bergen sentrum allerede kan beskrives som et bilfritt område med restriksjoner på parkering og kjøring, et bredt mobilitetstilbud og gode forhold for byliv. 
+Andre mener at Bergen sentrum bør bli helt bilfritt med unntak for personer med nedsatt funksjonsevne, utrykningskjøretøy, varelevering, renovasjon og lignende. 
+Hva mener du? Bør kommunen gjøre ytterligere tiltak for å gjøre Bergen sentrum mer bilfri?
+
+```{r Q11}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q11 %in% 1:5 ~ "Flertall",
+                                          Q11 == 6 | Q11 == 12 ~ "Ikke medregnet",
+                                          Q11 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q11), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Bergen sentrum mer bilfritt enn i dag?", x = 'Svarfordeling fra 0 = Mer bilfritt, til 10 = Ikke mer bilfritt', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+ `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent heller mot at Bergen sentrum må bli mer bilfritt enn det er i dag, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at det ikke skal det.
+Dette er et polariserende spørsmål, hvor de mest hyppige svaret blant deltakerne er at man mener ekstremt sterkt at det må bli mer bilfritt, mens det nest mest hyppige svaret er at man mener ekstremt sterkt at det ikke skal bli mer bilfritt.
+
+### Sentrumsnære strøk vs. ytre bydeler
+
+Spørsmål:
+
+>Noen mener at sentrumsnære strøk er godt egnet for utvikling av bilfrie områder.
+Områdene har relativt god infrastruktur for sykkel, gange og kollektivtransport, nærhet til sentrum og er ikke bygget for bilkjøring i like stor grad som de ytre bydelene.
+Andre mener at bilfrie områder bør utvikles i de ytre bydelene fordi problemet med bilavhengighet er større i disse områdene og innbyggerne har få insentiver til å redusere bilbruken sin. 
+Hva mener du, bør kommunen prioritere utvikling av bilfrie områder i sentrumsnære strøk eller i ytre bydeler?
+
+```{r Q12}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q12 %in% 1:5 ~ "Flertall",
+                                          Q12 == 6 | Q12 == 12 ~ "Ikke medregnet",
+                                          Q12 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q12), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Sentrumsnære strøk vs. ytre bydeler", x = 'Svarfordeling fra 0 = Prioritere sentrum, til 10 = Prioritere ytre bydeler', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Et klart flertall -- `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent -- mener at sentrum skal prioriteres framfor de ytre bydelene, mens  `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
+Mange er også usikker på hvordan den geografiske prioriteringen bør gjøres.
+
+### Store eller små områder?
+Spørsmål:
+
+>Noen mener at kommunen bør lage mange små, bilfrie områder, for eksempel i enkeltgater. 
+Andre mener at kommunen bør lage noen få, store bilfrie områder, som for eksempel på i Bergen sentrum. 
+Hva mener du, bør kommunen satse på å lage mange små eller noen få store bilfrie områder?
+
+```{r Q13}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q13 %in% 1:5 ~ "Flertall",
+                                          Q13 == 6 | Q13 == 12 ~ "Ikke medregnet",
+                                          Q13 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q13), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Mange små vs. store få bilfrie områder", x = 'Svarfordeling fra 0 = Mange små, til 10 = Store få', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Flertallet på `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker mange små bilfrie områder heller enn store, få områder. 
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
+Forslaget er noe mindre polariserende enn flere av de andre spørsmålene om bilfrie soner, men blant de som støtter forslaget er det mange sterke tilhengere.
+
+### Fleksibel bruk av parkeringsplasser
+Spørsmål:
+
+>Noen mener at en del parkeringsplasser skal kunne stenges for parkering i helgene for å kunne brukes til andre formål som uteservering, marked, lek, osv. 
+Andre mener parkeringsplassene alltid må være åpne for parkering, fordi de som har bil trenger et sted å sette bilen også i helgene. 
+Hva mener du?
+
+```{r Q14}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q14 %in% 1:5 ~ "Flertall",
+                                          Q14 == 6 | Q14 == 12 ~ "Ikke medregnet",
+                                          Q14 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q14), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Stenge parkeringsplasser i helgene", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+`r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent motsetter seg at parkeringsplasser skal kunne stenges for annen bruk i helgene, mens
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener de kan stenges.
+Det klart mest hyppige svaret er at man motsetter seg ekstremt sterkt at parkeringsplasser skal kunne stenges i helgene.
+
+
+### Bildeling
+Spørsmål:
+
+>I dag reserveres en del parkeringsplasser i byen til bildeleordninger. 
+Noen mener dette er bra, siden ordningene gjøre det lettere for folk ikke å eie egen bil. 
+Det kan også frigi fellesarealer til andre aktiviteter i nabolaget. 
+Andre mener dette ikke er bra fordi færre parkeringsplasser for privatbiler gjør at det innskrenker hver enkelt sin frihet. 
+Hva mener du, hvordan skal andelen parkeringsplasser fordeles mellom privatbiler og bildeleordninger?
+
+```{r Q15}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q15 %in% 1:5 ~ "Mindretall",
+                                          Q15 == 6 | Q15 == 12 ~ "Ikke medregnet",
+                                          Q15 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q15), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Reservere parkering til bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Svaralternativ 5 betyr at fordelingen mellom private parkeringsplasser og bildelingsplasser skal være som i dag.
+Dette er det mest foretrukne alternativet, og støttes av nesten en tredjedel av deltakerne.
+Av de som ønsker en endring fra dagens situasjon vil `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent øke andelen parkeringsplasser til bildeling, mens
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker å øke andelen til privatbiler.
+
+### Begrense bilkjøring
+
+Spørsmål: 
+
+>En bilfri sone er ikke helt bilfri, da det trengs tilkomst for varelevering/flyttelass, spesielle forflytningsbehov og for utrykningskjøretøy. 
+Likevel finnes det tiltak som kan begrense biltrafikken, og vi ber deg indikere hvilken måte du foretrekker av de fire under:
+
+TBA
+
+### Dele transportmidler
+
+Spørsmål:  
+
+>Hvor villig er du til å dele dette med andre:
+
+TBA
+
+### Avstand fra bolig til parkering
+
+Spørsmål:  
+
+>Noen foretrekker å kunne gå til skole, matbutikk, offentlige grøntområder, og kollektivtilbud på under 10 minutter, selv om det betyr at de har bilparkering mer enn 250 meter fra boligen.
+Andre foretrekker å ha bilparkering like ved boligen, selv om det betyr at det er mer enn 10 minutter å gå til grøntområder, skole, matbutikk og kollektivtilbud. 
+Om du måtte velge, hva foretrekker du?
+
+```{r Q18}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q18 %in% 1:5 ~ "Flertall",
+                                          Q18 == 6 | Q18 == 12 ~ "Ikke medregnet",
+                                          Q18 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q18), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Avstand til parkering", x = 'Svarfordeling fra 0 = Gåavstand til fasiliterer, til 10 = Parkering like ved bolig', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+I dette spørsmålet har de fleste gjort seg opp en helt klar mening.
+Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som foretrekker gåavstand til skole, matbutikk, offentlige grøntområder, og kollektivtilbud på under 10 minutter, selv om det betyr at de har bilparkering mer enn 250 meter fra boligen.
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent foretrekker å ha bilparkering like ved boligen, selv om det betyr at det er mer enn 10 minutter å gå til grøntområder, skole, matbutikk og kollektivtilbud. 
+
+### Bilfritt nabolag
+
+Spørsmål:
+
+>Hva er din mening om at nabolaget der du bor skal være bilfritt område?
+
+```{r Q19}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q19 %in% 1:5 ~ "Flertall",
+                                          Q19 == 6 | Q19 == 12 ~ "Ikke medregnet",
+                                          Q19 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q19), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Bilfritt nabolag", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+
+### Demokrati – hvem bestemmer?
+
+Spørsmål:
+
+>Noen mener at beboerne selv bør få bestemme om de skal ha bilfritt område i sitt nabolag, siden det er de som best vet hva som passer deres ønsker og behov. 
+Andre mener at en slik beslutning må tas av kommunen, fordi de ser hva som er best ikke bare for nabolaget, men for kommunen i sin helhet. 
+Hva mener du?
+
+```{r Q20}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q20 %in% 1:5 ~ "Mindretall",
+                                          Q20 == 6 | Q20 == 12 ~ "Ikke medregnet",
+                                          Q20 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q20), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Demokrati -- Hvem skal bestemme", x = 'Svarfordeling fra 0 = Nabolaget skal bestemme, til 10 = Kommunen skal bestemme', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+
+Dette er også et eksperiment, hvor vi har bedt halvparten av deltakerne om å se for seg at det er flertall i nabolaget for bilfritt område men at kommunen er imot, og andre halvparten at det er flertall i nabolaget for, mens kommunen er imot.
+
+Resultater av eksperimentet TBA.
+
+### Redusere farten svært tettbygde strøk.
+
+Spørsmål:
+
+>Det har vært diskutert om fartsgrensen i alle tett befolkede gater bør senkes til 30 km/t. 
+Hva mener du om det?
+
+```{r Q21}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q21 %in% 1:5 ~ "Mindretall",
+                                          Q21 == 6 | Q21 == 12 ~ "Ikke medregnet",
+                                          Q21 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q21), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Redusere fart", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+> Obs! Flere verdier med manglende observasjoner, som gjør at søylene kommer på feil plass. Jobber med saken.
+
+
+Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
+`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+
+
+## Endring i holdninger

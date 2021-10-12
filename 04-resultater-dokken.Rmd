@@ -30,6 +30,15 @@ Grupper på tematikk, plukk ut representative setninger.
 
 Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
 
+### Intro
+
+Introduksjonstekst til spørsmål om Dokken:
+
+>Først ønsker vi å stille deg noen spørsmål om Dokken. 
+Dokken er et havneområde som ligger sentralt plassert i Bergen ved Puddefjorden, mellom Laksevåg og Nordnes.
+Bergen kommune arbeider nå med planer for å fornye dette området, og vi ønsker å stille deg noen spørsmål om hva du tenker dette området bør brukes til.
+
+
 ### Cruisetrafikk ut av sentrum?
 Spørsmål:
 
@@ -128,7 +137,7 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q6), fill = fill)) +
 plot
 
 ```
-> Obs! Ingen observasjoner av verdi 2, som gjør at tellingen blir feil. Jobber med saken.
+> Obs! Ingen observasjoner av verdi 2, som gjør søylene kommer på feil plass. Jobber med saken.
 
 Av de som uttrykte en prioritering angående hva sjølinjen skal brukes til er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker fortsatt havneaktivitet, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at området skal prioriteres til rekreasjon eller natur- og dyreliv.
 
@@ -155,9 +164,67 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q7), fill = fill)) +
 plot
 
 ```
-> Obs! Ingen observasjoner av verdi 2, som gjør at tellingen blir feil. Jobber med saken.
 
 Av de som uttrykte en mening om hvorvidt kommunen skal sikre rimelige boliger eller om de ikke skal blande seg inn i hva boligene på Dokken skal koste, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at rimelige boliger sikres, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at kommunen ikke skal blande seg inn.
+
+### Parker vs. idrettsanlegg
+
+Spørsmålstekst:
+
+>Noen mener at parker og grøntarealer bør prioriteres på Dokken framfor idrettsanlegg som for eksempel fotballbane og flerbrukshall. 
+Dette fordi flere har nytte av grøntarealer enn av idrettsanlegg. 
+Andre mener idrettsanlegg må prioriteres fordi det er mangel på slike tilbud sentralt i Bergen.
+Hva mener du?
+
+```{r Q8}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q8 %in% 1:5 ~ "Flertall",
+                                          Q8 == 6 | Q8 == 12 ~ "Ikke medregnet",
+                                          Q8 %in% 7:11 ~ "Mindretall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q8), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Parker vs. idrettsanlegg", x = 'Svarfordeling fra 0 = Prioritere parker, til 10 = Prioritere idrettsanlegg', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+> Obs! Flere verdier med manglende observasjoner, som gjør at søylene kommer på feil plass. Jobber med saken.
+
+
+Av de som uttrykte en prioritering mellom parker/grøntarealer og idrettsanlegg, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at parker får forrang framfor idrettsanlegg, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ville prioritere omvendt.
+
+### Nye gatenavn
+Spørsmålstekst:
+
+>Noen mener at alle nye gater på Dokken som skal kalles opp etter historiske personer må ha navn etter kvinner, for å bidra til å rette opp den skjeve fordelingen av eksisterende gatenavn i byen. 
+Andre er imot dette, fordi personer som har gjort seg fortjent til å få en gate kalt opp etter seg ikke skal hindres på grunn av sitt kjønn.
+Hva mener du?
+
+
+```{r Q9}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q9 %in% 1:5 ~ "Mindretall",
+                                          Q9 == 6 | Q9 == 12 ~ "Ikke medregnet",
+                                          Q9 %in% 7:11 ~ "Flertall")) 
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q9), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+   labs(title = "Kalle opp nye gatenavn etter kvinner", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+
+Av de som uttrykte en mening om hvorvidt nye gatenavn på Dokken som skal kalles opp etter historiske personer utelukkende skal ha navn etter kvinner eller ikke, mener `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at de ikke skal det, og `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at de skal det.
+Verdt å merke seg er at mange er i tvende sinn om spørsmålet (både svaralternativ 5 og "Vet ikke"-kategoriene har høyere svarandel enn i mange andre spørsmål).
+Samtidig har mange av de som har gjort seg opp en mening sterke meninger om saken, i begge endene av holdningsspekteret.
+
 
 ## Endring i holdninger
 ```{r results-dokken-change}
