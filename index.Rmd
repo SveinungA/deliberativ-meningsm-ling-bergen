@@ -25,7 +25,7 @@ if(!require("knitr")){install.packages("knitr");  library(knitr)}
 if(!require("naniar")){install.packages("naniar");  library(naniar)}
 if(!require("patchwork")){install.packages("patchwork");  library(patchwork)}
 if(!require("readxl")){install.packages("readxl");  library(readxl)}
-if(!require("sjlabelled")){install.packages("sjlabelled");  library(sjalabelled)}
+if(!require("sjlabelled")){install.packages("sjlabelled");  library(sjlabelled)}
 if(!require("srvyr")){install.packages("srvyr");  library(srvyr)}
 if(!require("tidyverse")){install.packages("tidyverse");  library(tidyverse)}
 

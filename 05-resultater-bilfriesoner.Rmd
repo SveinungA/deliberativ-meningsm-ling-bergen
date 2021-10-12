@@ -72,7 +72,7 @@ plot
 
 ```
 
-Et klart flertall -- `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent -- mener at sentrum skal prioriteres framfor de ytre bydelene, mens  `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
+Av de som uttrykte en prioritering mener et klart flertall på `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at sentrum skal prioriteres framfor de ytre bydelene, mens  `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
 Mange er også usikker på hvordan den geografiske prioriteringen bør gjøres.
 
 ### Store eller små områder?
@@ -124,6 +124,7 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q14), fill = fill)) +
 plot
 
 ```
+> Obs! Flere verdier med manglende observasjoner, som gjør at søylene kommer på feil plass. Jobber med saken.
 
 `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent motsetter seg at parkeringsplasser skal kunne stenges for annen bruk i helgene, mens
 `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener de kan stenges.
@@ -155,6 +156,7 @@ plot
 
 ```
 
+
 Svaralternativ 5 betyr at fordelingen mellom private parkeringsplasser og bildelingsplasser skal være som i dag.
 Dette er det mest foretrukne alternativet, og støttes av nesten en tredjedel av deltakerne.
 Av de som ønsker en endring fra dagens situasjon vil `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent øke andelen parkeringsplasser til bildeling, mens
@@ -167,7 +169,24 @@ Spørsmål:
 >En bilfri sone er ikke helt bilfri, da det trengs tilkomst for varelevering/flyttelass, spesielle forflytningsbehov og for utrykningskjøretøy. 
 Likevel finnes det tiltak som kan begrense biltrafikken, og vi ber deg indikere hvilken måte du foretrekker av de fire under:
 
-TBA
+```{r Q16}
+
+plot <- ggplot(dp_t_post, aes(x = factor(Q16))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Skilt med gjennomkjøring forbudt', 'Fysiske hindringer \nsom tvinger ned farten', 'Fysiske sperrer \nsom kan fjernes for nødvendig trafikk', 'Lavest mulig fartsgrense (30 km/t)'), drop = FALSE, guide = guide_axis(n.dodge=2)) +
+   labs(title = "Reservere parkering til bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
+
+Av de fire alternativene er det regulering av fartsgrense til lavest tillatte nivå som er det mest foretrukne alternativet.
+De tre andre alternativene skiller det lite mellom.
+
+
+
 
 ### Dele transportmidler
 
@@ -175,7 +194,56 @@ Spørsmål:
 
 >Hvor villig er du til å dele dette med andre:
 
-TBA
+```{r Q17}
+
+p1 <- ggplot(dp_t_post, aes(x = factor(Q17_1))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Biler', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+
+p2 <- ggplot(dp_t_post, aes(x = factor(Q17_2))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Sykler', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+p3 <- ggplot(dp_t_post, aes(x = factor(Q17_3))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Elsykler', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+p4 <- ggplot(dp_t_post, aes(x = factor(Q17_4))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Elsparkesykler', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+p5 <- ggplot(dp_t_post, aes(x = factor(Q17_5))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Sykkelparkering', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+p6 <- ggplot(dp_t_post, aes(x = factor(Q17_6))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
+   labs(title = 'Sykkelverksted', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+patchwork <- p1 + p2 + p3 +  p4 + p5 + p6
+patchwork + plot_annotation(title = 'Villighet til å dele transportmidler', caption = 'Svarfordeling fra 0 = Ikke villig, til 10 = Villig')
+
+```
+
 
 ### Avstand fra bolig til parkering
 
