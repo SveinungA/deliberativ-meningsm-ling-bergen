@@ -241,7 +241,6 @@ p6 <- ggplot(dp_t_post, aes(x = factor(Q17_6))) +
   
 patchwork <- p1 + p2 + p3 +  p4 + p5 + p6
 patchwork + plot_annotation(title = 'Villighet til å dele transportmidler', caption = 'Svarfordeling fra 0 = Ikke villig, til 10 = Villig')
-
 ```
 
 

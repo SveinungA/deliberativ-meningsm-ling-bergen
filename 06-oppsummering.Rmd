@@ -2,6 +2,63 @@
 
 ## Viktigste funn
 
+## Deltakernes evaluering
+
+### Nytte av deliberativ meningsmåling
+Spørsmål:
+
+> På en skala fra 0 til 10, der 0 er «bortkastet tid», 10 er «ekstremt verdifullt» og 5 er nøyaktig i midten, hvor verdifullt var hver av de følgende delene for å hjelpe deg med å avklare dine synspunkter på sakene?
+
+```{r Q85}
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_1 %in% 1:5 ~ "Mindretall",
+                                          Q85_1 == 6 | Q85_1 == 14 ~ "Ikke medregnet",
+                                          Q85_1 %in% 7:11 ~ "Flertall")) 
+p1 <- ggplot(dp_t_post, aes(x = factor(Q85_1), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' ), drop = FALSE) +
+   labs(title = 'Gruppediskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_2 %in% 1:5 ~ "Mindretall",
+                                          Q85_2 == 6 | Q85_2 == 14 ~ "Ikke medregnet",
+                                          Q85_2 %in% 7:11 ~ "Flertall")) 
+p2 <- ggplot(dp_t_post, aes(x = factor(Q85_2), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' ), drop = FALSE) +
+   labs(title = 'Informasjonsmaterialet', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_3 %in% 1:5 ~ "Mindretall",
+                                          Q85_3 == 6 | Q85_3 == 14 ~ "Ikke medregnet",
+                                          Q85_3 %in% 7:11 ~ "Flertall")) 
+p3 <- ggplot(dp_t_post, aes(x = factor(Q85_3), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' )) +
+   labs(title = 'Plenumsdiskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_4 %in% 1:5 ~ "Mindretall",
+                                          Q85_4 == 6 | Q85_4 == 14 ~ "Ikke medregnet",
+                                          Q85_4 %in% 7:11 ~ "Flertall")) 
+p4 <- ggplot(dp_t_post, aes(x = factor(Q85_4), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '    Vet\n  ikke' ), drop = FALSE) +
+   labs(title = 'Arrangementet som helhet', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+
+patchwork <- p1 + p2 + p3 +  p4
+patchwork + plot_annotation(title = 'Nytte av deliberativ meningsmåling', caption = 'Svarfordeling fra 0 = Bortkastet tid, til 10 = Ekstremt verdifullt, og hvor 5 = Nøyaktig på midten')
+```
+### 
+Spørsmål:
+
+> Og, i hvilken grad er du enig eller uenig i de følgende påstandene?
+
+TBA
 
 ## Erfaringer
 
