@@ -131,7 +131,7 @@ plot
 Det klart mest hyppige svaret er at man motsetter seg ekstremt sterkt at parkeringsplasser skal kunne stenges i helgene.
 
 
-### Bildeling
+### Fordeling av parkeringsplasser
 Spørsmål:
 
 >I dag reserveres en del parkeringsplasser i byen til bildeleordninger. 
@@ -149,7 +149,7 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q15), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
-   labs(title = "Reservere parkering til bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
+   labs(title = "Andel parkeringsplasser til private biler vs. bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
   theme_classic()
   
 plot
@@ -314,7 +314,7 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q20), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
-   labs(title = "Demokrati -- Hvem skal bestemme", x = 'Svarfordeling fra 0 = Nabolaget skal bestemme, til 10 = Kommunen skal bestemme', y = 'Prosent', fill = '')  +
+   labs(title = "Hvem skal bestemme om nabolag skal være bilfritt", x = 'Svarfordeling fra 0 = Nabolaget skal bestemme, til 10 = Kommunen skal bestemme', y = 'Prosent', fill = '')  +
   theme_classic()
   
 plot
@@ -358,3 +358,103 @@ Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (
 
 
 ## Endring i holdninger
+```{r car-results-manage-1}
+Q11_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q11, na.rm=TRUE), se=sd(Q11, na.rm = TRUE)/sqrt(length(Q11))) %>% mutate(group = 'control', question = 'Q11')
+Q12_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q12, na.rm=TRUE), se=sd(Q12, na.rm = TRUE)/sqrt(length(Q12))) %>% mutate(group = 'control', question = 'Q12')
+Q13_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q13, na.rm=TRUE), se=sd(Q13, na.rm = TRUE)/sqrt(length(Q13)))  %>% mutate(group = 'control', question = 'Q13')
+Q14_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q14, na.rm=TRUE), se=sd(Q14, na.rm = TRUE)/sqrt(length(Q14))) %>% mutate(group = 'control', question = 'Q14')
+Q15_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q15, na.rm=TRUE), se=sd(Q15, na.rm = TRUE)/sqrt(length(Q15))) %>% mutate(group = 'control', question = 'Q15')
+Q18_c<- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q18, na.rm=TRUE), se=sd(Q18, na.rm = TRUE)/sqrt(length(Q18))) %>% mutate(group = 'control', question = 'Q18')
+Q19_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q19, na.rm=TRUE), se=sd(Q19, na.rm = TRUE)/sqrt(length(Q19))) %>% mutate(group = 'control', question = 'Q19')
+Q20_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q20, na.rm=TRUE), se=sd(Q20, na.rm = TRUE)/sqrt(length(Q20))) %>% mutate(group = 'control', question = 'Q20')
+Q21_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q21, na.rm=TRUE), se=sd(Q21, na.rm = TRUE)/sqrt(length(Q21))) %>% mutate(group = 'control', question = 'Q21')
+
+Q11_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q11, na.rm=TRUE), se=sd(Q11, na.rm = TRUE)/sqrt(length(Q11))) %>% mutate(group = 'treatment', question = 'Q11')
+Q12_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q12, na.rm=TRUE), se=sd(Q12, na.rm = TRUE)/sqrt(length(Q12))) %>% mutate(group = 'treatment', question = 'Q12')
+Q13_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q13, na.rm=TRUE), se=sd(Q13, na.rm = TRUE)/sqrt(length(Q13))) %>% mutate(group = 'treatment', question = 'Q13')
+Q14_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q14, na.rm=TRUE), se=sd(Q14, na.rm = TRUE)/sqrt(length(Q14))) %>% mutate(group = 'treatment', question = 'Q14')
+Q15_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q15, na.rm=TRUE), se=sd(Q15, na.rm = TRUE)/sqrt(length(Q15))) %>% mutate(group = 'treatment', question = 'Q15')
+Q18_t<- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q18, na.rm=TRUE), se=sd(Q18, na.rm = TRUE)/sqrt(length(Q18))) %>% mutate(group = 'treatment', question = 'Q18')
+Q19_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q19, na.rm=TRUE), se=sd(Q19, na.rm = TRUE)/sqrt(length(Q19))) %>% mutate(group = 'treatment', question = 'Q19')
+Q20_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q20, na.rm=TRUE), se=sd(Q20, na.rm = TRUE)/sqrt(length(Q20))) %>% mutate(group = 'treatment', question = 'Q20')
+Q21_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q21, na.rm=TRUE), se=sd(Q21, na.rm = TRUE)/sqrt(length(Q21))) %>% mutate(group = 'treatment', question = 'Q21')
+
+
+car <- bind_rows(list(Q11_c, Q12_c, Q13_c, Q14_c, Q15_c, Q18_c, Q19_c, Q20_c, Q21_c, Q11_t, Q12_t, Q13_t, Q14_t, Q15_t, Q18_t, Q19_t, Q20_t, Q21_t), .id = "group") %>% 
+ mutate(group = (case_when(group %in% c(1:9) ~ 'Kontrollgruppe',
+                                               group %in% c(10:18) ~ 'Deltakergruppe')),
+                            question = (case_when(question == 'Q11' ~ 'Bergen sentrum mer bilfritt',
+                                                  question == 'Q12' ~ 'Sentrumsnære strøk vs. ytre bydeler',
+                                                  question == 'Q13' ~ 'Mange små vs. store, få bilfrie områder',
+                                                  question == 'Q14' ~ 'Stenge parkeringsplasser i helgene',
+                                                  question == 'Q15' ~ 'Andel parkeringsplasser til private biler vs. bildeling',
+                                                  question == 'Q18' ~ 'Gåavstand til fasiliteter vs. parkering like ved bolig',
+                                                  question == 'Q19' ~ 'Bo i bilfritt nabolag',
+                                                  question == 'Q20' ~ 'Hvem skal bestemme om nabolag skal være bilfritt',
+                                                  question == 'Q21' ~ 'Redusere fart i tettbygde strøk')),
+                            survey = case_when(survey == 'pre'~ 'pre',
+                                               survey == 'post_c' ~ 'post',
+                                               survey == 'post_t' ~ 'post'
+                                               )) %>%
+  mutate(avg=mean) %>% 
+  mutate(conf.low = avg-se) %>% 
+  mutate(conf.high = avg+se) %>% 
+  select(-mean) %>% 
+  arrange(question) %>% 
+  relocate(c(question, group, survey, avg, se))
+```
+
+
+```{r car-results-figure1, include=FALSE, eval=FALSE}
+#Plot
+pd <- position_dodge(1)
+
+plot1 <- ggplot(car, aes(x = survey, y = avg, colour=question, group=question)) +
+  geom_errorbar(aes(ymin = avg-se, ymax = avg+se), position = pd, size=1, width=0.1) +
+  geom_line(position=pd) +
+  geom_point(position=pd, size=3) +
+  scale_y_continuous(limits = c(1, 11), breaks=seq(1, 11)) +
+  facet_wrap(~group)
+plot1
+```
+
+```{r car-results-table1, include=FALSE, eval=FALSE}
+car %>% select(question, group, survey, avg, se) %>% kableExtra::kable(., booktabs = T) %>% kable_styling(c('striped', 'hover')) %>% collapse_rows(columns = c(1:2)) %>% 
+      footnote(general = 'All questions range from 1 to 11. "Do not knows" and "NA" omitted.')
+
+write_csv(car, 'Data/Car.csv')
+```
+
+The figure below displays that the participants changed their minds about some of the topics discussed, but for many topics, the mean responses were similar before and after deliberation. 
+Nevertheless, for around half of the topics, there is a marked difference between the control group and treatment group in terms of how their attitudes changed between the pre-survey and post-survey.
+It is worth noting that these figures display the average attitudes, and do not measure individual change directly.
+Individual attitudinal change will be added to the analysis at a later stage.
+
+```{r car-results-manage-2}
+postpre <- read_csv('Data/Car-postpre.csv')
+postpre <- postpre %>% filter(!is.na(postpre)) %>% 
+  mutate(question = case_when(question == 'Flexible parking areas' ~ 'Stenge parkeringsplasser i helgene',
+                                                          question == 'Further reduce traffic speed in residential areas' ~ 'Redusere fart i tettbygde strøk',
+                                                          question == 'Increase efforts to make downtown car-free' ~ 'Bergen sentrum mer bilfritt',
+                                                          question == 'Live in a car-free neighbourhood' ~ 'Bo i bilfritt nabolag',
+                                                          question == 'Many, small zones vs. few, large zones' ~ 'Mange små vs. store, få bilfrie områder',
+                                                          question == 'Neighborhood or city to decide on car-free zone' ~ 'Hvem skal bestemme om nabolag skal være bilfritt',
+                                                          question == 'Parking area for private cars vs. shared cars' ~ 'Andel parkeringsplasser til private biler vs. bildeling',
+                              question == 'Prioritize car-free zones downtown vs. city outskirts' ~ 'Sentrumsnære strøk vs. ytre bydeler',
+                              question == 'Walking distance to key services vs. parking near home' ~ 'Gåavstand til fasiliteter vs. parkering like ved bolig'),
+                                     group = case_when(group == 'treatment' ~ 'Deltakergruppe',
+                                                       group == 'control' ~ 'Kontrollgruppe'))
+```
+
+```{r car-results-figure2}
+plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
+  geom_errorbar(aes(ymin = postpre-se, ymax = postpre+se), size = 1, width = 0.1) +
+  geom_point(size=3) +
+  coord_flip() +
+   labs(title = 'Holdningsendringer før og etter arrangement', subtitle = 'Bilfrie områder', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
+  geom_hline(aes(yintercept=0), linetype = 'dotted') +
+  theme_classic()
+
+plot2
+```
+

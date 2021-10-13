@@ -151,9 +151,9 @@ Andre mener at boliger på Dokken bør selges til ordinær markedspris.
 Hva mener du?
 
 ```{r Q7}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q7 %in% 1:5 ~ "Mindretall",
+dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q7 %in% 1:5 ~ "Flertall",
                                           Q7 == 6 | Q7 == 12 ~ "Ikke medregnet",
-                                          Q7 %in% 7:11 ~ "Flertall")) 
+                                          Q7 %in% 7:11 ~ "Mindretall")) 
 
 plot <- ggplot(dp_t_post, aes(x = factor(Q7), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
@@ -333,7 +333,7 @@ plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
   geom_errorbar(aes(ymin = postpre-se, ymax = postpre+se), size = 1, width = 0.1) +
   geom_point(size=3) +
   coord_flip() +
-  labs(title = 'Endring i holdninger før og etter arrangement', subtitle = 'Dokken', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
+  labs(title = 'Holdningsendringer før og etter arrangement', subtitle = 'Dokken', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
   geom_hline(aes(yintercept=0), linetype = 'dotted') +
   theme_classic()
 

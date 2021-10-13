@@ -45,6 +45,23 @@ Mot slutten av arrangementet svarer deltakerne på en spørreundersøkelse lik d
 Dette gir mulighet for å måle effekten av gruppediskusjonene (deliberasjonen).
 En kontrollgruppe som ikke deltar i selve arrangementet får samme undersøkelse på de samme tidspunktene som deltakerne. 
 
+Den deliberative meningsmålingen er satt opp etter et såkalt pretest/posttest kontrollgruppedesign.
+Det vil si at vi målte holdningene til deltakerne både før og etter arrangementet den 12. juni.
+På denne måten kan vi måle om deltakernes holdninger endrer seg etter å ha diskutert sakene og fått tid til å tenke seg om.
+For å utelate at eventuelle holdningsendringer kommer som en konsekvens av andre forhold som har skjedd fra det ene tidspunktet til det andre, har vi med en kontrollgruppe som også gjennomfører spørreundersøkelsene, men som ikke deltar i selve arrangementet.
+Et slikt oppsett er et av de mest vanlige felt-eksperimentelle design [@cook2002experimental].
+
+|         Gruppe            | Pretest | Treatment    | Post-test                           | 
+|--------------------:|--------:|-------------:|-----------:|
+| Kontrollgruppe       |  Spørreundersøkelse |              | Spørreundersøkelse     | 
+| Deltakergruppe     |  Spørreundersøkelse | Gruppediskusjon | Spørreundersøkelse     |
+
+Når vi går gjennom resultatene fokuserer vi på svarene til deltakerne *etter* at de har gjennomført gruppediskusjonene. 
+Det er dette målepunktet som er de autorative svarene, og som skal vurderes av politikerne.
+Samtidig analyserer vi i resultatdelen også i hvilken grad deltakerne endret holdninger fra før gruppediskusjonen, og om disse eventuelle holdningsendringene bevegde seg mer enn eventuelle holdningsendringer i kontrollgruppen.
+
+
+## Deltakere
 Et tilfeldig uttrekk av 4000 innbyggere med bostedsadresse i Bergen ble gjort fra Folkeregisteret våren 2021.
 Det ble sendt invitasjonsbrev til å delta i første omgang til 2500 innbyggere medio mai 2021. 
 Invitasjonsbrevet hadde to utforminger. 
@@ -57,9 +74,8 @@ Ved siden av at flere ble invitert (1500 nye invitasjoner fra reservelisten ble 
 Det ble også foretatt to purringer via brev og sms. I underkant av 10 prosent av de inviterte meldte seg til deltakelse i undersøkelsen (168), mens rundt 5 prosent av de inviterte meldte seg til panelet (138).
 121 fra hver av gruppene svarte på undersøkelsen før panelet.
 
-## Deltakere
 
-| Gruppe       | Presurvey | Deliberation | Postsurvey  |
+| Gruppe       | Forundersøkelse | Deliberasjon | Etterundersøkelse  |
 |------------:|-------:|-------------:|------------:|
 | Kontrollgruppe     |  N=121     | N=0          | N=108       | 
 | Deltakergruppe   |  N=121     | N=90         | N=101       |
@@ -79,20 +95,6 @@ Byrådets vedtak fra april 2021 om nettopp dette ble gjengitt.
 
 ## Deliberasjonen
 
-Den deliberative meningsmålingen er satt opp etter et såkalt pretest/posttest kontrollgruppedesign.
-Det vil si at vi målte holdningene til deltakerne både før og etter arrangementet den 12. juni.
-På denne måten kan vi måle om deltakernes holdninger endrer seg etter å ha diskutert sakene og fått tid til å tenke seg om.
-For å utelate at eventuelle holdningsendringer kommer som en konsekvens av andre forhold som har skjedd fra det ene tidspunktet til det andre, har vi med en kontrollgruppe som også gjennomfører spørreundersøkelsene, men som ikke deltar i selve arrangementet.
-Et slikt oppsett er et av de mest vanlige felt-eksperimentelle design [@cook2002experimental].
-
-|         Gruppe            | Pretest | Treatment    | Post-test                           | 
-|--------------------:|--------:|-------------:|-----------:|
-| Kontrollgruppe       |  Spørreundersøkelse |              | Spørreundersøkelse     | 
-| Deltakergruppe     |  Spørreundersøkelse | Gruppediskusjon | Spørreundersøkelse     |
-
-Når vi går gjennom resultatene fokuserer vi på svarene til deltakerne *etter* at de har gjennomført gruppediskusjonene. 
-Det er dette målepunktet som er de autorative svarene, og som skal vurderes av politikerne.
-Samtidig analyserer vi i resultatdelen også i hvilken grad deltakerne endret holdninger fra før gruppediskusjonen, og om disse eventuelle holdningsendringene bevegde seg mer enn eventuelle holdningsendringer i kontrollgruppen.
 Deltakerne i den deliberative meningsmålingen blir delt inn i mindre grupper ledet av en moderator.
 Moderatorene til denne aktuelle meningsmålingen var rekruttert fra prosjektgruppen, men også frivillige studenter fra Institutt for sammenliknende politikk ved UiB bekledde disse postene. 
 I forkant var moderatorene briefet av prosjektleder og en svært erfaren representant for Stanford-teamet.
