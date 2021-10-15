@@ -53,12 +53,75 @@ p4 <- ggplot(dp_t_post, aes(x = factor(Q85_4), fill = fill)) +
 patchwork <- p1 + p2 + p3 +  p4
 patchwork + plot_annotation(title = 'Nytte av deliberativ meningsmåling', caption = 'Svarfordeling fra 0 = Bortkastet tid, til 10 = Ekstremt verdifullt, og hvor 5 = Nøyaktig på midten')
 ```
+
 ### 
 Spørsmål:
 
 > Og, i hvilken grad er du enig eller uenig i de følgende påstandene?
 
-TBA
+```{r Q86}
+p1 <- ggplot(dp_t_post, aes(x = factor(Q86_1))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+ scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+   labs(title = 'Gruppelederne ga alle mulighet til å delta i diskusjonen', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+p1
+
+p2 <- ggplot(dp_t_post, aes(x = factor(Q86_2))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+   labs(title = 'Medlemmene i gruppen min deltok relativt likt i diskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+p2
+
+p3 <- ggplot(dp_t_post, aes(x = factor(Q86_3))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+  labs(title = 'Gruppelederne prøvde å sørge for at motstridene argumenter ble vurdert', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+p3
+
+p4 <- ggplot(dp_t_post, aes(x = factor(Q86_4))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+   labs(title = 'De viktige aspektene av sakene ble dekket i gruppediskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+p4
+
+p5 <- ggplot(dp_t_post, aes(x = factor(Q86_5))) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+   labs(title = 'Jeg lærte mye om folk som er annerledes enn meg – om hvordan de og livene deres er', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic()
+p5
+
+# patchwork <- p1 / p2 / p3 / p4 / p5
+
+#patchwork + plot_annotation(title = 'Evaluering av gruppediskusjoner')
+```
+## Vektlegging av resultater
+
+Spørsmål:
+
+>Resultatene fra undersøkelsen du har deltatt i vil bli formidlet til politikerne i Bergen kommune. 
+Hvor mye mener du at resultatet fra undersøkelsen skal vektlegges når politikerne skal fatte den endelige beslutningen i saken?
+
+```{r Q91}
+plot <- ggplot(dp_t_post, aes(x = factor(Q91), fill = fill)) +
+  geom_bar(aes(y = (..count..) / sum(..count..))) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+   labs(title = "Vektlegging av resultater", x = 'Svarfordeling fra 0 = Skal ikke vektlegges i det hele tatt til 10 = Må følges uansett', y = 'Prosent', fill = '')  +
+  theme_classic()
+  
+plot
+
+```
 
 ## Erfaringer
 

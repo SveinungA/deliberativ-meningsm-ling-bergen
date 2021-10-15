@@ -1,27 +1,5 @@
 # Dokken {#dokken}
 
-```{r import-dp-surveys}
-#last inn data fra spørreundersøkelsene
-pre <- sjlabelled::read_spss(here("Data", "presurvey.sav"))
-post_c <- sjlabelled::read_spss(here("Data", "post-survey-control.sav"))
-post_t <- sjlabelled::read_spss(here("Data", "post-survey-treatment.sav"))
-```
-
-```{r merge-dp-surveys}
-#slå sammen undersøkelsene til en fil
-post_c <- post_c %>% mutate(survey = 'post_c') %>% var_labels(survey= 'Survey')
-post_t <- post_t %>% mutate(survey = 'post_t') %>% var_labels(survey= 'Survey')
-pre <- pre %>% mutate(survey = 'pre') %>% var_labels(survey= 'Survey')
-
-dp_c <- full_join(post_c, pre)
-dp_t <- full_join(post_t, pre)
-
-#Filtrer på de som kan bekreftes å ha svart på både pre og post
-#dp_c <- dp_c %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
-#dp_t <- dp_t %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
-```
-
-
 ## Gruppediskusjoner
 
 Kvantitativ tekstanalyse av gruppesamtalene om Dokken.
@@ -47,10 +25,6 @@ Spørsmål:
 Selv om godshavnen flyttes er det fremdeles flere andre havneaktiviteter som kan bli værende på Dokken eller et annet sted i Bergen sentrum. Alternativet er å flytte oppgavene ut av sentrum til andre områder, og heller bruke Dokken til andre formål.
 Noen mener at cruisetrafikken bør bli værende i sentrum for å legge til rette for turistnæringen. Andre mener den bør legges utenfor sentrum fordi skipene forurenser og tar opp verdifull plass sentralt i byen. Hva mener du?
 
-```{r hist}
-dp_t_post <- dp_t %>% 
-  filter(survey == 'post_t', !is.na(Q86_1))
-```
 
 ```{r Q3}
 dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q3 %in% 1:5 ~ "Mindretall",

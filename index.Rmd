@@ -36,6 +36,33 @@ ggsave2 <- function(filename, ...) {
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, digits = 0)
 ```
 
+```{r import-dp-surveys}
+#last inn data fra spørreundersøkelsene
+pre <- sjlabelled::read_spss(here("Data", "presurvey.sav"))
+post_c <- sjlabelled::read_spss(here("Data", "post-survey-control.sav"))
+post_t <- sjlabelled::read_spss(here("Data", "post-survey-treatment.sav"))
+```
+
+```{r merge-dp-surveys}
+#slå sammen undersøkelsene til en fil
+post_c <- post_c %>% mutate(survey = 'post_c') %>% var_labels(survey= 'Survey')
+post_t <- post_t %>% mutate(survey = 'post_t') %>% var_labels(survey= 'Survey')
+pre <- pre %>% mutate(survey = 'pre') %>% var_labels(survey= 'Survey')
+
+dp_c <- full_join(post_c, pre)
+dp_t <- full_join(post_t, pre)
+
+#Filtrer på de som kan bekreftes å ha svart på både pre og post
+#dp_c <- dp_c %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
+#dp_t <- dp_t %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
+
+# Filtrer bort deltakere som ikke fullførte evalueringen av arrangementet
+dp_t_post <- dp_t %>% 
+  filter(survey == 'post_t', !is.na(Q86_1))
+```
+
+
+
 # Om rapporten
 
 Denne rapporten presenterer resultatene fra en deliberativ meningsmåling i Bergen våren 2021.
