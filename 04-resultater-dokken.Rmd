@@ -35,7 +35,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q3), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Cruisetrafikken ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 ```
@@ -58,7 +59,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q4), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Utenlandsferger ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -81,7 +83,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q5), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Utfylling i sjø?", x = 'Svarfordeling fra 0 = Motsetter seg til 10 = Støtter', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -107,7 +110,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q6), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Sjølinjen", x = 'Svarfordeling fra 0 = Fortsatt havneaktivitet, til 10 = Rekreasjon eller natur- og dyreliv', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -134,7 +138,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q7), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Boligpolitikk", x = 'Svarfordeling fra 0 = Sikre rimelige boliger, til 10 = Ikke blande seg inn', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -161,7 +166,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q8), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Parker vs. idrettsanlegg", x = 'Svarfordeling fra 0 = Prioritere parker, til 10 = Prioritere idrettsanlegg', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -189,7 +195,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q9), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Kalle opp nye gatenavn etter kvinner", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic() +
+  scale_fill_grey()
   
 plot
 
@@ -309,7 +316,8 @@ plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
   coord_flip() +
   labs(title = 'Holdningsendringer før og etter arrangement', subtitle = 'Dokken', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
   geom_hline(aes(yintercept=0), linetype = 'dotted') +
-  theme_classic()
+  theme_classic() +
+  scale_colour_grey()
 
 plot2
 

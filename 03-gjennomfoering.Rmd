@@ -32,7 +32,7 @@ IT-avdelingen sto også for den tekniske støtten ifb med gjennomføringen av pa
 Beslutning om å velge denne løsningen ble tatt relativt sent i prosessen gitt at arrangementet var satt til juni 2021. 
 Da avklaringen rundt den tekniske løsningen var på plass, de nødvendige personvernmessige tillatelser gitt og datasikkerhet ivaretatt, startet arbeidet med å trekke ut og invitere deltakere til panelet. 
 
-## Deliberativ online meningsmåling
+## Design
 
 Den deliberative meningsmålingen som ble valgt som metode for dette online panelet er en bestemt prosedyre for å invitere innbyggere til diskusjon og meningsutveksling om forhåndsbestemte politiske spørsmål. 
 Grunnideen er den samme som det vi iht prosjektsøknaden planla for den fysiske samlingen våren 2021. 
@@ -92,8 +92,9 @@ p1 <- ggplot(alder, aes(x = factor(Q32))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('<1940', '1940-1949', '1950-1959', '1960-1969', '1970-1979', '1980-1989', '>1989'), guide = guide_axis(n.dodge = 2)) +
-   labs(title = "Aldersfordeling på deltakerne", x = '', y = '', fill = '')  +
-  theme_classic()
+   labs(title = "Aldersfordeling", x = '', y = '', fill = '')  +
+  theme_classic() +
+  scale_fill_grey()
   
 
 # Kjønn
@@ -106,8 +107,9 @@ p2 <- ggplot(kjonn, aes(x = factor(Q31))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Kvinne', 'Mann')) +
-   labs(title = "Kjønnsfordeling på deltakerne", x = '', y = '', fill = '')  +
-  theme_classic()
+   labs(title = "Kjønnsfordeling", x = '', y = '', fill = '')  +
+  theme_classic() +
+  scale_fill_grey()
   
 # Statsborgerskap
 statsborger <- pre %>% 
@@ -118,35 +120,53 @@ statsborger <- pre %>%
 p3 <- ggplot(statsborger, aes(x = factor(Q33))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('Norsk statsborger', 'Statsborger i annet land', 'Begge deler'), , guide = guide_axis(n.dodge = 2)) +
-   labs(title = "Deltakernes statsborgerskap", x = '', y = '', fill = '')  +
-  theme_classic()
+  scale_x_discrete(labels = c('Norsk statsborger', 'Statsborger i annet land', 'Begge deler'), guide = guide_axis(n.dodge = 2)) +
+   labs(title = "Statsborgerskap", x = '', y = '', fill = '')  +
+  theme_classic() +
+  scale_fill_grey()
 
-# Landbakgrunn
-land <- pre %>% 
+#Inntekt
+inntekt <- pre %>% 
   filter(Q1 %in% post_t$Q1) %>% 
-  select(Q34) %>% 
-  filter(!is.na(Q34))
+  select(Q30) %>% 
+  filter(!is.na(Q30))
 
-p4 <- ggplot(land, aes(x = factor(Q34))) +
+p4 <- ggplot(inntekt, aes(x = factor(Q30))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('Nei', 'Selv', 'Begge foreldre', 'Mor', 'Far')) +
-   labs(title = "Innvandret til Norge", x = '', y = '', fill = '')  +
-  theme_classic()
+  scale_x_discrete(labels = c('<150K', '150K-300K', '300K-400K', '400K-500K', '500K-600K', '600K-700k', '700K-800K', '800K-900K', '900K-1M', '>1M'), guide = guide_axis(n.dodge = 2)) +
+   labs(title = "Inntekt", x = '', y = '', fill = '')  +
+  theme_classic() +
+  scale_fill_grey()
+
+#Bydel
+bydel <- pre %>% 
+  filter(Q1 %in% post_t$Q1) %>% 
+  select(Q27) %>% 
+  filter(!is.na(Q27)) 
+
+p5 <- ggplot(bydel, aes(x = factor(Q27))) +
+  geom_bar(aes(y = (..count..) / sum(..count..)),
+           position = position_dodge()) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_x_discrete(labels = c('Arna', 'Åsane', 'Ytrebygda', 'Fana', 'Laksevåg', 'Fyllingsdalen', 'Årstad', 'Bergenhus')) +
+   labs(title = "Bosted", x = '', y = '', fill = '')  +
+  theme_classic() +
+  scale_fill_grey()
   
-p1 + p2 + p3 + p4
+(p1 + p2 + p3 + p4) / p5 +
+  plot_annotation(title = 'Bakgrunnen til deltakerne i den deliberative meningsmålingen')
 ```
+>Obs! En søyle mangler, fordi ingen er derfra. Jobber med å løse saken. [se her](https://www.aj2duncan.com/blog/missing-data-ggplot2-barplots/).
 
 ## Hva snakket de om?
 
 Sakene som skulle inngå i undersøkelsen og også i den deliberative meningsmålingen ble bestemt av Bergen kommune i samråd med forskerne.
 Det ble valgt ut to saker; fornying av havneområdet Dokken i Bergen sentrum og utvikling av bilfrie områder i Bergen uten om sentrum.
-Det ble utarbeidet et omfattende informasjonsmateriale (se vedlegg) om de to sakene som ble sendt til paneldeltakerne i forkant av arrangementet. 
+Det ble utarbeidet et omfattende informasjonsmateriale (se \@ref(informasjonsmateriale))  om de to sakene som ble sendt til paneldeltakerne i forkant av arrangementet. 
 I dette materiale ble det gitt informasjon om hva saken dreide seg om. 
 Det ble videre lagt frem konkrete forslag som skulle være diskusjonstema i den deliberative meningsmålingen. 
 Til disse forslagene ble det presentert for- og motargument. 
-Det var sju forslag knyttet til Dokken-utbyggingen og ni knyttet til bilfrie soner. 
 
 I brevet som fulgte informasjonsmaterialet ble det sagt noe om hvordan innspillene fra den deliberative meningsmålingene vil bli behandlet videre i det kommunale systemet. 
 Byrådets vedtak fra april 2021 om nettopp dette ble gjengitt.

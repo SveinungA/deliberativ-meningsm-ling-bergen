@@ -38,7 +38,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q11), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Bergen sentrum mer bilfritt enn i dag?", x = 'Svarfordeling fra 0 = Mer bilfritt, til 10 = Ikke mer bilfritt', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -66,7 +67,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q12), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Sentrumsnære strøk vs. ytre bydeler", x = 'Svarfordeling fra 0 = Prioritere sentrum, til 10 = Prioritere ytre bydeler', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -92,7 +94,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q13), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Mange små vs. store få bilfrie områder", x = 'Svarfordeling fra 0 = Mange små, til 10 = Store få', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -119,7 +122,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q14), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Stenge parkeringsplasser i helgene", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -150,7 +154,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q15), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Andel parkeringsplasser til private biler vs. bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -176,7 +181,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q16))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Skilt med gjennomkjøring forbudt', 'Fysiske hindringer \nsom tvinger ned farten', 'Fysiske sperrer \nsom kan fjernes for nødvendig trafikk', 'Lavest mulig fartsgrense (30 km/t)'), drop = FALSE, guide = guide_axis(n.dodge=2)) +
    labs(title = "Reservere parkering til bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -201,7 +207,8 @@ p1 <- ggplot(dp_t_post, aes(x = factor(Q17_1))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Biler', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
 
 
 p2 <- ggplot(dp_t_post, aes(x = factor(Q17_2))) +
@@ -209,35 +216,40 @@ p2 <- ggplot(dp_t_post, aes(x = factor(Q17_2))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Sykler', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
 
 p3 <- ggplot(dp_t_post, aes(x = factor(Q17_3))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Elsykler', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
 
 p4 <- ggplot(dp_t_post, aes(x = factor(Q17_4))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Elsparkesykler', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
 
 p5 <- ggplot(dp_t_post, aes(x = factor(Q17_5))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Sykkelparkering', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
 
 p6 <- ggplot(dp_t_post, aes(x = factor(Q17_6))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10' ), drop = FALSE) +
    labs(title = 'Sykkelverksted', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 patchwork <- p1 + p2 + p3 +  p4 + p5 + p6
 patchwork + plot_annotation(title = 'Villighet til å dele transportmidler', caption = 'Svarfordeling fra 0 = Ikke villig, til 10 = Villig')
@@ -262,7 +274,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q18), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Avstand til parkering", x = 'Svarfordeling fra 0 = Gåavstand til fasiliterer, til 10 = Parkering like ved bolig', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -288,7 +301,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q19), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Bilfritt nabolag", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -315,7 +329,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q20), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Hvem skal bestemme om nabolag skal være bilfritt", x = 'Svarfordeling fra 0 = Nabolaget skal bestemme, til 10 = Kommunen skal bestemme', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -345,7 +360,8 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q21), fill = fill)) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
    labs(title = "Redusere fart", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
-  theme_classic()
+  theme_classic()+
+  scale_fill_grey()
   
 plot
 
@@ -453,7 +469,8 @@ plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
   coord_flip() +
    labs(title = 'Holdningsendringer før og etter arrangement', subtitle = 'Bilfrie områder', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
   geom_hline(aes(yintercept=0), linetype = 'dotted') +
-  theme_classic()
+  theme_classic()+
+  scale_colour_grey()
 
 plot2
 ```

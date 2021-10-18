@@ -1,0 +1,6 @@
+# Informasjonsmateriale {#informasjonsmateriale}
+
+
+> Informasjonsmateriale sendt til deltakerne før arrangementet
+
+<!-- \includepdf[pages={-}]{Informasjonsmateriale.pdf} -->

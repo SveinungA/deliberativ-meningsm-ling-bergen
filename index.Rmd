@@ -72,7 +72,16 @@ Samarbeidspartnere er Universitetet i Bergen og Stanford University.
 
 Formålet med prosjektet er å utvide verktøykassen for lokaldemokratiet i kommunen ved å ta i bruk nye metoder for involvering av innbyggerne i politikken.
 Det  er initiert på bakgrunn av vedtak i Bergen bystyre i møte 24.10.2018, sak 235/18, der bystyret fattet følgende vedtakspunkt: 
-«Bystyret ber om at byborgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.» 
+>Bystyret ber om at borgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.
+
+En deliberativ meningsmåling er en variant av et borgerpanel.
+
+Byrådet behandlet videre saken i møtet 29.04.2021 sak 1135/21 og fattet følgende vedtak: 
+>1. Program for bilfrie soner i bydelene og arealstrategi for Dokken brukes som diskusjonstemaer i 
+borgerpanelet.  
+2. Byrådet vil ta stilling til innspillene fra borgerpanelet i de politiske saksfremleggene som følger 
+sakene i vedtakspunkt 1, og innspillene skal være selvstendige vedlegg i saksgrunnlaget frem mot 
+endelig politisk behandling.
 
 
 ```{r include=FALSE}

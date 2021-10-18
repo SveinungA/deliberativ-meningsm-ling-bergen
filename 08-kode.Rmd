@@ -1,0 +1,4 @@
+# Appendiks: All kode brukt for å lage denne rapporten
+
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```
