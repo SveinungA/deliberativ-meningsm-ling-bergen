@@ -18,7 +18,7 @@ Denne politiske ulikheten sammenfaller ofte med andre typer ulikhet i samfunnet 
 Den politiske ulikheten gir seg utslag blant annet i lavere valgdeltakelse og engasjement i politiske partier, både nasjonalt og lokalt. 
 
 Norge er generelt et land med høy tillit og høy politisk deltakelse, men også i vårt land er det tydelige tegn på lignende mønstre.
-Fimreite-rapporten fra 2018 analyserte valgdeltakelsen til alle kommunens innbyggere med stemmerett i 2015-valget, og fant store forskjeller basert på sosiale bakgrunnsvariabler som alder, utdanning, og kjønn:
+Fimreite-rapporten analyserte valgdeltakelsen til alle kommunens innbyggere med stemmerett i 2015-valget, og fant store forskjeller basert på sosiale bakgrunnsvariabler som alder, utdanning, og kjønn:
 Valgdeltakelsen blant unge menn uten høyere utdannelse var ned mot 30 prosent, som er halvparten av nivået for den samlede valgdeltakelsen det året.
 Også geografisk var det store forskjeller.
 I Vadmyra var valgdeltakelsen på 51 prosent, mens på Bønes var den på 72 prosent.
@@ -34,10 +34,13 @@ Bergen kommune og forskningsinstitusjonene NORCE og Universitetet i Bergen har d
 Flere av forskerne som var involvert i lokaldemokratiutvalget er nå med i dette samarbeidsprosjektet, deriblant utvalgets leder og sekretær. 
 Med på laget har vi fått kolleger fra Stanford University, som har utviklet *deliberativ meningsmåling* som metode for å gjennomføre borgerpanel.
 
+Når det gjøres riktig har denne typen demokratiarrangementer potensiale til å lede til bedre beslutninger.
+Videre kan de styrke innbyggernes oppfatninger om at den demokratiske prosessen er rettferdig og tar hensyn til innbyggernes synspunkter, som i sin tur regnes som en avgjørende bestanddel av et robust og legitimt demokrati [@marien2019fair].
+
 ## Hva er en deliberativ meningsmåling?
 Deliberativ meningsmåling viser til en bestemt prosedyre for å invitere innbyggere til diskusjon og meningsutveksling om forhåndsbestemte politiske spørsmål. 
 
-Hovedideen bak bruken av deliberativ meningsmåling i den politiske prosessen er å få vite hva innbyggerne mener når de får tenkt seg om og vurdert argumenter for et politisk forslag.
+Hovedideen bak bruken av deliberativ meningsmåling i den politiske prosessen er å få vite hva innbyggerne mener når de får tenkt seg om og vurdert argumenter for et politisk forslag [@fishkin2018democracy].
 I korte trekk går prosessen ut på at man inviterer et representativt utvalg typisk på hundre eller flere innbyggere til å sette av en til to dager for å diskutere politikk med sine medborgere. 
 De tar stilling til forslag, blir presentert for for- og motargumenter, og diskuterer sakene i mindre grupper på rundt 10 personer. 
 Gruppene ledes av moderatorer som styrer diskusjonen, og sørger for at alle får anledning til å bli hørt.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  18 OCT 2021 15:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  19 OCT 2021 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1036,6 +1036,11 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 [4]
 Kapittel 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--186
+
+ []
+
 [5
 
 ] [6
@@ -1046,40 +1051,31 @@ Kapittel 2.
 
 ]
 Kapittel 3.
-[9] [10]
-Kapittel 4.
-[11
+
+Package natbib Warning: Citation `dahlberg2015democratic' on page 9 undefined o
+n input line 209.
+
+
+Package natbib Warning: Citation `norris2011democratic' on page 9 undefined on 
+input line 209.
+
+
+Package natbib Warning: Citation `dalton2004democratic' on page 9 undefined on 
+input line 210.
+
+[9] [10] [11] [12
 
 ]
-Underfull \hbox (badness 1033) in paragraph at lines 241--245
+Kapittel 4.
+[13]
+Underfull \hbox (badness 1033) in paragraph at lines 275--279
 \TU/lmr/m/n/10 kommunens personvernombud vurderte dette annerledes. Vurderingen
  var
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 246--251
-[]\TU/lmr/m/n/10 SODP-løsningen måtte dermed forlates, og valget falt på å arra
-ngere
- []
-
-
-Package natbib Warning: Citation `cook2002experimental' on page 12 undefined on
- input line 273.
-
-
-Overfull \hbox (51.02225pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 12 \TU/lmr/m/sl/10 KAPITTEL 4.  GJENNOMFØRING AV DEN DELIBERATIV
-E MENINGSMÅLINGEN
- []
-
-[12] [13]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf Grap
-hic file (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
-[][]
- []
+Package natbib Warning: Citation `cook2002experimental' on page 14 undefined on
+ input line 297.
 
 
 Overfull \hbox (51.02225pt too wide) has occurred while \output is active
@@ -1087,52 +1083,46 @@ Overfull \hbox (51.02225pt too wide) has occurred while \output is active
 E MENINGSMÅLINGEN
  []
 
-[14] [15]
-Overfull \hbox (51.02225pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 KAPITTEL 4.  GJENNOMFØRING AV DEN DELIBERATIV
-E MENINGSMÅLINGEN
- []
+[14]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf Grap
+hic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf>
 
-[16]
-Kapittel 5.
-
-Underfull \hbox (badness 1824) in paragraph at lines 390--391
-\TU/lmr/m/n/10 Svarene baseres på undersøkelsen \TU/lmr/m/it/10 deltakerne \TU/
-lmr/m/n/10 fikk \TU/lmr/m/it/10 etter \TU/lmr/m/n/10 den deliberative
- []
-
-[17
-
-]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf Graphic fi
-le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf>
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf Graphic fi
-le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
-[][]
- []
-
-[18]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
-le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--443
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf Graphic fi
-le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf>
+[15]
+Overfull \hbox (51.02225pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 16 \TU/lmr/m/sl/10 KAPITTEL 4.  GJENNOMFØRING AV DEN DELIBERATIV
+E MENINGSMÅLINGEN
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--458
+[16] [17]
+Overfull \hbox (51.02225pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 18 \TU/lmr/m/sl/10 KAPITTEL 4.  GJENNOMFØRING AV DEN DELIBERATIV
+E MENINGSMÅLINGEN
+ []
+
+[18]
+Kapittel 5.
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf Graphic fi
+le (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[19
+
+]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf Graphic fi
+le (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
 [][]
  []
 
@@ -1140,18 +1130,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--458
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [20]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf Graphic fi
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
 le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf>
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
+[][]
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [21]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf Graphic fi
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf Graphic fi
 le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf>
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--490
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
 [][]
  []
 
@@ -1159,13 +1154,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 488--490
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [22]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf Graphic fi
+le (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf Graphic fi
+le (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[24]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[23]
+[25]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figu
 re2-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figur
@@ -1173,100 +1187,139 @@ e2-1.pdf>
 
 Underfull \vbox (badness 2856) has occurred while \output is active []
 
-[24]
-Underfull \hbox (badness 5787) in paragraph at lines 523--526
+[26]
+Underfull \hbox (badness 5787) in paragraph at lines 554--557
 []\TU/lmr/m/n/10 Vi observerer et mønster hvor deltakergruppen har kraftigere h
 old-
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 523--526
+Underfull \hbox (badness 1496) in paragraph at lines 554--557
 \TU/lmr/m/n/10 ningsendringer enn kontrollgruppen har. Det er også flere tilfel
 ler hvor
  []
 
-[25] [26
+[27] [28
 
 ]
 Kapittel 6.
-[27]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf>
-[28]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[29]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[30]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q13-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q13-1.pdf>
-[29]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 31
+ []
+
+[31]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--622
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30]
+[32]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[31]
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 33
+ []
+
+[33]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32]
+[34]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[33]
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 35
+ []
+
+[35]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[34]
+[36]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[35]
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 37
+ []
+
+[37]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[36]
+[38]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--736
+Underfull \hbox (badness 10000) in paragraph at lines 722--724
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[37]
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 39
+ []
+
+[39]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2
 -1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2-
@@ -1274,7 +1327,7 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[38] [39] [40
+[40] [41] [42
 
 ]
 Kapittel 7.
@@ -1282,76 +1335,61 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf>
 
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
+[][]
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[41]
+[43]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf>
 
+Underfull \hbox (badness 10000) in paragraph at lines 766--768
+[][]
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[42]
+[44]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-
 manage-1-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-m
 anage-1-1.pdf>
-[43]
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--775
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[45]
+
+LaTeX Warning: Reference `political-efficacy-manage-1' on page 46 undefined on 
+input line 776.
+
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf>
-[44] [45] [46]
+
+Underfull \vbox (badness 5175) has occurred while \output is active []
+
+[46] [47] [48] [49] [50
+
+]
 Kapittel 8.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 866.
-[47
-
-]
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
- []
-
-[48]
-Overfull \vbox (2.28998pt too high) detected at line 1667
- []
-
-[49]
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
- []
-
-[50]
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
 [51]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1361,19 +1399,19 @@ LAGE DENNE RAPPORTEN
  []
 
 [52]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 [53]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1382,16 +1420,12 @@ Overfull \hbox (57.46895pt too wide) has occurred while \output is active
 LAGE DENNE RAPPORTEN
  []
 
-[54]
-Overfull \vbox (2.27998pt too high) detected at line 1667
- []
-
-[55]
-Underfull \vbox (badness 10000) detected at line 1667
+[54] [55]
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1401,15 +1435,15 @@ LAGE DENNE RAPPORTEN
  []
 
 [56]
-Overfull \vbox (2.21999pt too high) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 [57]
-Underfull \vbox (badness 10000) detected at line 1667
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1667
+Overfull \vbox (2.28998pt too high) detected at line 1673
  []
 
 
@@ -1419,19 +1453,19 @@ LAGE DENNE RAPPORTEN
  []
 
 [58]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 [59]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1441,19 +1475,19 @@ LAGE DENNE RAPPORTEN
  []
 
 [60]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 [61]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1463,15 +1497,19 @@ LAGE DENNE RAPPORTEN
  []
 
 [62]
-Overfull \vbox (1.66998pt too high) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 [63]
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1667
+Underfull \vbox (badness 10000) detected at line 1673
  []
 
 
@@ -1480,17 +1518,57 @@ Overfull \hbox (57.46895pt too wide) has occurred while \output is active
 LAGE DENNE RAPPORTEN
  []
 
-[64] [65]
+[64]
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+[65]
+Overfull \vbox (1.38998pt too high) detected at line 1673
+ []
+
+
 Overfull \hbox (57.46895pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
 LAGE DENNE RAPPORTEN
  []
 
-[66
+[66]
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+[67]
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1673
+ []
+
+
+Overfull \hbox (57.46895pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
+LAGE DENNE RAPPORTEN
+ []
+
+[68] [69]
+Overfull \hbox (57.46895pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
+LAGE DENNE RAPPORTEN
+ []
+
+[70
 
 ]
 Kapittel 9.
-(./Rapport-deliberativ-meningsmaaling.bbl [67] [68
+(./Rapport-deliberativ-meningsmaaling.bbl [71] [72
 
 ]
 
@@ -1500,18 +1578,21 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 Package natbib Warning: There were undefined citations.
 
-[69] (./Rapport-deliberativ-meningsmaaling.aux)
+[73] (./Rapport-deliberativ-meningsmaaling.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Rapport-deliberativ-meningsmaaling.out' has 
 not changed.
-(rerunfilecheck)             Checksum: D821C818FBB8DEF2DB53B8D3AFA0658B;4444.
+(rerunfilecheck)             Checksum: BEA25DA1E1929E085BE10AFC3E516B23;4071.
  ) 
 Here is how much of TeX's memory you used:
- 19419 strings out of 478492
- 350213 string characters out of 5860434
- 1129131 words of memory out of 5000000
- 39379 multiletter control sequences out of 15000+600000
+ 19416 strings out of 478492
+ 350166 string characters out of 5860434
+ 1130699 words of memory out of 5000000
+ 39376 multiletter control sequences out of 15000+600000
  410011 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,6n,120p,1049b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,9n,120p,1049b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Rapport-deliberativ-meningsmaaling.pdf (69 pages).
+Output written on Rapport-deliberativ-meningsmaaling.pdf (73 pages).

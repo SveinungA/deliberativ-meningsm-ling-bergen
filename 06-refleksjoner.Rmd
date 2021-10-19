@@ -16,8 +16,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_1 %in% 1:5 ~ "Mindretall"
 p1 <- ggplot(dp_t_post, aes(x = factor(Q85_1), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' ), drop = FALSE) +
-   labs(title = 'Gruppediskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke')) +  labs(title = 'Gruppediskusjonene', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -27,8 +27,9 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_2 %in% 1:5 ~ "Mindretall"
 p2 <- ggplot(dp_t_post, aes(x = factor(Q85_2), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' ), drop = FALSE) +
-   labs(title = 'Informasjonsmaterialet', x = ' ', y = 'Prosent', fill = '')  +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke')) +
+  labs(title = 'Informasjonsmaterialet', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -38,7 +39,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_3 %in% 1:5 ~ "Mindretall"
 p3 <- ggplot(dp_t_post, aes(x = factor(Q85_3), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke' )) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke')) +
    labs(title = 'Plenumsdiskusjonene', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
@@ -49,7 +51,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q85_4 %in% 1:5 ~ "Mindretall"
 p4 <- ggplot(dp_t_post, aes(x = factor(Q85_4), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '    Vet\n  ikke' ), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '   Vet\n  ikke')) +
    labs(title = 'Arrangementet som helhet', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -169,8 +172,8 @@ efficacy_post_t <- post_t %>%
 
 
 efficacy <- bind_rows(list(efficacy_pre_c, efficacy_pre_t, efficacy_post_c, efficacy_post_t), .id = "group") %>% 
- mutate(survey = case_when(group == c(1:2) ~ 'pre',
-                           group == c(3:4) ~ 'post'),
+ mutate(survey = case_when(group == c(1:2) ~ 'Før deliberasjon',
+                           group == c(3:4) ~ 'Etter deliberasjon'),
         group = (case_when(group %in% c(1, 3) ~ 'Kontrollgruppe',
                            group %in% c(2, 4) ~ 'Deltakergruppe')))
 
@@ -261,7 +264,8 @@ Hvor mye mener du at resultatet fra undersøkelsen skal vektlegges når politike
 plot <- ggplot(dp_t_post, aes(x = factor(Q91))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Vektlegging av resultater", x = 'Svarfordeling fra 0 = Skal ikke vektlegges i det hele tatt til 10 = Må følges uansett', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()

@@ -1,4 +1,4 @@
-# Gjennomføring av den deliberative meningsmålingen {#implementation}
+# Gjennomføring {#implementation}
 
 ## Plan A, B –- og C
 

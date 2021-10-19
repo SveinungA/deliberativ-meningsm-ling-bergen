@@ -27,7 +27,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q3 %in% 1:5 ~ "Mindretall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q3), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Cruisetrafikken ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -49,7 +50,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q4 %in% 1:5 ~ "Mindretall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q4), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Utenlandsferger ut av sentrum?", x = 'Svarfordeling fra 0 = Må bli værende til 10 = Må flyttes ut', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -71,7 +73,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q5 %in% 1:5 ~ "Mindretall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q5), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Utfylling i sjø?", x = 'Svarfordeling fra 0 = Motsetter seg til 10 = Støtter', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -96,7 +99,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q6 %in% 1:5 ~ "Mindretall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q6), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Sjølinjen", x = 'Svarfordeling fra 0 = Fortsatt havneaktivitet, til 10 = Rekreasjon eller natur- og dyreliv', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -122,7 +126,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q7 %in% 1:5 ~ "Flertall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q7), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Boligpolitikk", x = 'Svarfordeling fra 0 = Sikre rimelige boliger, til 10 = Ikke blande seg inn', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -148,7 +153,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q8 %in% 1:5 ~ "Flertall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q8), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Parker vs. idrettsanlegg", x = 'Svarfordeling fra 0 = Prioritere parker, til 10 = Prioritere idrettsanlegg', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -176,7 +182,8 @@ dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q9 %in% 1:5 ~ "Mindretall",
 plot <- ggplot(dp_t_post, aes(x = factor(Q9), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke'), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
+                   labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Kalle opp nye gatenavn etter kvinner", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
   theme_classic() +
   scale_fill_grey()
