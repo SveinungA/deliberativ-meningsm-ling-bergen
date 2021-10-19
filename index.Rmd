@@ -15,18 +15,19 @@ description: "Rapport til Byrådet i Bergen om gjennomføringen av deliberativ m
 ---
 
 ```{r setup, include=FALSE}
-if(!require("broom")){install.packages("broom");  library(broom)}
-if(!require("ggdag")){install.packages("ggdag");  library(ggdag)}
 if(!require("here")){install.packages("here");  library(here)}
 if(!require("haven")){install.packages("haven");  library(haven)}
-if(!require("here")){install.packages("here");  library(here)}
 if(!require("kableExtra")){install.packages("kableExtra");  library(kableExtra)}
 if(!require("knitr")){install.packages("knitr");  library(knitr)}
 if(!require("naniar")){install.packages("naniar");  library(naniar)}
 if(!require("patchwork")){install.packages("patchwork");  library(patchwork)}
+if(!require("quanteda")){install.packages("quanteda");  library(quanteda)}
 if(!require("readxl")){install.packages("readxl");  library(readxl)}
 if(!require("sjlabelled")){install.packages("sjlabelled");  library(sjlabelled)}
-if(!require("srvyr")){install.packages("srvyr");  library(srvyr)}
+if(!require("spacyr")){install.packages("spacyr");  library(spacyr)}
+if(!require("stringr")){install.packages("stringr");  library(stringr)}
+if(!require("text2vec")){install.packages("text2vec");  library(text2vec)}
+if(!require("tidytext")){install.packages("tidytext");  library(tidytext)}
 if(!require("tidyverse")){install.packages("tidyverse");  library(tidyverse)}
 
 ggsave2 <- function(filename, ...) {
@@ -65,18 +66,20 @@ dp_t_post <- dp_t %>%
 
 # Om rapporten
 
-Denne rapporten presenterer resultatene fra en deliberativ meningsmåling i Bergen våren 2021.
+Denne rapporten presenterer resultatene fra en deliberativ meningsmåling i Bergen sommeren 2021.
 Arrangementet ble gjennomført som et ledd i det forskningsrådsfinansierte prosjektet *Demokratisk innovasjon i praksis: Forskning på medvirkning og legitimitet i kommunale beslutningsprosesser (Demovate)* (prosjektnummer 295892). 
 Prosjektansvarlig er Bergen kommune, og faglig ledes prosjektet av forskningsinstitusjonen NORCE.  
 Samarbeidspartnere er Universitetet i Bergen og Stanford University. 
 
 Formålet med prosjektet er å utvide verktøykassen for lokaldemokratiet i kommunen ved å ta i bruk nye metoder for involvering av innbyggerne i politikken.
 Det  er initiert på bakgrunn av vedtak i Bergen bystyre i møte 24.10.2018, sak 235/18, der bystyret fattet følgende vedtakspunkt: 
+
 >Bystyret ber om at borgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.
 
-En deliberativ meningsmåling er en variant av et borgerpanel.
+En deliberativ meningsmåling er en variant av borgerpanel.
 
 Byrådet behandlet videre saken i møtet 29.04.2021 sak 1135/21 og fattet følgende vedtak: 
+
 >1. Program for bilfrie soner i bydelene og arealstrategi for Dokken brukes som diskusjonstemaer i 
 borgerpanelet.  
 2. Byrådet vil ta stilling til innspillene fra borgerpanelet i de politiske saksfremleggene som følger 

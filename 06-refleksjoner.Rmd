@@ -1,11 +1,11 @@
 # Refleksjoner {#refleksjoner}
 
 ## Viktigste funn
+Kommer.
 
 ## Deltakernes evaluering
 
 ### Nytte av deliberativ meningsmåling
-Spørsmål:
 
 > På en skala fra 0 til 10, der 0 er «bortkastet tid», 10 er «ekstremt verdifullt» og 5 er nøyaktig i midten, hvor verdifullt var hver av de følgende delene for å hjelpe deg med å avklare dine synspunkter på sakene?
 
@@ -54,12 +54,12 @@ p4 <- ggplot(dp_t_post, aes(x = factor(Q85_4), fill = fill)) +
   theme_classic() +
   scale_fill_grey()
 
-patchwork <- p1 + p2 + p3 +  p4
+patchwork <- p4 + p2 + p3 + p1
 patchwork + plot_annotation(title = 'Nytte av deliberativ meningsmåling', caption = 'Svarfordeling fra 0 = Bortkastet tid, til 10 = Ekstremt verdifullt, og hvor 5 = Nøyaktig på midten')
 ```
+Tilbakemeldingene fra deltakerne var i stor grad at de hadde nytte av den deliberative meningsmålingen.
 
 ### Gruppene
-Spørsmål:
 
 > Og, i hvilken grad er du enig eller uenig i de følgende påstandene?
 
@@ -113,6 +113,7 @@ patchwork <- (p1 + p2) / (p3 + p4) / p5
 
 patchwork + plot_annotation(title = 'Evaluering av gruppediskusjoner')
 ```
+Evalueringen av gruppediskusjonene var også positive, om enn mer mot nøytralt enn de foregående evalueringsspørsmålene.
 
 ## Endringer i syn på politikk
 
@@ -225,8 +226,8 @@ efficacy_post_t <- post_t %>%
 
 
 efficacy <- bind_rows(list(efficacy_pre_c, efficacy_pre_t, efficacy_post_c, efficacy_post_t), .id = "group") %>% 
- mutate(survey = case_when(group == c(1:2) ~ 'pre',
-                           group == c(3:4) ~ 'post'),
+ mutate(survey = case_when(group == c(1:2) ~ 'Før deliberasjon',
+                           group == c(3:4) ~ 'Etter deliberasjon'),
         group = (case_when(group %in% c(1, 3) ~ 'Kontrollgruppe',
                            group %in% c(2, 4) ~ 'Deltakergruppe')))
 
@@ -243,10 +244,15 @@ p1 / p2
 
 
 ```
+Deltakerne fikk også to spørsmål som er vanlig å stille for å måle det som på engelsk kalles "political efficacy". 
+Det første spørsmålet måler i hvilken grad man opplever at man kan påvirke lokalpolitikken, og det andre måler i hvilken grad man syns at politikk er innviklet.
+
+Figur \@ref(political-efficacy-manage-1) viser at deltakerne har flyttet seg i "riktig" retning av hva man skulle forvente etter å ha deltatt i en deliberativ meningsmåling:
+De har større tro på at de kan ha en påvirkning på lokalpolitikk, og de synes i mindre grad enn før at politkk er innviklet.
+Kontrollgruppen har ikke den samme endringen.
+Samtidig er endringene for deltakerne såpass små at vi ikke kan si at forskjellen er statistisk signifikant.
 
 ## Vektlegging av resultater
-
-Spørsmål:
 
 >Resultatene fra undersøkelsen du har deltatt i vil bli formidlet til politikerne i Bergen kommune. 
 Hvor mye mener du at resultatet fra undersøkelsen skal vektlegges når politikerne skal fatte den endelige beslutningen i saken?
@@ -264,6 +270,12 @@ plot
 
 ```
 
+Deltakerne er informert om at svarene deres vil bli formidlet til politikerne i kommunen.
+Når de blir spurt om hvor mye vekt som skal legges på resultatene fra den deliberative meningsmålingen, så er svarene deres nyanserte.
+Vi tolker fordelingen slik hen at langt de fleste forstår at dette er ett innspill som må vurderes i sammenheng med mange andre forhold i de to såpass komplekse saksfeltene som arealutvikling på Dokken og planlegging av bilfrie områder er.
+Samtidig har deltakerne en forventning til at det blir tatt på alvor at de har brukt tid og ressurser på å diskutere saker som er viktige for byen, og hvor de kan gi et nyansert perspektiv fra vanlige innbyggeres ståsted.
+
+
 ## Erfaringer
 
 Korona-pandemien har gjort gjennomføringen av DEMOVATE-prosjektet svært utfordrende. 
@@ -271,12 +283,12 @@ Mye av ideen i prosjektet var å samle innbyggere fysisk til panel av ulik stør
 Gjennom dette ønsket vi å teste ut deliberasjonens betydning for synspunkter. 
 Det er imidlertid også viktig at vi på den måten kan få tak i innbyggernes synspunkter og argument på en grundigere og mer dyptgående måte enn i en ordinær meningsmåling. 
 Det sier seg selv at når fysiske møter ikke kunne arrangeres i stort sett hele prosjektperioden, har dette satt sitt preg på gjennomføringen og mulighetene for å høste erfaringer på de ønskete områdene. 
-At vi har fått teste ut en gjennomføring av en deliberativ meningsmåling online, er likevel en viktig bonus som kan ha overførselsverdi både til senere opplegg i Bergen kommune og til andre kommuner. 
+At vi har fått testet ut en gjennomføring av en deliberativ meningsmåling online, er likevel en viktig bonus som kan ha overførselsverdi både til senere opplegg i Bergen kommune og til andre kommuner. 
 Vi vil her oppsummere noen av våre viktigste erfaringer fra arrangementet.
 
 Personvernmessige utfordringer knyttet til lagring og overføring av data kom særlig i fokus i vårt opplegg. 
 Det har dels å gjøre med at vi hadde samarbeidspartnere utenfor Europa underlagt annen regulering enn GDPR. 
-Dette ble forsterket av usikkerhet knyttet til nylige dommer i EU-domstolen. 
+Dette ble forsterket av usikkerhet knyttet til nylige dommer i EU-domstolen (Schrems II). 
 Personvernmessige utfordringer har imidlertid også å gjøre med at bruken av digitale løsninger på området knyttet til deliberative samlinger der folk møtes og utveksler synspunkt over nettet, er nokså upløyd mark i Norge. 
 Det viste seg å være et svært krevende arbeid å få dette på plass, et arbeid som krever mye kunnskap både når det gjelder personvern, databehandling og juss.
 Å få utarbeidet gode rutiner og prosedyrer for databehandling og for gjennomføring av selve panelet vil være avgjørende for om denne typen panel skal la seg gjennomføre i fremtiden uten altfor mye forarbeide. 
@@ -289,7 +301,8 @@ Vi valgte å sende en postal invitasjon i utgangspunktet og en god del av dette 
 Det er tid- og kostnadskrevende. 
 Den første purringen ble gjort postalt mens den siste ble gjort via sms og telefon. 
 Det er et selvstendig poeng å rekruttere på en måte som treffer flest mulig av innbyggerne. 
-Vi vurderte det til å være via brev. Dette kan vurderes annerledes i andre prosjekt med andre målsetninger, men også en rekruttering via epost, krever oppfølging i invitasjonsfasen og når purringer skal gjennomføres. 
+Vi vurderte det til å være via brev.
+Dette kan vurderes annerledes i andre prosjekt med andre målsetninger, men også en rekruttering via epost, krever oppfølging i invitasjonsfasen og når purringer skal gjennomføres. 
 Vi fikk lave responsrater både på undersøkelsen (13.4) og til panelet (5). 
 Responsraten til undersøkelsen er ikke oppsiktsvekkende lav i forhold til det som kan være tilfellet i denne typen online surveys nå. 
 Til selve panelet som er en nyvinning i norsk sammenheng visste vi ikke hva som kunne forventes når det gjaldt påmelding. 
@@ -301,7 +314,8 @@ Det er antakelig ikke en for spenstig hypotese å anta at kun et fåtall av de s
 
 Gjennomføringen av selve den deliberative meningsmålingen gikk svært bra. 
 Det var få tekniske problemer og dagsorden ble fulgt til punkt og prikke. 
-Det var enkelt å få deltakere fra plenum og inn i grupper og vise versa. Svært lite tid gikk med til denne typen aktivitet.
+Det var enkelt å få deltakere fra plenum og inn i grupper og vise versa. 
+Svært lite tid gikk med til denne typen aktivitet.
 Vi skulle kanskje vært noe rausere med pausene. 
 Også i det digitale rommet trenger folk å koble av, hente påfyll med kaffe og trekke frisk luft. 
 

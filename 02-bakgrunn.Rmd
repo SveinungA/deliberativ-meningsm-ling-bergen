@@ -2,8 +2,8 @@
 
 Tidligere byrådsleder Harald Schjelderup satte i 2017 ned et utvalg, ledet av Prof. Anne Lise Fimreite, med formål å vurdere demokratiets tilstand i Bergen. 
 Utvalget vurderte blant annet hvilke muligheter innbyggerne i Bergen hadde for å påvirke politiske beslutninger i kommunen, og anbefalte at man søkte å utvikle og forbedre disse mulighetene. 
-I utvalgets rapport “Byen og nærdemokratiet” ble såkalte borgerpaneler anbefalt gjennomført, hvor vanlige innbyggere velges ut etter vitenskapelige prinsipper som sikrer mest mulig representativ deltakelse. 
-I etterkant av forsøket med borgerpaneler vedtok Bergen bystyre i møte 24.10.2018, sak 235/18, at «Bystyret ber om at byborgerpanel prøves videre ut som et forskningssamarbeid der det også søkes eksterne forskningsmidler.» 
+I utvalgets rapport “Byen og nærdemokratiet” ble såkalte borgerpaneler anbefalt gjennomført, hvor vanlige innbyggere velges ut etter vitenskapelige prinsipper som etterstreber representativ deltakelse. 
+I etterkant av forsøket med borgerpaneler vedtok Bergen bystyre å søke eksterne midler for å videreutvikle bruken av borgerpaneler i byen.
 
 Prosjektets etablering har altså blitt til dels for å dekke lokal politisk etterspørsel etter demokratisk innovasjon. 
 Også underveis har politikere fulgt opp prosjektet:
@@ -11,14 +11,32 @@ Oppstartsseminaret ble åpnet av daværende byutviklingsbyråd Rune Bakervik i 2
 Prosjektet har også blitt presentert for Bergensalliansen, som følger prosjektet med interesse av muligheten for å gjennomføre lignende tiltak i egne kommuner. 
 
 En sentral motivasjon for prosjektet er nettopp å høste erfaringer i Bergen som kan komme til nytte for andre norske kommuner.
-I en tid hvor demokratiet settes på prøve også i etablerte, vestlige demokratier, er viktigheten av å forske på demokratiske prosesser kanskje viktigere enn noen gang. 
+I en tid hvor demokratiet settes på prøve også i etablerte, vestlige demokratier, er viktigheten av å forske på demokratiske prosesser kanskje viktigere enn noen gang [@dahlberg2015democratic; @norris2011democratic]. 
+Internasjonalt ser vi lav, og ofte synkende tillit til grunnleggende demokratiske institusjoner som politiske partier og regjeringer [@dalton2004democratic]. 
+Samtidig eksisterer det store forskjeller mellom innbyggerne med tanke på hvem som involverer seg i politikk. 
+Denne politiske ulikheten sammenfaller ofte med andre typer ulikhet i samfunnet som økonomi, helse, og utdanning *Ref CV-modellen*. 
+Den politiske ulikheten gir seg utslag blant annet i lavere valgdeltakelse og engasjement i politiske partier, både nasjonalt og lokalt. 
+
+Norge er generelt et land med høy tillit og høy politisk deltakelse, men også i vårt land er det tydelige tegn på lignende mønstre.
+Fimreite-rapporten fra 2018 analyserte valgdeltakelsen til alle kommunens innbyggere med stemmerett i 2015-valget, og fant store forskjeller basert på sosiale bakgrunnsvariabler som alder, utdanning, og kjønn:
+Valgdeltakelsen blant unge menn uten høyere utdannelse var ned mot 30 prosent, som er halvparten av nivået for den samlede valgdeltakelsen det året.
+Også geografisk var det store forskjeller.
+I Vadmyra var valgdeltakelsen på 51 prosent, mens på Bønes var den på 72 prosent.
+
+Mulighetene som finnes for å påvirke politikken også *mellom valg* blir typisk benyttet av de ressurssterke og de med spesielle interesser. 
+Det at ressurssterke grupper engasjerer seg er ikke et problem, men et gode.
+Utfordringen ligger i å øke engasjementet innbyggerne som vanligvis ellers ikke er aktive, for å sikre at alle stemmer blir hørt.
+Når undergrupper i samfunnet føler seg avskåret fra det politiske systemet, er det ikke bare et problem for hver enkelt, men for samfunnet som helhet.
+For å hindre at politisk fremmedgjorte innbyggere kan komme til å søke alternative, ikke-demokratiske løsninger for å få gjennomslag for sine interesser, er det viktig å opprettholde fokus på videreutvikling av inkluderende, demokratiske prosesser som kan styrke det politiske systemets legitimitet.
+Dette er ikke noe som er gjort i en håndvending, men noe som krever kontinuerlig oppmerksomhet.
+
 Bergen kommune og forskningsinstitusjonene NORCE og Universitetet i Bergen har derfor ønsket å arbeide videre med forsøk som kan styrke demokratiet lokalt i Bergen kommune.
 Flere av forskerne som var involvert i lokaldemokratiutvalget er nå med i dette samarbeidsprosjektet, deriblant utvalgets leder og sekretær. 
-Med oss på laget har vi fått kolleger fra Stanford University, som har utviklet deliberativ meningsmåling som metode for å gjennomføre borgerpanel.
+Med på laget har vi fått kolleger fra Stanford University, som har utviklet *deliberativ meningsmåling* som metode for å gjennomføre borgerpanel.
 
 ## Hva er en deliberativ meningsmåling?
 Deliberativ meningsmåling viser til en bestemt prosedyre for å invitere innbyggere til diskusjon og meningsutveksling om forhåndsbestemte politiske spørsmål. 
-Det er et registrert varemerke på prof. James S. Fishkin ved Stanford University. 
+
 Hovedideen bak bruken av deliberativ meningsmåling i den politiske prosessen er å få vite hva innbyggerne mener når de får tenkt seg om og vurdert argumenter for et politisk forslag.
 I korte trekk går prosessen ut på at man inviterer et representativt utvalg typisk på hundre eller flere innbyggere til å sette av en til to dager for å diskutere politikk med sine medborgere. 
 De tar stilling til forslag, blir presentert for for- og motargumenter, og diskuterer sakene i mindre grupper på rundt 10 personer. 
@@ -29,4 +47,6 @@ De samme spørsmålene svarte de på før arrangementet, slik at man kan måle e
 En kontrollgruppe som ikke har deltatt på arrangementet får samme spørreundersøkelsen på samme tidspunkt.
 
 Siden starten i 1988 har metoden blitt brukt verden over. 
-De aller fleste deliberative høringer har foregått ved at deltakerne fysisk kommer sammen. 
+Det er imidlertid første gangen den blir brukt i Norge, og Bergen er slik sett en foregangskommune i landet.
+Bergen er også blant de aller første i internasjonal sammenheng som har gjennomført deliberativ meningsmåling online.
+Denne formen presset seg fram som følge av at arrangementet fant sted under coronapandemien, hvor  restriksjoner på fysiske samlinger satte en stopper for de opprinnelige planene.

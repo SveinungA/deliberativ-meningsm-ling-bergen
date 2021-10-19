@@ -1,28 +1,19 @@
 # Bilfrie soner {#bilfri}
 
-## Gruppediskusjoner
+<!-- ## Gruppediskusjoner -->
 
-Kvantitativ tekstanalyse av gruppesamtalene om Dokken.
-Grupper på tematikk, plukk ut representative setninger.
+<!-- Kvantitativ tekstanalyse av gruppesamtalene om Dokken. -->
+<!-- Grupper på tematikk, plukk ut representative setninger. -->
 
-## Svarfordeling for alle spørsmål om Dokken. 
+## Svarfordeling for alle spørsmål om bilfrie områder 
 
-### Intro
+Under følger svarene deltakerne ga om bilfrie områder, etter at de hadde diskutert sakene i grupper og deltatt på plenumssesjon om temaet.
+Vi har gitt søylene ulike gråtoner for å lettere kunne identifisere hva flertallet mener i hver enkelt sak.
+De som har svart den nøytrale midtkategorien "5" eller svart "Vet ikke", har blitt utelatt fra beregningen av flertallet.
+Det er imidlertid viktig å vurdere fra sak til sak hvor mange som har gitt slike svar, da det sier noe om hvor sterke preferanser deltakerne samlet har om saken.
 
-Introduksjonstekst til spørsmål om bilfrie områder:
-
->Du har nå besvart alle spørsmålene som handler om Dokken. Nå går vi over til spørsmål om bilfrie områder i Bergen.
-
->I enkelte områder i Bergen vil kommunen begrense kjøring og parkering av privatbiler slik at det blir tryggere og mer attraktivt å leke og møtes i gatene. 
-Ved å skape mer plass til folk og legge til rette for møteplasser og aktivitet, er målet å skape mer liv i nærmiljøet. 
-I de samme områdene vil kommunen jobbe for at det blir enklere og mer attraktivt å gå, sykle og bruke andre former for bærekraftig mobilitet, som f.eks. bildeleordninger.
-
->Bilfrie områder betyr i denne sammenhengen tiltak for å begrense biltrafikk. Bilfrie områder innebærer altså ikke fullstendig fravær av biler. 
-Vi ønsker å vite dine meninger om hvor og hvordan slike områder skal utvikles.
 
 ### Bergen sentrum mer bilfritt?
-
-Spørsmål:
 
 >Noen mener at Bergen sentrum allerede kan beskrives som et bilfritt område med restriksjoner på parkering og kjøring, et bredt mobilitetstilbud og gode forhold for byliv. 
 Andre mener at Bergen sentrum bør bli helt bilfritt med unntak for personer med nedsatt funksjonsevne, utrykningskjøretøy, varelevering, renovasjon og lignende. 
@@ -50,8 +41,6 @@ Dette er et polariserende spørsmål, hvor de mest hyppige svaret blant deltaker
 
 ### Sentrumsnære strøk vs. ytre bydeler
 
-Spørsmål:
-
 >Noen mener at sentrumsnære strøk er godt egnet for utvikling av bilfrie områder.
 Områdene har relativt god infrastruktur for sykkel, gange og kollektivtransport, nærhet til sentrum og er ikke bygget for bilkjøring i like stor grad som de ytre bydelene.
 Andre mener at bilfrie områder bør utvikles i de ytre bydelene fordi problemet med bilavhengighet er større i disse områdene og innbyggerne har få insentiver til å redusere bilbruken sin. 
@@ -78,7 +67,6 @@ Av de som uttrykte en prioritering mener et klart flertall på `r round(sum((dp_
 Mange er også usikker på hvordan den geografiske prioriteringen bør gjøres.
 
 ### Store eller små områder?
-Spørsmål:
 
 >Noen mener at kommunen bør lage mange små, bilfrie områder, for eksempel i enkeltgater. 
 Andre mener at kommunen bør lage noen få, store bilfrie områder, som for eksempel på i Bergen sentrum. 
@@ -106,7 +94,6 @@ Flertallet på `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill==
 Forslaget er noe mindre polariserende enn flere av de andre spørsmålene om bilfrie soner, men blant de som støtter forslaget er det mange sterke tilhengere.
 
 ### Fleksibel bruk av parkeringsplasser
-Spørsmål:
 
 >Noen mener at en del parkeringsplasser skal kunne stenges for parkering i helgene for å kunne brukes til andre formål som uteservering, marked, lek, osv. 
 Andre mener parkeringsplassene alltid må være åpne for parkering, fordi de som har bil trenger et sted å sette bilen også i helgene. 
@@ -136,7 +123,6 @@ Det klart mest hyppige svaret er at man motsetter seg ekstremt sterkt at parkeri
 
 
 ### Fordeling av parkeringsplasser
-Spørsmål:
 
 >I dag reserveres en del parkeringsplasser i byen til bildeleordninger. 
 Noen mener dette er bra, siden ordningene gjøre det lettere for folk ikke å eie egen bil. 
@@ -169,8 +155,6 @@ Av de som ønsker en endring fra dagens situasjon vil `r round(sum((dp_t_post$fi
 
 ### Begrense bilkjøring
 
-Spørsmål: 
-
 >En bilfri sone er ikke helt bilfri, da det trengs tilkomst for varelevering/flyttelass, spesielle forflytningsbehov og for utrykningskjøretøy. 
 Likevel finnes det tiltak som kan begrense biltrafikken, og vi ber deg indikere hvilken måte du foretrekker av de fire under:
 
@@ -195,8 +179,6 @@ De tre andre alternativene skiller det lite mellom.
 
 
 ### Dele transportmidler
-
-Spørsmål:  
 
 >Hvor villig er du til å dele dette med andre:
 
@@ -258,8 +240,6 @@ patchwork + plot_annotation(title = 'Villighet til å dele transportmidler', cap
 
 ### Avstand fra bolig til parkering
 
-Spørsmål:  
-
 >Noen foretrekker å kunne gå til skole, matbutikk, offentlige grøntområder, og kollektivtilbud på under 10 minutter, selv om det betyr at de har bilparkering mer enn 250 meter fra boligen.
 Andre foretrekker å ha bilparkering like ved boligen, selv om det betyr at det er mer enn 10 minutter å gå til grøntområder, skole, matbutikk og kollektivtilbud. 
 Om du måtte velge, hva foretrekker du?
@@ -287,8 +267,6 @@ Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (
 
 ### Bilfritt nabolag
 
-Spørsmål:
-
 >Hva er din mening om at nabolaget der du bor skal være bilfritt område?
 
 ```{r Q19}
@@ -312,8 +290,6 @@ Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (
 `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
 
 ### Demokrati – hvem bestemmer?
-
-Spørsmål:
 
 >Noen mener at beboerne selv bør få bestemme om de skal ha bilfritt område i sitt nabolag, siden det er de som best vet hva som passer deres ønsker og behov. 
 Andre mener at en slik beslutning må tas av kommunen, fordi de ser hva som er best ikke bare for nabolaget, men for kommunen i sin helhet. 
@@ -344,8 +320,6 @@ Dette er også et eksperiment, hvor vi har bedt halvparten av deltakerne om å s
 Resultater av eksperimentet TBA.
 
 ### Redusere farten svært tettbygde strøk.
-
-Spørsmål:
 
 >Det har vært diskutert om fartsgrensen i alle tett befolkede gater bør senkes til 30 km/t. 
 Hva mener du om det?
@@ -420,26 +394,6 @@ car <- bind_rows(list(Q11_c, Q12_c, Q13_c, Q14_c, Q15_c, Q18_c, Q19_c, Q20_c, Q2
   relocate(c(question, group, survey, avg, se))
 ```
 
-
-```{r car-results-figure1, include=FALSE, eval=FALSE}
-#Plot
-pd <- position_dodge(1)
-
-plot1 <- ggplot(car, aes(x = survey, y = avg, colour=question, group=question)) +
-  geom_errorbar(aes(ymin = avg-se, ymax = avg+se), position = pd, size=1, width=0.1) +
-  geom_line(position=pd) +
-  geom_point(position=pd, size=3) +
-  scale_y_continuous(limits = c(1, 11), breaks=seq(1, 11)) +
-  facet_wrap(~group)
-plot1
-```
-
-```{r car-results-table1, include=FALSE, eval=FALSE}
-car %>% select(question, group, survey, avg, se) %>% kableExtra::kable(., booktabs = T) %>% kable_styling(c('striped', 'hover')) %>% collapse_rows(columns = c(1:2)) %>% 
-      footnote(general = 'All questions range from 1 to 11. "Do not knows" and "NA" omitted.')
-
-write_csv(car, 'Data/Car.csv')
-```
 
 The figure below displays that the participants changed their minds about some of the topics discussed, but for many topics, the mean responses were similar before and after deliberation. 
 Nevertheless, for around half of the topics, there is a marked difference between the control group and treatment group in terms of how their attitudes changed between the pre-survey and post-survey.

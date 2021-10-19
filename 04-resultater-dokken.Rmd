@@ -1,25 +1,19 @@
 # Dokken {#dokken}
 
-## Gruppediskusjoner
+<!-- ## Gruppediskusjoner -->
 
-Kvantitativ tekstanalyse av gruppesamtalene om Dokken.
-Grupper på tematikk, plukk ut representative setninger.
+<!-- Kvantitativ tekstanalyse av gruppesamtalene om Dokken. -->
+<!-- Grupper på tematikk, plukk ut representative setninger. -->
 
 ## Svarfordeling for alle spørsmål om Dokken. 
 
-Svarene baseres på undersøkelsen *deltakerne* fikk *etter* den deliberative meningsmålingen.
-
-### Intro
-
-Introduksjonstekst til spørsmål om Dokken:
-
->Først ønsker vi å stille deg noen spørsmål om Dokken. 
-Dokken er et havneområde som ligger sentralt plassert i Bergen ved Puddefjorden, mellom Laksevåg og Nordnes.
-Bergen kommune arbeider nå med planer for å fornye dette området, og vi ønsker å stille deg noen spørsmål om hva du tenker dette området bør brukes til.
+Under følger svarene deltakerne ga om Dokken, etter at de hadde diskutert sakene i grupper og deltatt på plenumssesjon om temaet.
+Vi har gitt søylene ulike gråtoner for å lettere kunne identifisere hva flertallet mener i hver enkelt sak.
+De som har svart den nøytrale midtkategorien "5" eller svart "Vet ikke", har blitt utelatt fra beregningen av flertallet.
+Det er imidlertid viktig å vurdere fra sak til sak hvor mange som har gitt slike svar, da det sier noe om hvor sterke preferanser deltakerne samlet har om saken.
 
 
 ### Cruisetrafikk ut av sentrum?
-Spørsmål:
 
 >Nå er det besluttet at havneaktivitet knyttet til gods skal flyttes fra Dokken til nytt anlegg på Ågotnes.
 Selv om godshavnen flyttes er det fremdeles flere andre havneaktiviteter som kan bli værende på Dokken eller et annet sted i Bergen sentrum. Alternativet er å flytte oppgavene ut av sentrum til andre områder, og heller bruke Dokken til andre formål.
@@ -46,8 +40,6 @@ Det er også verdt å merke seg at mange av de som mener den må flyttes ut av s
 
 ### Utenlandsferger ut av sentrum?
 
-Spørsmålstekst:
-
 >Noen mener også at utenlands fergetilbud (som Danskebåten) bør bli værende i sentrum for å legge til rette for turistnæringen. Andre mener den bør legges utenfor sentrum fordi skipene forurenser og tar opp verdifull plass sentralt i byen. Hva mener du?
 
 ```{r Q4}
@@ -68,8 +60,6 @@ plot
 Av de som uttrykte en mening enten for eller mot å flytte utenlandsfergene ut av sentrum mente `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at utenlandsfergene må bli værende i sentrum, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at de må flyttes ut av sentrum.
 
 ### Utfylling i sjø
-
-Spørsmålstekst:
 
 >Utfylling i sjø er en mulighet som vurderes på Dokken. Noen er for dette fordi det gir mer plass til boliger, næring og parker sentralt i byen. 
 Andre er mot dette fordi de ønsker å bevare sjøfronten slik den ser ut i dag og for å spare dyrelivet i sjøen. Hva mener du, bør kommunen fylle ut i sjøen når de fornyer havneområdet på Dokken?
@@ -92,8 +82,6 @@ plot
 Av de som uttrykte en mening enten for eller mot utfylling i sjø på Dokken er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg forslaget, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent støtter det.
 
 ### Hva sjølinjen skal brukes til
-
-Spørsmålstekst:
 
 >Dokken har en 2500 meter lang sjølinje som i dag brukes til havneaktivitet. 
 Noen mener at havneaktiviteten må prioriteres langs sjølinjen på Dokken for å kunne legge til rette for større skip og bedrifter med behov for kai.
@@ -122,8 +110,6 @@ Av de som uttrykte en prioritering angående hva sjølinjen skal brukes til er d
 
 ### Boligpolitikk
 
-Spørsmålstekst:
-
 >Noen mener at prisene på boliger som bygges på Dokken må styres ved at myndighetene tar en aktiv rolle i utviklingen av rimelige boliger folk flest har råd til å bo i. 
 Andre mener at boliger på Dokken bør selges til ordinær markedspris. 
 Hva mener du?
@@ -148,8 +134,6 @@ plot
 Av de som uttrykte en mening om hvorvidt kommunen skal sikre rimelige boliger eller om de ikke skal blande seg inn i hva boligene på Dokken skal koste, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at rimelige boliger sikres, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at kommunen ikke skal blande seg inn.
 
 ### Parker vs. idrettsanlegg
-
-Spørsmålstekst:
 
 >Noen mener at parker og grøntarealer bør prioriteres på Dokken framfor idrettsanlegg som for eksempel fotballbane og flerbrukshall. 
 Dette fordi flere har nytte av grøntarealer enn av idrettsanlegg. 
@@ -178,7 +162,6 @@ plot
 Av de som uttrykte en prioritering mellom parker/grøntarealer og idrettsanlegg, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at parker får forrang framfor idrettsanlegg, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ville prioritere omvendt.
 
 ### Nye gatenavn
-Spørsmålstekst:
 
 >Noen mener at alle nye gater på Dokken som skal kalles opp etter historiske personer må ha navn etter kvinner, for å bidra til å rette opp den skjeve fordelingen av eksisterende gatenavn i byen. 
 Andre er imot dette, fordi personer som har gjort seg fortjent til å få en gate kalt opp etter seg ikke skal hindres på grunn av sitt kjønn.
