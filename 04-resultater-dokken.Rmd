@@ -108,7 +108,6 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q6), fill = fill)) +
 plot
 
 ```
-> Obs! Ingen observasjoner av verdi 2, som gjør søylene kommer på feil plass. Jobber med saken.
 
 Av de som uttrykte en prioritering angående hva sjølinjen skal brukes til er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker fortsatt havneaktivitet, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at området skal prioriteres til rekreasjon eller natur- og dyreliv.
 
@@ -162,8 +161,6 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q8), fill = fill)) +
 plot
 
 ```
-> Obs! Flere verdier med manglende observasjoner, som gjør at søylene kommer på feil plass. Jobber med saken.
-
 
 Av de som uttrykte en prioritering mellom parker/grøntarealer og idrettsanlegg, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at parker får forrang framfor idrettsanlegg, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ville prioritere omvendt.
 

@@ -53,6 +53,8 @@ pre <- pre %>% mutate(survey = 'pre') %>% var_labels(survey= 'Survey')
 
 dp_c <- full_join(post_c, pre)
 dp_t <- full_join(post_t, pre)
+#Alternativt:
+#full_join(post, pre, by = 'Q1', keep=TRUE) %>% filter(Q1.x == Q1.y)
 
 #Filtrer på de som kan bekreftes å ha svart på både pre og post
 #dp_c <- dp_c %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)

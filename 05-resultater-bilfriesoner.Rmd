@@ -1,4 +1,4 @@
-# Bilfrie soner {#bilfri}
+# Bilfrie områder {#bilfri}
 
 <!-- ## Gruppediskusjoner -->
 
@@ -326,9 +326,7 @@ plot
 Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
 `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
 
-Dette er også et eksperiment, hvor vi har bedt halvparten av deltakerne om å se for seg at det er flertall i nabolaget for bilfritt område men at kommunen er imot, og andre halvparten at det er flertall i nabolaget for, mens kommunen er imot.
 
-Resultater av eksperimentet TBA.
 
 ### Redusere farten svært tettbygde strøk.
 
@@ -352,7 +350,7 @@ plot <- ggplot(dp_t_post, aes(x = factor(Q21), fill = fill)) +
 plot
 
 ```
-> Obs! Flere verdier med manglende observasjoner, som gjør at søylene kommer på feil plass. Jobber med saken.
+
 
 
 Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
@@ -360,6 +358,8 @@ Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (
 
 
 ## Endring i holdninger
+
+### Gjennomsnittsendringer
 ```{r car-results-manage-1}
 Q11_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q11, na.rm=TRUE), se=sd(Q11, na.rm = TRUE)/sqrt(length(Q11))) %>% mutate(group = 'control', question = 'Q11')
 Q12_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q12, na.rm=TRUE), se=sd(Q12, na.rm = TRUE)/sqrt(length(Q12))) %>% mutate(group = 'control', question = 'Q12')
@@ -440,4 +440,122 @@ plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour=group)) +
 
 plot2
 ```
+
+### Eksperiment om hvem som skal bestemme over bilfritt nabolag
+Spørsmålet om hvem som skal bestemme over bilfrie områder er også et eksperiment, hvor vi har bedt halvparten av deltakerne om å se for seg at det er flertall i nabolaget for bilfritt område men at kommunen er imot, og andre halvparten at det er flertall i nabolaget for, mens kommunen er imot.
+Spørsmålet er stilt til deltakerne både før og etter arrangementet, med hensikt å måle om deltakerne er mindre påvirket av egeninteresse etter deliberasjonen.
+
+### Individuelle endringer
+```{r within-change}
+
+# Lag funksjon for øvre og nedre konfidensintervall
+lower_ci <- function(mean, se, n, conf_level = 0.95){
+  lower_ci <- mean - qt(1 - ((1 - conf_level) / 2), n - 1) * se
+}
+upper_ci <- function(mean, se, n, conf_level = 0.95){
+  upper_ci <- mean + qt(1 - ((1 - conf_level) / 2), n - 1) * se
+}
+within_pre <- pre %>% 
+  filter(Q1 %in% post_t$Q1) %>% 
+  select(c(Q1, Q11, Q12, Q13, Q14, Q15, Q16, Q17_1, Q17_2, Q17_3, Q17_4, Q17_5, Q17_6, Q18, Q19, Q20, Q21)) 
+  
+within_post <- post_t %>% 
+  filter(Q1 %in% post_t$Q1) %>% 
+  select(c(Q1, Q11, Q12, Q13, Q14, Q15, Q16, Q17_1, Q17_2, Q17_3, Q17_4, Q17_5, Q17_6, Q18, Q19, Q20, Q21)) 
+  
+within <- full_join(within_post, within_pre, by = 'Q1', keep=TRUE) %>% filter(Q1.x == Q1.y)
+within <- within %>% mutate(Q11_change = Q11.x - Q11.y,
+                            Q12_change = Q12.x - Q12.y,
+                            Q13_change = Q13.x - Q13.y,
+                            Q14_change = Q14.x - Q14.y,
+                            Q15_change = Q15.x - Q15.y,
+                            Q16_change = Q16.x - Q16.y,
+                            Q17_1_change = Q17_1.x - Q17_1.y,
+                            Q17_2_change = Q17_2.x - Q17_2.y,
+                            Q17_3_change = Q17_3.x - Q17_3.y,
+                            Q17_4_change = Q17_4.x - Q17_5.y,
+                            Q17_5_change = Q17_5.x - Q17_5.y,
+                            Q17_6_change = Q17_6.x - Q17_6.y,
+                            Q18_change = Q18.x - Q18.y,
+                            Q19_change = Q19.x - Q19.y,
+                            Q20_change = Q20.x - Q20.y,
+                            Q21_change = Q21.x - Q21.y) %>% 
+  select(ends_with("change"))
+
+within_summary <- within %>% summarise(smean = across(c(Q11_change:Q21_change), ~ mean(.x, na.rm = TRUE)),
+                                       sd = across(c(Q11_change:Q21_change), ~ sd(.x, na.rm = TRUE)),
+                                       count = across(c(Q11_change:Q21_change), ~ n()))
+```
+
+
+```{r prosesseksperiment}
+
+# Før deliberasjon
+demex_pre <- pre %>% 
+  filter(Q1 %in% post_t$Q1) %>% 
+  select(c('prosess', 'Q19', 'Q20')) %>% 
+  mutate(prosess = case_when(prosess == 'Se for deg at det var flertall i ditt nabolag mot å ha bilfri sone der du bor, men at kommunen var for.' ~ 'Nabolag for, kommune mot',
+                             prosess == 'Se for deg at det var flertall i ditt nabolag for å ha bilfri sone der du bor, men at kommunen var imot.' ~ 'Nabolag mot, kommune for',
+                             prosess == '&nbsp;' ~ 'Ingen info om nabolag eller kommune'),
+         Q19 = case_when(Q19 %in% c(1:5) ~ 'Mot bilfritt nabolag',
+                         Q19 %in% c(7:11) ~ 'For bilfritt nabolag'))  
+
+demex_pre_ate <- demex_pre %>% 
+  filter(!is.na(Q19)) %>% 
+  group_by(prosess, Q19) %>% 
+  summarise(smean = mean(Q20, na.rm = TRUE),
+            ssd = sd(Q20, na.rm = TRUE),
+            count = n()) %>%
+  mutate(se = ssd / sqrt(count),
+         lower_ci = lower_ci(smean, se, count),
+         upper_ci = upper_ci(smean, se, count))
+  
+
+p1 <- ggplot(demex_pre_ate, aes(x = prosess, y = smean, colour=Q19)) +
+  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), size = 1, width = 0.1) +
+  geom_point(size = 3) +
+  coord_flip() +
+  scale_y_continuous(limits = c(1, 11),
+                     breaks = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
+                     labels = c('0\n Nabolag', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10\n Kommunen'))  +
+  labs(title = 'Før deliberasjon', y = 'Gjennomsnitt', x = ' ', colour = 'Egen holdning' ) +
+  theme_classic() +
+  scale_colour_grey() 
+
+# Etter deliberasjon
+demex_post <- post_t %>% 
+  filter(Q1 %in% post_t$Q1) %>% 
+  select(c('prosess', 'Q19', 'Q20')) %>% 
+  mutate(prosess = case_when(prosess == 'Se for deg at det var flertall i ditt nabolag mot å ha bilfri sone der du bor, men at kommunen var for.' ~ 'Nabolag for, kommune mot',
+                             prosess == 'Se for deg at det var flertall i ditt nabolag for å ha bilfri sone der du bor, men at kommunen var imot.' ~ 'Nabolag mot, kommune for',
+                             prosess == '&nbsp;' ~ 'Ingen info om nabolag eller kommune'),
+         Q19 = case_when(Q19 %in% c(1:5) ~ 'Mot bilfritt nabolag',
+                         Q19 %in% c(7:11) ~ 'For bilfritt nabolag'))  
+
+demex_post_ate <- demex_post %>% 
+  filter(!is.na(Q19)) %>% 
+  group_by(prosess, Q19) %>% 
+  summarise(smean = mean(Q20, na.rm = TRUE),
+            ssd = sd(Q20, na.rm = TRUE),
+            count = n()) %>%
+  mutate(se = ssd / sqrt(count),
+         lower_ci = lower_ci(smean, se, count),
+         upper_ci = upper_ci(smean, se, count))
+  
+
+p2 <- ggplot(demex_post_ate, aes(x = prosess, y = smean, colour=Q19)) +
+  geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), size = 1, width = 0.1) +
+  geom_point(size = 3) +
+  coord_flip() +
+  scale_y_continuous(limits = c(1, 11),
+                     breaks = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
+                     labels = c('0\n Nabolag', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10\n Kommunen'))  +
+  labs(title = 'Etter deliberasjon', y = 'Gjennomsnitt', x = ' ', colour = 'Egen holdning' ) +
+  theme_classic() +
+  scale_colour_grey() 
+
+patch <- p1 / p2
+patch + plot_annotation(title = 'Hvem skal bestemme over bilfritt nabolag')
+```
+> Merknad: Her bør vi vise resultatene på en måte som bedre får fram om respondentene beveger seg mot det beslutningsnivået som gir dem et "favorable outcome".
 
