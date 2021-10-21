@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  19 OCT 2021 22:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  21 OCT 2021 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -24,11 +24,6 @@ File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
-sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count187
-)
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
 y
 Package: amsmath 2021/04/20 v2.17j AMS math features
@@ -51,13 +46,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count188
+\inf@bad=\count187
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count189
-\leftroot@=\count190
+\uproot@=\count188
+\leftroot@=\count189
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count191
-\DOTSCASE@=\count192
+\classnum@=\count190
+\DOTSCASE@=\count191
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -66,15 +61,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count193
-\c@MaxMatrixCols=\count194
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
 \dotsspace@=\muskip16
-\c@parentequation=\count195
-\dspbrk@lvl=\count196
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
 \tag@help=\toks17
-\row@=\count197
-\column@=\count198
-\maxfields@=\count199
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -148,14 +143,14 @@ Package: expl3 2021-10-12 L3 programming layer (loader)
 d-xetex.def
 File: l3backend-xetex.def 2021-10-12 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count266
-\l__color_backend_stack_int=\count267
-\g__color_backend_stack_int=\count268
-\g__graphics_track_int=\count269
+\c__kernel_sys_dvipdfmx_version_int=\count199
+\l__color_backend_stack_int=\count266
+\g__color_backend_stack_int=\count267
+\g__graphics_track_int=\count268
 \l__pdf_internal_box=\box52
-\g__pdf_backend_object_int=\count270
-\g__pdf_backend_annotation_int=\count271
-\g__pdf_backend_link_int=\count272
+\g__pdf_backend_object_int=\count269
+\g__pdf_backend_annotation_int=\count270
+\g__pdf_backend_link_int=\count271
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -180,17 +175,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count273
-\l__fontspec_language_int=\count274
-\l__fontspec_strnum_int=\count275
-\l__fontspec_tmp_int=\count276
-\l__fontspec_tmpa_int=\count277
-\l__fontspec_tmpb_int=\count278
-\l__fontspec_tmpc_int=\count279
-\l__fontspec_em_int=\count280
-\l__fontspec_emdef_int=\count281
-\l__fontspec_strong_int=\count282
-\l__fontspec_strongdef_int=\count283
+\l__fontspec_script_int=\count272
+\l__fontspec_language_int=\count273
+\l__fontspec_strnum_int=\count274
+\l__fontspec_tmp_int=\count275
+\l__fontspec_tmpa_int=\count276
+\l__fontspec_tmpb_int=\count277
+\l__fontspec_tmpc_int=\count278
+\l__fontspec_em_int=\count279
+\l__fontspec_emdef_int=\count280
+\l__fontspec_strong_int=\count281
+\l__fontspec_strongdef_int=\count282
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
@@ -205,9 +200,9 @@ Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count284
-\g__um_fonts_used_int=\count285
-\l__um_primecount_int=\count286
+\g__um_fam_int=\count283
+\g__um_fonts_used_int=\count284
+\l__um_primecount_int=\count285
 \g__um_primekern_muskip=\muskip17
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
@@ -289,8 +284,8 @@ s.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen151
-\Hy@linkcounter=\count287
-\Hy@pagecounter=\count288
+\Hy@linkcounter=\count286
+\Hy@pagecounter=\count287
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
 f
@@ -309,7 +304,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count289
+\Hy@SavedSpaceFactor=\count288
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -322,7 +317,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count290
+\c@Hy@tempcnt=\count289
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -339,7 +334,7 @@ tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count291
+\Fld@menulength=\count290
 \Field@Width=\dimen153
 \Fld@charsize=\dimen154
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -357,9 +352,9 @@ sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count292
-\c@Item=\count293
-\c@Hfootnote=\count294
+\Hy@abspage=\count291
+\c@Item=\count292
+\c@Hfootnote=\count293
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -373,10 +368,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box53
-\c@Hy@AnnotLevel=\count295
-\HyField@AnnotCount=\count296
-\Fld@listcount=\count297
-\c@bookmark@seq@number=\count298
+\c@Hy@AnnotLevel=\count294
+\HyField@AnnotCount=\count295
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
 unfilecheck.sty
@@ -400,11 +395,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.
 sty
 Package: fancyvrb 2021/10/15 v3.9 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count299
+\FV@CodeLineNo=\count298
 \FV@InFile=\read2
 \FV@TabBox=\box54
-\c@FancyVerbLine=\count300
-\FV@StepNumber=\count301
+\c@FancyVerbLine=\count299
+\FV@StepNumber=\count300
 \FV@OutFile=\write3
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.st
 y
@@ -422,17 +417,17 @@ Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count302
+\LTchunksize=\count301
 \LTcapwidth=\dimen159
 \LT@head=\box55
 \LT@firsthead=\box56
 \LT@foot=\box57
 \LT@lastfoot=\box58
 \LT@gbox=\box59
-\LT@cols=\count303
-\LT@rows=\count304
-\c@LT@tables=\count305
-\c@LT@chunks=\count306
+\LT@cols=\count302
+\LT@rows=\count303
+\c@LT@tables=\count304
+\c@LT@chunks=\count305
 \LT@p@ftn=\toks22
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
@@ -448,12 +443,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen167
 \cmidrulekern=\dimen168
 \defaultaddspace=\dimen169
-\@cmidla=\count307
-\@cmidlb=\count308
+\@cmidla=\count306
+\@cmidlb=\count307
 \@aboverulesep=\dimen170
 \@belowrulesep=\dimen171
-\@thisruleclass=\count309
-\@lastruleclass=\count310
+\@thisruleclass=\count308
+\@lastruleclass=\count309
 \@thisrulewidth=\dimen172
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
@@ -466,16 +461,21 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@cellbox=\box61
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count311
-\calc@Bcount=\count312
+\calc@Acount=\count310
+\calc@Bcount=\count311
 \calc@Adimen=\dimen175
 \calc@Bdimen=\dimen176
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count313
+\calc@Ccount=\count312
 \calc@Cskip=\skip62
+)
+(c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
+sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count313
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.
 sty
@@ -665,40 +665,40 @@ LaTeX Info: Redefining \cite on input line 694.
 ) (./Rapport-deliberativ-meningsmaaling.aux)
 \openout1 = `Rapport-deliberativ-meningsmaaling.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 152.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 152.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 152.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 152.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 152.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 152.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 152.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -727,7 +727,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 152.
+(Font)              scaled to size 10.0pt on input line 145.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -766,18 +766,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 152.
+(Font)              scaled to size 10.0pt on input line 145.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 152.
+(Font)              `operators' in the math version `normal' on input line 145.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 152.
+ line 145.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 152.
+(Font)              `operators' in the math version `bold' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 152.
+t line 145.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -864,15 +864,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 152.
+(Font)              `symbols' in the math version `normal' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 152.
+t line 145.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 152.
+(Font)              `symbols' in the math version `bold' on input line 145.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 152.
+t line 145.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -942,17 +942,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-52.
+45.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 152.
+t line 145.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 152
+(Font)              `largesymbols' in the math version `bold' on input line 145
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 152.
-Package hyperref Info: Link coloring OFF on input line 152.
+t line 145.
+Package hyperref Info: Link coloring OFF on input line 145.
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -968,43 +968,43 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 152.
-LaTeX Info: Redefining \pageref on input line 152.
-LaTeX Info: Redefining \nameref on input line 152.
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
 (./Rapport-deliberativ-meningsmaaling.out) (./Rapport-deliberativ-meningsmaalin
 g.out)
 \@outlinefile=\write4
 \openout4 = `Rapport-deliberativ-meningsmaaling.out'.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 154.
+(Font)              scaled to size 12.0pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 154.
+(Font)              scaled to size 8.0pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 154.
+(Font)              scaled to size 6.0pt on input line 147.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-54.
+47.
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 154.
+(Font)              scaled to size 12.0011pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 154.
+(Font)              scaled to size 8.00073pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 154.
+(Font)              scaled to size 6.00055pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 154.
+(Font)              scaled to size 11.99872pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 154.
+(Font)              scaled to size 7.99915pt on input line 147.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 154.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 154
+(Font)              scaled to size 5.99936pt on input line 147.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 154
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1037,7 +1037,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 [4]
 Kapittel 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
 
  []
 
@@ -1056,7 +1056,7 @@ Kapittel 3.
 ]
 Kapittel 4.
 
-Underfull \hbox (badness 1033) in paragraph at lines 278--282
+Underfull \hbox (badness 1033) in paragraph at lines 271--275
 \TU/lmr/m/n/10 kommunens personvernombud vurderte dette annerledes. Vurderingen
  var
  []
@@ -1065,11 +1065,6 @@ Underfull \hbox (badness 1033) in paragraph at lines 278--282
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf Grap
 hic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
-[][]
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1088,7 +1083,7 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--474
+Underfull \hbox (badness 10000) in paragraph at lines 466--468
 [][]
  []
 
@@ -1100,7 +1095,7 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 477--480
 [][]
  []
 
@@ -1111,11 +1106,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--498
-[][]
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1130,11 +1120,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--526
-[][]
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1154,13 +1139,13 @@ e2-1.pdf>
 Underfull \vbox (badness 2856) has occurred while \output is active []
 
 [26]
-Underfull \hbox (badness 5787) in paragraph at lines 557--560
+Underfull \hbox (badness 5787) in paragraph at lines 550--553
 []\TU/lmr/m/n/10 Vi observerer et mønster hvor deltakergruppen har kraftigere h
 old-
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 557--560
+Underfull \hbox (badness 1496) in paragraph at lines 550--553
 \TU/lmr/m/n/10 ningsendringer enn kontrollgruppen har. Det er også flere tilfel
 ler hvor
  []
@@ -1267,11 +1252,6 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--726
-[][]
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1280,15 +1260,17 @@ Overfull \hbox (2.19003pt too wide) has occurred while \output is active
 r/m/n/10 39
  []
 
-[39]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2
--1.pdf Graphic file (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2-
-1.pdf>
+[39] [40]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/prosesseksperiment-
+1.pdf Graphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/prosesseksperiment-1
+.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 751--753
+[][]
+ []
 
-[40] [41] [42
+[41] [42
 
 ]
 Kapittel 7.
@@ -1296,42 +1278,35 @@ File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--760
+Underfull \hbox (badness 10000) in paragraph at lines 767--769
 [][]
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [43]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 768--770
+Underfull \hbox (badness 10000) in paragraph at lines 777--779
 [][]
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[44]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-
 manage-1-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-m
 anage-1-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--777
+Underfull \hbox (badness 10000) in paragraph at lines 783--786
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[45]
+[44]
 
-LaTeX Warning: Reference `political-efficacy-manage-1' on page 46 undefined on 
-input line 778.
+LaTeX Warning: Reference `political-efficacy-manage-1' on page 45 undefined on 
+input line 787.
 
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf Graphic f
 ile (type pdf)
@@ -1339,201 +1314,149 @@ ile (type pdf)
 
 Underfull \vbox (badness 5175) has occurred while \output is active []
 
-[46] [47] [48] [49] [50
-
-]
+[45] [46] [47] [48]
 Kapittel 8.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 868.
-[51]
-Underfull \vbox (badness 10000) detected at line 1699
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 877.
+[49
+
+]
+Overfull \vbox (2.28998pt too high) detected at line 1845
+ []
+
+[50]
+Overfull \vbox (2.28998pt too high) detected at line 1845
+ []
+
+[51] [52]
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
- []
-
-[52]
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [53]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [54]
-Overfull \vbox (2.21999pt too high) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [55]
-Overfull \vbox (1.66998pt too high) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
-[56]
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-[57]
-Underfull \vbox (badness 10000) detected at line 1699
+[56] [57]
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [58]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [59]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [60]
-Overfull \vbox (2.27998pt too high) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [61]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [62]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [63]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [64]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [65]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
- []
-
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [66]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 [67]
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1699
+Underfull \vbox (badness 10000) detected at line 1845
  []
 
-
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
+[68]
+Overfull \vbox (1.38998pt too high) detected at line 1845
  []
 
-[68] [69]
-Overfull \hbox (57.46895pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 KAPITTEL 8.  APPENDIKS: ALL KODE BRUKT FOR Å 
-LAGE DENNE RAPPORTEN
- []
-
-[70
-
-]
+[69] [70]
 Kapittel 9.
-(./Rapport-deliberativ-meningsmaaling.bbl [71] [72
+(./Rapport-deliberativ-meningsmaaling.bbl [71
+
+] [72
 
 ]) [73] (./Rapport-deliberativ-meningsmaaling.aux)
 
@@ -1541,15 +1464,15 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Rapport-deliberativ-meningsmaaling.out' has 
 not changed.
-(rerunfilecheck)             Checksum: 7263DB2B12753243E9D0378F7BC3EF28;3876.
+(rerunfilecheck)             Checksum: B82F6D967949A14575B522152008B1F7;3562.
  ) 
 Here is how much of TeX's memory you used:
- 19434 strings out of 478492
- 350658 string characters out of 5860434
- 1156955 words of memory out of 5000000
- 39394 multiletter control sequences out of 15000+600000
+ 19435 strings out of 478492
+ 350697 string characters out of 5860434
+ 1218544 words of memory out of 5000000
+ 39395 multiletter control sequences out of 15000+600000
  410011 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,9n,120p,1373b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,9n,120p,1373b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Rapport-deliberativ-meningsmaaling.pdf (73 pages).

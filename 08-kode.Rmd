@@ -1,4 +1,4 @@
-# Appendiks: All kode brukt for å lage denne rapporten
+# Appendiks: R-kode
 
-```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE, out.width= '60%'}
 ```

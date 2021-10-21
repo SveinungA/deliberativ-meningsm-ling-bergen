@@ -83,6 +83,7 @@ plot
 
 ```
 Av de som uttrykte en mening enten for eller mot utfylling i sjø på Dokken er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg forslaget, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent støtter det.
+Om lag en av fem hverken støtter eller motsetter seg forslaget.
 
 ### Hva sjølinjen skal brukes til
 
@@ -135,7 +136,7 @@ plot
 
 ```
 
-Av de som uttrykte en mening om hvorvidt kommunen skal sikre rimelige boliger eller om de ikke skal blande seg inn i hva boligene på Dokken skal koste, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at rimelige boliger sikres, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at kommunen ikke skal blande seg inn.
+Av de som uttrykte en mening om hvorvidt kommunen skal sikre rimelige boliger eller om de ikke skal blande seg inn i hva boligene på Dokken skal koste, er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at rimelige boliger sikres, mens `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker at kommunen ikke skal blande seg inn.
 
 ### Parker vs. idrettsanlegg
 
@@ -162,7 +163,7 @@ plot
 
 ```
 
-Av de som uttrykte en prioritering mellom parker/grøntarealer og idrettsanlegg, er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at parker får forrang framfor idrettsanlegg, mens `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ville prioritere omvendt.
+Av de som uttrykte en prioritering mellom parker/grøntarealer og idrettsanlegg, er det hele `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som ønsker at parker får forrang framfor idrettsanlegg, mens `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent vil prioritere idrettsanlegg.
 
 ### Nye gatenavn
 
@@ -274,10 +275,10 @@ write_csv(dokken, 'Data/Dokken.csv')
 ```
 Figuren under viser hvordan deltakergruppen endret holdninger etter å ha diskutert sakene.
 Den stiplete linjen viser til gjennomsnittet i undersøkelsen før arrangementet.
-De grønne prikkene indikerer gjennomsnittet for deltakergruppen.
+De svarte prikkene indikerer gjennomsnittet for deltakergruppen.
 Hvis linjene som er trukket gjennom prikkene ikke overlapper den stiplete linjen er endringen før og etter arrangementet statistisk signifikant.
-De motsvarende røde prikkene og strekene viser kontrollgruppens endring fra før og etter arrangementet (som de ikke deltok på).
-Hvis de grønne og røde strekene overlapper, er endringene mellom kontrollgruppen og deltakergruppen ikke signifikant forskjellige.
+De motsvarende grå prikkene og strekene viser kontrollgruppens endring fra før og etter arrangementet (som de ikke deltok på).
+Hvis de svarte og grå strekene overlapper, er endringene mellom kontrollgruppen og deltakergruppen ikke signifikant forskjellige.
 Dersom de ikke overlapper, betyr det at gruppene har endret seg forskjellig, enten ved at de har endret seg mer eller at de har gått i motsatt retning av hverandre.
 
 ```{r dokken-results-manage-2}

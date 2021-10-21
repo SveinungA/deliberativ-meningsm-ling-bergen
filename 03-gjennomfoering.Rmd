@@ -149,7 +149,6 @@ p5 <- ggplot(bydel, aes(x = factor(Q27))) +
 (p5 + p2 + p3 + p4) / p1 +
   plot_annotation(title = 'Bakgrunnen til deltakerne i den deliberative meningsmålingen')
 ```
->Obs! En søyle mangler, fordi ingen er derfra. Jobber med å løse saken. [se her](https://www.aj2duncan.com/blog/missing-data-ggplot2-barplots/).
 
 Det var hovedsakelig god balanse i deltakergruppen med tanke på deres sosiale bakgrunnsvariabler som kjønn, inntekt, og statsborgerskap.
 Når det gjelder alder er yngre deltakere er sterkere representert enn eldre, og geografisk manglet det deltakere fra Arna.
@@ -236,8 +235,10 @@ Deltakerne ble takket for innsatsen.
 Umiddelbart kom det her en del positive tilbakemeldinger i chat-funksjonen fra deltakere som uttrykte entusiasme for å ha fått være med på denne muligheten og for det opplegget som var valgt. 
 Hvor representative disse er for deltakerne lærer vi mer om i kapittel \@ref(refleksjoner). 
 
-90 personer deltok på arrangementet, og 81 av disse fullførte både før- og etterundersøkelsen.
+Kriteriene for å bli inkludert i analysene er at man har fullført begge undersøkelsene.
+Deltakerne i deliberasjonen må også kunne bekreftes å ha deltatt på denne.
 108 respondenter fra kontrollgruppen fullførte begge undersøkelsene. 
+90 personer deltok på arrangementet, og alle disse fullførte både før- og etterundersøkelsen.
 Svarene som presenteres i de følgende kapitlene baserer seg på *etterundersøkelsen* til *deltakerne*, med mindre annet er eksplisitt nevnt.
 
 
