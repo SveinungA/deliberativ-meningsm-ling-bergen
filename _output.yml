@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">Deliberativ meningsmåling i Bergen</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Laget med bookdown</a></li>
-    edit: https://github.com/SveinungA/deliberativ-meningsm-ling-bergen
+    edit: https://github.com/SveinungA/deliberativ-meningsm-ling-bergen/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   #base_format: "function(..., number_sections) rmarkdown::beamer_presentation(...)"
@@ -25,7 +25,8 @@ bookdown::bs4_book:
         <li><a href="./">Deliberativ meningsmåling i Bergen</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Laget med bookdown</a></li>
-    edit: https://github.com/SveinungA/deliberativ-meningsm-ling-bergen
+    edit: https://github.com/SveinungA/deliberativ-meningsm-ling-bergen/%s
     download: ["pdf", "epub"]
+    cover-image: cover.png
 
 

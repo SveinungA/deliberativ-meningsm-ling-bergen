@@ -36,14 +36,14 @@ Da avklaringen rundt den tekniske løsningen var på plass, de nødvendige perso
 
 ## Design
 
-Grunnideen til en deliberativ meningsmåling er som nevnt i kapittel \@(bakgrunn) å få vite hva innbyggerne mener når de har fått tenkt seg om og vurdert argument for et politisk forslag. 
+Grunnideen til en deliberativ meningsmåling er som nevnt å få vite hva innbyggerne mener når de har fått tenkt seg om og vurdert argument for et politisk forslag. 
 Det ble lagt opp til et såkalt pretest/posttest kontrollgruppedesign.
 Det vil si at vi målte holdningene til deltakerne både før og etter arrangementet den 12. juni.
 På denne måten kan vi måle om deltakernes holdninger endrer seg etter å ha diskutert sakene og fått tid til å tenke seg om.
 For å utelate at eventuelle holdningsendringer kommer som en konsekvens av andre forhold som har skjedd fra det ene tidspunktet til det andre, har vi med en kontrollgruppe som også gjennomfører spørreundersøkelsene, men som ikke deltar i selve arrangementet.
 Et slikt oppsett er et av de mest vanlige felt-eksperimentelle design [@cook2002experimental].
 
-|         Gruppe            | Pretest | Treatment    | Post-test                           | 
+|         Gruppe            | Pretest | Eksperimentkomponent    | Posttest                           | 
 |--------------------:|--------:|-------------:|-----------:|
 | Kontrollgruppe       |  Spørreundersøkelse |              | Spørreundersøkelse     | 
 | Deltakergruppe     |  Spørreundersøkelse | Gruppediskusjon | Spørreundersøkelse     |
@@ -82,7 +82,7 @@ alder <- pre %>%
 
 p1 <- ggplot(alder, aes(x = factor(Q32))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
   scale_x_discrete(labels = c('<1940', '1940-1949', '1950-1959', '1960-1969', '1970-1979', '1980-1989', '>1989'), guide = guide_axis(n.dodge = 2)) +
    labs(title = "Aldersfordeling", x = '', y = '', fill = '')  +
   theme_classic() +
@@ -97,7 +97,7 @@ kjonn <- pre %>%
 
 p2 <- ggplot(kjonn, aes(x = factor(Q31))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.5)) +
   scale_x_discrete(labels = c('Kvinne', 'Mann')) +
    labs(title = "Kjønnsfordeling", x = '', y = '', fill = '')  +
   theme_classic() +
@@ -111,7 +111,7 @@ statsborger <- pre %>%
 
 p3 <- ggplot(statsborger, aes(x = factor(Q33))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.75)) +
   scale_x_discrete(labels = c('Norsk statsborger', 'Statsborger i annet land', 'Begge deler'), guide = guide_axis(n.dodge = 2)) +
    labs(title = "Statsborgerskap", x = '', y = '', fill = '')  +
   theme_classic() +
@@ -125,8 +125,8 @@ inntekt <- pre %>%
 
 p4 <- ggplot(inntekt, aes(x = factor(Q30))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('<150K', '150K-300K', '300K-400K', '400K-500K', '500K-600K', '600K-700k', '700K-800K', '800K-900K', '900K-1M', '>1M'), guide = guide_axis(n.dodge = 2)) +
+   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
+  scale_x_discrete(labels = c('<150K', '150K-300K', '300K-400K', '400K-500K', '500K-600K', '600K-700k', '700K-800K', '800K-900K', '900K-1M', '>1M'), guide = guide_axis(n.dodge = 3)) +
    labs(title = "Inntekt", x = '', y = '', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -140,8 +140,8 @@ bydel <- pre %>%
 p5 <- ggplot(bydel, aes(x = factor(Q27))) +
   geom_bar(aes(y = (..count..) / sum(..count..)),
            position = position_dodge()) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
-  scale_x_discrete(labels = c('Arna', 'Åsane', 'Ytrebygda', 'Fana', 'Laksevåg', 'Fyllingsdalen', 'Årstad', 'Bergenhus')) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.25)) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8'), labels = c('Arna', 'Åsane', 'Ytrebygda', 'Fana', 'Laksevåg', 'Fyllingsdalen', 'Årstad', 'Bergenhus'), guide = guide_axis(n.dodge = 2)) +
    labs(title = "Bosted", x = '', y = '', fill = '')  +
   theme_classic() +
   scale_fill_grey()
@@ -153,13 +153,13 @@ p5 <- ggplot(bydel, aes(x = factor(Q27))) +
 Det var hovedsakelig god balanse i deltakergruppen med tanke på deres sosiale bakgrunnsvariabler som kjønn, inntekt, og statsborgerskap.
 Når det gjelder alder er yngre deltakere er sterkere representert enn eldre, og geografisk manglet det deltakere fra Arna.
 
-Det er i denne sammenhengen viktig å understreke at alle innbyggere i Bergen har hatt like stor sjanse for å bli invitert, uavhengig av hvem de er og hvor de bor. 
+Det er i denne sammenhengen viktig å understreke at alle innbyggere i Bergen over 18 år har hatt like stor sjanse for å bli invitert, uavhengig av hvem de er og hvor de bor. 
 
 ## Hva snakket de om?
 
 Sakene som skulle inngå i undersøkelsen og også i den deliberative meningsmålingen ble bestemt av Bergen kommune i samråd med forskerne.
 Det ble valgt ut to saker; fornying av havneområdet Dokken i Bergen sentrum og utvikling av bilfrie områder i Bergen uten om sentrum.
-Det ble utarbeidet et omfattende informasjonsmateriale (se kapittel \@ref(informasjonsmateriale))  om de to sakene som ble sendt til paneldeltakerne i forkant av arrangementet. 
+Det ble utarbeidet et omfattende informasjonsmateriale (se eget dokument) om de to sakene som ble sendt til paneldeltakerne i forkant av arrangementet. 
 I dette materiale ble det gitt informasjon om hva saken dreide seg om. 
 Det ble videre lagt frem konkrete forslag som skulle være diskusjonstema i den deliberative meningsmålingen. 
 Til disse forslagene ble det presentert for- og motargument. 

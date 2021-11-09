@@ -1,10 +1,10 @@
 --- 
 title: "Deliberativ meningsmåling i Bergen"
-author: ""
+author: "Sveinung Arnesen, Anne Lise Fimreite, Jon Kåre Skiple"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::bs4_book
-url: https://bookdown.org/janedoe/bookdown-demo
+url: 
 cover-image: cover.png
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -89,6 +89,16 @@ borgerpanelet.
 sakene i vedtakspunkt 1, og innspillene skal være selvstendige vedlegg i saksgrunnlaget frem mot 
 endelig politisk behandling.
 
+Til denne rapporten følger også (klikk på lenkene):
+
+1. [Informasjonsmaterialet](https://hdl.handle.net/11250/2827447) deltakerne fikk utdelt i forkant av arrangementet.
+
+2. [Transkribert materiale](https://hdl.handle.net/11250/2827447) av diskusjonene deltakerne hadde i gruppediskusjonene.
+
+3. Koden som ble laget for å analysere dataene i rapporten.
+Den er vedlagt i den [elektroniske versjonen av denne rapporten](https://bookdown.org/sveinungarnesen78/deliberativ-meningsmaaling-bergen/) (bs4-format).
+
+![](cover.png){width='90%'}
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

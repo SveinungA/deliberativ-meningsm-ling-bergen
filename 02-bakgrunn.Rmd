@@ -14,7 +14,7 @@ En sentral motivasjon for prosjektet er nettopp å høste erfaringer i Bergen so
 I en tid hvor demokratiet settes på prøve også i etablerte, vestlige demokratier, er viktigheten av å forske på demokratiske prosesser kanskje viktigere enn noen gang [@dahlberg2015democratic; @norris2011democratic]. 
 Internasjonalt ser vi lav, og ofte synkende tillit til grunnleggende demokratiske institusjoner som politiske partier og regjeringer [@dalton2004democratic]. 
 Samtidig eksisterer det store forskjeller mellom innbyggerne med tanke på hvem som involverer seg i politikk. 
-Denne politiske ulikheten sammenfaller ofte med andre typer ulikhet i samfunnet som økonomi, helse, og utdanning *Ref CV-modellen*. 
+Denne politiske ulikheten sammenfaller ofte med andre typer ulikhet i samfunnet som økonomi, helse, og utdanning. 
 Den politiske ulikheten gir seg utslag blant annet i lavere valgdeltakelse og engasjement i politiske partier, både nasjonalt og lokalt. 
 
 Norge er generelt et land med høy tillit og høy politisk deltakelse, men også i vårt land er det tydelige tegn på lignende mønstre.
@@ -24,15 +24,15 @@ Også geografisk var det store forskjeller.
 I Vadmyra var valgdeltakelsen på 51 prosent, mens på Bønes var den på 72 prosent.
 
 Mulighetene som finnes for å påvirke politikken også *mellom valg* blir typisk benyttet av de ressurssterke og de med spesielle interesser. 
-Det at ressurssterke grupper engasjerer seg er ikke et problem, men et gode.
-Utfordringen ligger i å øke engasjementet innbyggerne som vanligvis ellers ikke er aktive, for å sikre at alle stemmer blir hørt.
+Det at ressurssterke grupper engasjerer seg er et gode.
+Utfordringen ligger i å øke engasjementet også blant innbyggerne som vanligvis ellers ikke er aktive, for å sikre at alle stemmer blir hørt.
 Når undergrupper i samfunnet føler seg avskåret fra det politiske systemet, er det ikke bare et problem for hver enkelt, men for samfunnet som helhet.
 For å hindre at politisk fremmedgjorte innbyggere kan komme til å søke alternative, ikke-demokratiske løsninger for å få gjennomslag for sine interesser, er det viktig å opprettholde fokus på videreutvikling av inkluderende, demokratiske prosesser som kan styrke det politiske systemets legitimitet.
 Dette er ikke noe som er gjort i en håndvending, men noe som krever kontinuerlig oppmerksomhet.
 
-Bergen kommune og forskningsinstitusjonene NORCE og Universitetet i Bergen har derfor ønsket å arbeide videre med forsøk som kan styrke demokratiet lokalt i Bergen kommune.
+Bergen kommune, forskningsinstituttet NORCE og Universitetet i Bergen har derfor ønsket å arbeide videre med forsøk som kan styrke demokratiet lokalt i Bergen kommune.
 Flere av forskerne som var involvert i lokaldemokratiutvalget er nå med i dette samarbeidsprosjektet, deriblant utvalgets leder og sekretær. 
-Med på laget har vi fått kolleger fra Stanford University, som har utviklet *deliberativ meningsmåling* som metode for å gjennomføre borgerpanel.
+Med på prosjektet er kolleger fra Stanford University, som har utviklet *deliberativ meningsmåling* som metode for å gjennomføre borgerpanel.
 
 Når det gjøres riktig har denne typen demokratiarrangementer potensiale til å lede til bedre beslutninger.
 Videre kan de styrke innbyggernes oppfatninger om at den demokratiske prosessen er rettferdig og tar hensyn til innbyggernes synspunkter, som i sin tur regnes som en avgjørende bestanddel av et robust og legitimt demokrati [@marien2019fair].

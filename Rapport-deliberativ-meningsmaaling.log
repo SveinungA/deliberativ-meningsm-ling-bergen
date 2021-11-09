@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  21 OCT 2021 13:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  9 NOV 2021 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,96 +392,78 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.
-sty
-Package: fancyvrb 2021/10/15 v3.9 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count298
-\FV@InFile=\read2
-\FV@TabBox=\box54
-\c@FancyVerbLine=\count299
-\FV@StepNumber=\count300
-\FV@OutFile=\write3
-) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.st
-y
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip53
-\fb@frw=\dimen155
-\fb@frh=\dimen156
-\FrameRule=\dimen157
-\FrameSep=\dimen158
-)
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
 y
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
-\LTleft=\skip54
-\LTright=\skip55
-\LTpre=\skip56
-\LTpost=\skip57
-\LTchunksize=\count301
-\LTcapwidth=\dimen159
-\LT@head=\box55
-\LT@firsthead=\box56
-\LT@foot=\box57
-\LT@lastfoot=\box58
-\LT@gbox=\box59
-\LT@cols=\count302
-\LT@rows=\count303
-\c@LT@tables=\count304
-\c@LT@chunks=\count305
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count298
+\LTcapwidth=\dimen155
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@gbox=\box58
+\LT@cols=\count299
+\LT@rows=\count300
+\c@LT@tables=\count301
+\c@LT@chunks=\count302
 \LT@p@ftn=\toks22
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
 sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen160
-\lightrulewidth=\dimen161
-\cmidrulewidth=\dimen162
-\belowrulesep=\dimen163
-\belowbottomsep=\dimen164
-\aboverulesep=\dimen165
-\abovetopsep=\dimen166
-\cmidrulesep=\dimen167
-\cmidrulekern=\dimen168
-\defaultaddspace=\dimen169
-\@cmidla=\count306
-\@cmidlb=\count307
-\@aboverulesep=\dimen170
-\@belowrulesep=\dimen171
-\@thisruleclass=\count308
-\@lastruleclass=\count309
-\@thisrulewidth=\dimen172
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count303
+\@cmidlb=\count304
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count305
+\@lastruleclass=\count306
+\@thisrulewidth=\dimen168
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
-\col@sep=\dimen173
-\ar@mcellbox=\box60
-\extrarowheight=\dimen174
+\col@sep=\dimen169
+\ar@mcellbox=\box59
+\extrarowheight=\dimen170
 \NC@list=\toks23
-\extratabsurround=\skip58
-\backup@length=\skip59
-\ar@cellbox=\box61
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box60
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count310
-\calc@Bcount=\count311
-\calc@Adimen=\dimen175
-\calc@Bdimen=\dimen176
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count312
-\calc@Cskip=\skip62
+\calc@Ccount=\count309
+\calc@Cskip=\skip61
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
 sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count313
+\etb@tempcnta=\count310
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.
 sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box62
-\fn@width=\dimen177
+\fn@notes=\box61
+\fn@width=\dimen173
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
 sty
@@ -499,8 +481,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
 )
-\Gin@req@height=\dimen178
-\Gin@req@width=\dimen179
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.st
 y
 Package: amsthm 2020/05/29 v2.20.6
@@ -509,23 +491,23 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks26
 \thm@notefont=\toks27
 \thm@headpunct=\toks28
-\thm@preskip=\skip63
-\thm@postskip=\skip64
-\thm@headsep=\skip65
+\thm@preskip=\skip62
+\thm@postskip=\skip63
+\thm@headsep=\skip64
 \dth@everypar=\toks29
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.st
 y
 Package: babel 2021/10/13 3.64 The Babel package
-\babel@savecnt=\count314
-\U@D=\dimen180
+\babel@savecnt=\count311
+\U@D=\dimen176
 \l@unhyphenated=\language3
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/xebabel.de
 f
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
 ef))
-\bbl@readstream=\read3
-\bbl@dirlevel=\count315
+\bbl@readstream=\read2
+\bbl@dirlevel=\count312
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-norsk/nors
 k.ldf
@@ -548,32 +530,32 @@ Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.
 sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip66
-\multirow@cntb=\count316
-\multirow@dima=\skip67
-\bigstrutjot=\dimen181
+\multirow@colwidth=\skip65
+\multirow@cntb=\count313
+\multirow@dima=\skip66
+\bigstrutjot=\dimen177
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.st
 y
-\wrapoverhang=\dimen182
-\WF@size=\dimen183
-\c@WF@wrappedlines=\count317
-\WF@box=\box63
+\wrapoverhang=\dimen178
+\WF@size=\dimen179
+\c@WF@wrappedlines=\count314
+\WF@box=\box62
 \WF@everypar=\toks30
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count318
+\c@float@type=\count315
 \float@exts=\toks31
-\float@box=\box64
+\float@box=\box63
 \@float@everytoks=\toks32
-\@floatcapt=\box65
+\@floatcapt=\box64
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.
 sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks33
-\minrowclearance=\skip68
+\minrowclearance=\skip67
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscap
 e.sty
@@ -591,38 +573,38 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.
 sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box66
-\sift@deathcycles=\count319
-\@vwid@loff=\dimen184
-\@vwid@roff=\dimen185
+\@vwid@box=\box65
+\sift@deathcycles=\count316
+\@vwid@loff=\dimen180
+\@vwid@roff=\dimen181
 )
-\c@taburow=\count320
-\tabu@nbcols=\count321
-\tabu@cnt=\count322
-\tabu@Xcol=\count323
-\tabu@alloc=\count324
-\tabu@nested=\count325
-\tabu@target=\dimen186
-\tabu@spreadtarget=\dimen187
-\tabu@naturalX=\dimen188
-\tabucolX=\dimen189
-\tabu@Xsum=\dimen190
-\extrarowdepth=\dimen191
-\abovetabulinesep=\dimen192
-\belowtabulinesep=\dimen193
-\tabustrutrule=\dimen194
+\c@taburow=\count317
+\tabu@nbcols=\count318
+\tabu@cnt=\count319
+\tabu@Xcol=\count320
+\tabu@alloc=\count321
+\tabu@nested=\count322
+\tabu@target=\dimen182
+\tabu@spreadtarget=\dimen183
+\tabu@naturalX=\dimen184
+\tabucolX=\dimen185
+\tabu@Xsum=\dimen186
+\extrarowdepth=\dimen187
+\abovetabulinesep=\dimen188
+\belowtabulinesep=\dimen189
+\tabustrutrule=\dimen190
 \tabu@thebody=\toks34
 \tabu@footnotes=\toks35
-\tabu@box=\box67
-\tabu@arstrutbox=\box68
-\tabu@hleads=\box69
-\tabu@vleads=\box70
-\tabu@cellskip=\skip69
+\tabu@box=\box66
+\tabu@arstrutbox=\box67
+\tabu@hleads=\box68
+\tabu@vleads=\box69
+\tabu@cellskip=\skip68
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/thr
 eeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box71
+\@tempboxb=\box70
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/th
 reeparttablex.sty
@@ -636,69 +618,69 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip70
+\TPTL@width=\skip69
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box72
-\UL@hyphenbox=\box73
-\UL@skip=\skip71
+\UL@box=\box71
+\UL@hyphenbox=\box72
+\UL@skip=\skip70
 \UL@hook=\toks36
-\UL@height=\dimen195
-\UL@pe=\count326
-\UL@pixel=\dimen196
-\ULC@box=\box74
+\UL@height=\dimen191
+\UL@pe=\count323
+\UL@pixel=\dimen192
+\ULC@box=\box73
 Package: ulem 2019/11/18
-\ULdepth=\dimen197
+\ULdepth=\dimen193
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.
 sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen198
-\c@nlinenum=\count327
+\rotheadsize=\dimen194
+\c@nlinenum=\count324
 \TeXr@lab=\toks37
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.st
 y
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip72
-\bibsep=\skip73
+\bibhang=\skip71
+\bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count328
+\c@NAT@ctr=\count325
 ) (./Rapport-deliberativ-meningsmaaling.aux)
 \openout1 = `Rapport-deliberativ-meningsmaaling.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 145.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 145.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 145.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 145.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 145.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 145.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 106.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 145.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 106.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -727,7 +709,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 145.
+(Font)              scaled to size 10.0pt on input line 106.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -766,18 +748,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 145.
+(Font)              scaled to size 10.0pt on input line 106.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 145.
+(Font)              `operators' in the math version `normal' on input line 106.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 145.
+ line 106.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 145.
+(Font)              `operators' in the math version `bold' on input line 106.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 145.
+t line 106.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -864,15 +846,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 145.
+(Font)              `symbols' in the math version `normal' on input line 106.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 145.
+t line 106.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 145.
+(Font)              `symbols' in the math version `bold' on input line 106.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 145.
+t line 106.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -942,17 +924,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-45.
+06.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 145.
+t line 106.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 145
+(Font)              `largesymbols' in the math version `bold' on input line 106
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 145.
-Package hyperref Info: Link coloring OFF on input line 145.
+t line 106.
+Package hyperref Info: Link coloring OFF on input line 106.
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -966,45 +948,45 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 145.
-LaTeX Info: Redefining \pageref on input line 145.
-LaTeX Info: Redefining \nameref on input line 145.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
 (./Rapport-deliberativ-meningsmaaling.out) (./Rapport-deliberativ-meningsmaalin
 g.out)
-\@outlinefile=\write4
-\openout4 = `Rapport-deliberativ-meningsmaaling.out'.
+\@outlinefile=\write3
+\openout3 = `Rapport-deliberativ-meningsmaaling.out'.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 147.
+(Font)              scaled to size 12.0pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 147.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 147.
+(Font)              scaled to size 6.0pt on input line 108.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-47.
+08.
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 147.
+(Font)              scaled to size 12.0011pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 147.
+(Font)              scaled to size 8.00073pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 147.
+(Font)              scaled to size 6.00055pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 147.
+(Font)              scaled to size 11.99872pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 147.
+(Font)              scaled to size 7.99915pt on input line 108.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 147.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 147
+(Font)              scaled to size 5.99936pt on input line 108.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 147
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1015,179 +997,186 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (./Rapport-deliberativ-meningsmaaling.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 6.
+(Font)              scaled to size 7.0pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 6.
+(Font)              scaled to size 5.0pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 6.
+(Font)              scaled to size 10.00092pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 6.
+(Font)              scaled to size 7.00064pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 6.
+(Font)              scaled to size 5.00046pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 6.
+(Font)              scaled to size 9.99893pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 6.
+(Font)              scaled to size 6.99925pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 6.
-[3])
-\tf@toc=\write5
-\openout5 = `Rapport-deliberativ-meningsmaaling.toc'.
+(Font)              scaled to size 4.99947pt on input line 5.
+)
+\tf@toc=\write4
+\openout4 = `Rapport-deliberativ-meningsmaaling.toc'.
 
-[4]
+[3] [4
+
+]
 Kapittel 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--179
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
 
  []
 
-[5
 
-] [6
+Overfull \hbox (18.27pt too wide) in paragraph at lines 153--155
+[][]\TU/lmr/m/n/10 Transkribert materiale[] av diskusjonene deltakerne hadde i 
+gruppediskusjonene. 
+ []
 
-]
+[5]
+File: cover.png Graphic file (type bmp)
+<cover.png>
+[6]
 Kapittel 2.
-[7] [8
+[7
+
+] [8] [9] [10
 
 ]
 Kapittel 3.
-[9] [10] [11] [12
 
-]
-Kapittel 4.
-
-Underfull \hbox (badness 1033) in paragraph at lines 271--275
+Underfull \hbox (badness 1033) in paragraph at lines 244--248
 \TU/lmr/m/n/10 kommunens personvernombud vurderte dette annerledes. Vurderingen
  var
  []
 
-[13] [14]
+[11]
+Overfull \hbox (28.24004pt too wide) in alignment at lines 268--272
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.24004pt too wide) in alignment at lines 272--276
+ [] [] [] [] 
+ []
+
+[12]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf Grap
 hic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[15] [16] [17] [18]
-Kapittel 5.
+[13] [14] [15] [16]
+Kapittel 4.
+File: ordsky-dokken.png Graphic file (type bmp)
+<ordsky-dokken.png>
+[17
+
+]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1259) has occurred while \output is active []
 
-[19
-
-]
+[18]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--468
+Underfull \hbox (badness 10000) in paragraph at lines 448--450
 [][]
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--480
+Underfull \hbox (badness 10000) in paragraph at lines 459--462
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[21]
+[19]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[22]
+[20]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[23]
+[21]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24]
+[22]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[25]
+[23]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figu
 re2-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figur
 e2-1.pdf>
-
-Underfull \vbox (badness 2856) has occurred while \output is active []
-
-[26]
-Underfull \hbox (badness 5787) in paragraph at lines 550--553
+[24] [25]
+Underfull \hbox (badness 5787) in paragraph at lines 573--576
 []\TU/lmr/m/n/10 Vi observerer et mønster hvor deltakergruppen har kraftigere h
 old-
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 550--553
+Underfull \hbox (badness 1496) in paragraph at lines 573--576
 \TU/lmr/m/n/10 ningsendringer enn kontrollgruppen har. Det er også flere tilfel
 ler hvor
  []
 
-[27] [28
+[26]
+Kapittel 5.
+File: ordsky-bilfri.png Graphic file (type bmp)
+<ordsky-bilfri.png>
+[27
 
 ]
-Kapittel 6.
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1460) has occurred while \output is active []
 
-[29]
+[28]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[30]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q13-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q13-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 31
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 29
  []
 
-[31]
+[29]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32]
+[30]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf>
@@ -1196,18 +1185,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 33
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 31
  []
 
-[33]
+[31]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[34]
+[32]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf>
@@ -1216,18 +1205,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 35
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 33
  []
 
-[35]
+[33]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[36]
+[34]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf>
@@ -1236,18 +1225,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 37
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 35
  []
 
-[37]
+[35]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[38]
+[36]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf>
@@ -1256,38 +1245,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 6.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 39
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 37
  []
 
-[39] [40]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/prosesseksperiment-
-1.pdf Graphic file (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/prosesseksperiment-1
-.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 751--753
-[][]
+[37]
+Overfull \hbox (75.38pt too wide) in paragraph at lines 769--834
+ [][] 
  []
 
-[41] [42
 
-]
-Kapittel 7.
+LaTeX Warning: Float too large for page by 2.13824pt on input line 834.
+
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2
+-1.pdf Graphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2-
+1.pdf>
+[38] [39] [40]
+Kapittel 6.
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--769
+Underfull \hbox (badness 10000) in paragraph at lines 862--864
 [][]
  []
 
-[43]
+[41
+
+]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--779
+Underfull \hbox (badness 10000) in paragraph at lines 872--874
 [][]
  []
 
@@ -1296,183 +1287,34 @@ manage-1-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-m
 anage-1-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--786
+Underfull \hbox (badness 10000) in paragraph at lines 878--881
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[44]
-
-LaTeX Warning: Reference `political-efficacy-manage-1' on page 45 undefined on 
-input line 787.
-
+[42]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf>
 
 Underfull \vbox (badness 5175) has occurred while \output is active []
 
-[45] [46] [47] [48]
-Kapittel 8.
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 877.
-[49
+[43] [44] [45] (./Rapport-deliberativ-meningsmaaling.bbl [46]) [47
 
-]
-Overfull \vbox (2.28998pt too high) detected at line 1845
- []
-
-[50]
-Overfull \vbox (2.28998pt too high) detected at line 1845
- []
-
-[51] [52]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[53]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[54]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[55]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[56] [57]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[58]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[59]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[60]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[61]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[62]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[63]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[64]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[65]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[66]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[67]
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1845
- []
-
-[68]
-Overfull \vbox (1.38998pt too high) detected at line 1845
- []
-
-[69] [70]
-Kapittel 9.
-(./Rapport-deliberativ-meningsmaaling.bbl [71
-
-] [72
-
-]) [73] (./Rapport-deliberativ-meningsmaaling.aux)
-
-LaTeX Warning: There were undefined references.
-
+] (./Rapport-deliberativ-meningsmaaling.aux)
 Package rerunfilecheck Info: File `Rapport-deliberativ-meningsmaaling.out' has 
 not changed.
-(rerunfilecheck)             Checksum: B82F6D967949A14575B522152008B1F7;3562.
+(rerunfilecheck)             Checksum: 2F29A061C92BD707E15C861DEFFE8DE9;3144.
  ) 
 Here is how much of TeX's memory you used:
- 19435 strings out of 478492
- 350697 string characters out of 5860434
- 1218544 words of memory out of 5000000
- 39395 multiletter control sequences out of 15000+600000
- 410011 words of font info for 84 fonts, out of 8000000 for 9000
+ 19006 strings out of 478492
+ 344228 string characters out of 5860434
+ 823474 words of memory out of 5000000
+ 38975 multiletter control sequences out of 15000+600000
+ 409987 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,9n,120p,1373b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,11n,120p,401b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Rapport-deliberativ-meningsmaaling.pdf (73 pages).
+Output written on Rapport-deliberativ-meningsmaaling.pdf (47 pages).

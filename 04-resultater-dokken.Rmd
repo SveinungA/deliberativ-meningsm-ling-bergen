@@ -1,9 +1,8 @@
 # Dokken {#dokken}
 
-<!-- ## Gruppediskusjoner -->
-
-<!-- Kvantitativ tekstanalyse av gruppesamtalene om Dokken. -->
-<!-- Grupper på tematikk, plukk ut representative setninger. -->
+```{r ordsky-dokken, fig.align = 'center', out.width = "100%", fig.cap = "Ordsky fra gruppediskusjonene om Dokken"}
+knitr::include_graphics("ordsky-dokken.png")
+```
 
 ## Svarfordeling for alle spørsmål om Dokken. 
 
@@ -267,14 +266,20 @@ plot1 <- ggplot(dokken, aes(x = survey, y = avg, colour=question, group=question
 plot1
 ```
 
-```{r dokken-results-table1, include=FALSE, eval=FALSE}
-dokken %>% select(question, group, survey, avg, se) %>% kableExtra::kable(., booktabs = T) %>% kable_styling(c('striped', 'hover')) %>% collapse_rows(columns = c(1:2)) %>% 
-      footnote(general = 'All questions range from 1 to 11. "Do not knows" and "NA" omitted.')
+Tabellen viser gjennomsnittlig score for spørsmålene om Dokken, før og etter arrangementet den 12. juni.
+
+```{r dokken-results-table1}
+dokken %>% filter(group == 'Deltakergruppe') %>% 
+  mutate(survey = case_when(survey == 'pre' ~ 'Før',
+                                  survey == 'post' ~ 'Etter')) %>% 
+  select(Sak = question, Undersøkelse = survey, Gj.snitt = avg, Standardfeil = se) %>% 
+  kableExtra::kable(., booktabs = T, digits = 1, caption = 'Gjennomsnitt for deltakergruppen') %>% kable_styling(c('striped', 'hover'))%>% 
+  collapse_rows(columns = 1)  
 
 write_csv(dokken, 'Data/Dokken.csv')
 ```
 Figuren under viser hvordan deltakergruppen endret holdninger etter å ha diskutert sakene.
-Den stiplete linjen viser til gjennomsnittet i undersøkelsen før arrangementet.
+Den stiplete linjen viser til gjennomsnittet i undersøkelsen før arrangementet, her sentralisert til null.
 De svarte prikkene indikerer gjennomsnittet for deltakergruppen.
 Hvis linjene som er trukket gjennom prikkene ikke overlapper den stiplete linjen er endringen før og etter arrangementet statistisk signifikant.
 De motsvarende grå prikkene og strekene viser kontrollgruppens endring fra før og etter arrangementet (som de ikke deltok på).

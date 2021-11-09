@@ -68,7 +68,7 @@ p1 <- ggplot(dp_t_post, aes(x = factor(Q86_1))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'Gruppelederne ga alle mulighet til å delta i diskusjonen', x = ' ', y = 'Prosent', fill = '')  +
+   labs(title = 'Gruppelederne ga alle mulighet \ntil å delta', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -77,7 +77,7 @@ p2 <- ggplot(dp_t_post, aes(x = factor(Q86_2))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'Medlemmene i gruppen min deltok relativt likt i diskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+   labs(title = 'Gruppemedlemmene deltok \nlike mye', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -86,16 +86,16 @@ p3 <- ggplot(dp_t_post, aes(x = factor(Q86_3))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-  labs(title = 'Gruppelederne prøvde å sørge for at motstridene argumenter ble vurdert', x = ' ', y = 'Prosent', fill = '')  +
+  labs(title = 'Motstridende argumenter \nble vurdert', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
 
 p4 <- ggplot(dp_t_post, aes(x = factor(Q86_4))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
   scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'De viktige aspektene av sakene ble dekket i gruppediskusjonene', x = ' ', y = 'Prosent', fill = '')  +
+   labs(title = 'De viktigste aspektene \nble dekket', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -104,7 +104,7 @@ p5 <- ggplot(dp_t_post, aes(x = factor(Q86_5))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'Jeg lærte mye om folk som er annerledes enn meg – om hvordan de og livene deres er', x = ' ', y = 'Prosent', fill = '')  +
+   labs(title = 'Jeg lærte mye om folk \nsom er annerledes enn meg', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey()
 
@@ -247,7 +247,7 @@ p1 / p2
 Deltakerne fikk også to spørsmål som er vanlig å stille for å måle det som på engelsk kalles "political efficacy". 
 Det første spørsmålet måler i hvilken grad man opplever at man kan påvirke lokalpolitikken, og det andre måler i hvilken grad man syns at politikk er innviklet.
 
-Figur \@ref(political-efficacy-manage-1) viser at deltakerne har flyttet seg i "riktig" retning av hva man skulle forvente etter å ha deltatt i en deliberativ meningsmåling:
+Resultatet viser at deltakerne har flyttet seg i "riktig" retning av hva man skulle forvente etter å ha deltatt i en deliberativ meningsmåling:
 De har større tro på at de kan ha en påvirkning på lokalpolitikk, og de synes i mindre grad enn før at politkk er innviklet.
 Kontrollgruppen har ikke den samme endringen.
 Samtidig er endringene for deltakerne såpass små at vi ikke kan si at forskjellen er statistisk signifikant.
