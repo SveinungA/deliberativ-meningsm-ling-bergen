@@ -64,13 +64,16 @@ Honoraret ble senere pga rekrutteringsproblemer doblet til kr 1000.
 Det var utfordringer knyttet til rekrutteringen, og det er ikke å legge skjul på at det var vesentlig enklere å rekruttere til deltakelse i undersøkelsen enn til deltakelse i panelet. 
 Ved siden av at flere ble invitert (1500 nye invitasjoner fra reservelisten ble sendt ut) og honoraret økt, var både byrådsleder og prosjektleder aktive i lokale medier for å oppfordre til deltakelse i panelet. 
 Det ble også foretatt to purringer via brev og sms. I underkant av 10 prosent av de inviterte meldte seg til deltakelse i undersøkelsen (168), mens rundt 5 prosent av de inviterte meldte seg til panelet (138).
-121 fra hver av gruppene svarte på undersøkelsen før panelet.
+124 personer i kontrollgruppen svarte på forundersøkelsen, og 118 personer gjorde det samme i deltakergruppen.
+På selve deliberasjonsarrangementet den 12. juni var det 90 deltakere.
+
+ 
 
 
 | Gruppe       | Forundersøkelse | Deliberasjon | Etterundersøkelse  |
 |------------:|-------:|-------------:|------------:|
-| Kontrollgruppe     |  N=121     | N=0          | N=108       | 
-| Deltakergruppe   |  N=121     | N=90         | N=101       |
+| Kontrollgruppe     |  N=124     | N=0          | N=108       | 
+| Deltakergruppe   |  N=118     | N=90         | N=101       |
 
 ```{r bakgrunn}
 #Alder
@@ -150,10 +153,21 @@ p5 <- ggplot(bydel, aes(x = factor(Q27))) +
   plot_annotation(title = 'Bakgrunnen til deltakerne i den deliberative meningsmålingen')
 ```
 
+Kriteriet for å bli del av analysene er at man har deltatt i deliberasjonen og svart på etterundersøkelsen.
+Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
 Det var hovedsakelig god balanse i deltakergruppen med tanke på deres sosiale bakgrunnsvariabler som kjønn, inntekt, og statsborgerskap.
-Når det gjelder alder er yngre deltakere er sterkere representert enn eldre, og geografisk manglet det deltakere fra Arna.
+Vi noterer oss at deltakelsen er høy i de yngre aldersgruppene, og lavere blant de eldre.
+Dette kan skyldes at yngre er mer komfortable med online gjennomføring.
+Pandemien har økt bruken av online kommunikasjon og med dette senket terskelen for deltakelse i alle aldersgrupper, men vi tror fortsatt at det er en forskjell i teknologisk kunnskap som påvirker aldersgruppene ulikt. 
+Målet er at alle skal ha like sjanser for å delta, slik at deltakerne er mest mulig representative for alle innbyggerne i Bergen.
+Slik sett hadde det vært mer ønskelig med en aldersmessig jevnere deltakelse.
+Når det er sagt, er det ofte de unge som er underrepresentert i andre demokratiske kanaler (som valg), så det er verdt å merke seg at dette arrangementet nådde fram til denne gruppen.
+Et fysisk arrangement ville senket den digitale kunnskapsterskelen, men samtidig introdusert andre terskler som for eksempel kunne gått ut over deltakelsen til personer som har vanskelig for å møte opp i et lokale av praktiske grunner.
 
+Geografisk manglet det deltakere fra Arna.
 Det er i denne sammenhengen viktig å understreke at alle innbyggere i Bergen over 18 år har hatt like stor sjanse for å bli invitert, uavhengig av hvem de er og hvor de bor. 
+
+
 
 ## Hva snakket de om?
 

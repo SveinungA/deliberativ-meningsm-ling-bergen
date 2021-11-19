@@ -357,9 +357,8 @@ plot
 
 
 
-Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
-`r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
-Det er altså svært sterk støtte til å redusere farten til 30 km/t i veldig tettbygde strøk.
+Det er høy oppslutning om å redusere farten til 30 km/t i svært tettbygde strøk. `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent støtter  dette forslaget, og av disse igjen er overvekten på svarkategorien som indikerer ekstremt sterk støtte.
+`r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent motsetter seg forslaget.
 
 
 ## Endring i holdninger
