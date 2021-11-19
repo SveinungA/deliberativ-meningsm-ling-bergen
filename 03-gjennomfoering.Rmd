@@ -22,7 +22,7 @@ SODP var vårt førstevalg for å arrangere en online meningsmåling i regi av D
 
 Forskningsinstituttet NORCE sitt personvernombud vurderte at SODP var en løsning som kunne velges gitt de spesielle forholdene pandemien gav. 
 Bergen kommunens personvernombud vurderte dette annerledes.
-Vurderingen var basert på at løsningen ikke tilfredsstilte deltakernes personvern godt nok, bla fordi data (innholdsdata, tekniske data og innloggingsdata) samlet inn ila meningsmålingen, ville overføres til og oppbevares på server i USA.
+Vurderingen var basert på at løsningen ikke tilfredsstilte deltakernes personvern godt nok, blant annet fordi data (innholdsdata, tekniske data og innloggingsdata) samlet inn ville overføres til og oppbevares på server i USA.
 Dette ble vurdert å være i strid med EUs GDPR-lovgivning. 
 
 SODP-løsningen måtte dermed forlates, og valget falt på å gjennomføre arrangementet  online ved bruk av videokonferanseplattformen Zoom.
@@ -33,6 +33,8 @@ IT-avdelingen sto også for den tekniske støtten ifb med gjennomføringen av pa
 
 Beslutning om å velge denne løsningen ble tatt relativt sent i prosessen gitt at arrangementet var satt til juni 2021. 
 Da avklaringen rundt den tekniske løsningen var på plass, de nødvendige personvernmessige tillatelser gitt og datasikkerhet ivaretatt, startet arbeidet med å trekke ut og invitere deltakere til panelet. 
+For å lette ansvarsstrukturen knyttet til behandling av personopplysninger overtok også NORCE de delene av arbeidet med å rekruttere deltakere som Bergen kommune var tiltenkt å gjennomføre.
+
 
 ## Design
 
@@ -66,8 +68,9 @@ Ved siden av at flere ble invitert (1500 nye invitasjoner fra reservelisten ble 
 Det ble også foretatt to purringer via brev og sms. I underkant av 10 prosent av de inviterte meldte seg til deltakelse i undersøkelsen (168), mens rundt 5 prosent av de inviterte meldte seg til panelet (138).
 124 personer i kontrollgruppen svarte på forundersøkelsen, og 118 personer gjorde det samme i deltakergruppen.
 På selve deliberasjonsarrangementet den 12. juni var det 90 deltakere.
+Kriteriet for å bli del av analysene er at man har deltatt i deliberasjonen og svart på etterundersøkelsen.
+Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
 
- 
 
 
 | Gruppe       | Forundersøkelse | Deliberasjon | Etterundersøkelse  |
@@ -153,20 +156,15 @@ p5 <- ggplot(bydel, aes(x = factor(Q27))) +
   plot_annotation(title = 'Bakgrunnen til deltakerne i den deliberative meningsmålingen')
 ```
 
-Kriteriet for å bli del av analysene er at man har deltatt i deliberasjonen og svart på etterundersøkelsen.
-Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
-Det var hovedsakelig god balanse i deltakergruppen med tanke på deres sosiale bakgrunnsvariabler som kjønn, inntekt, og statsborgerskap.
-Vi noterer oss at deltakelsen er høy i de yngre aldersgruppene, og lavere blant de eldre.
+Vi besitter ikke direkte sammeliknbare tall for hele populasjonen, og kan derfor ikke med sikkerhet bekrefte nøyaktig hvor representativ gruppen er med tanke på sosial bakgrunn.
+Når det er sagt stemmer profilen til gruppen tilsynelatende godt overens med innbyggerne i Bergen med tanke på kjønnsfordeling, statsborgerskap og alder.
+Vi noterer oss at det er god deltakelse blant yngre; en gruppe som ellers har tendens til å være underrepresentert i kommunevalg.
 Dette kan skyldes at yngre er mer komfortable med online gjennomføring.
 Pandemien har økt bruken av online kommunikasjon og med dette senket terskelen for deltakelse i alle aldersgrupper, men vi tror fortsatt at det er en forskjell i teknologisk kunnskap som påvirker aldersgruppene ulikt. 
+
 Målet er at alle skal ha like sjanser for å delta, slik at deltakerne er mest mulig representative for alle innbyggerne i Bergen.
-Slik sett hadde det vært mer ønskelig med en aldersmessig jevnere deltakelse.
-Når det er sagt, er det ofte de unge som er underrepresentert i andre demokratiske kanaler (som valg), så det er verdt å merke seg at dette arrangementet nådde fram til denne gruppen.
-Et fysisk arrangement ville senket den digitale kunnskapsterskelen, men samtidig introdusert andre terskler som for eksempel kunne gått ut over deltakelsen til personer som har vanskelig for å møte opp i et lokale av praktiske grunner.
-
-Geografisk manglet det deltakere fra Arna.
 Det er i denne sammenhengen viktig å understreke at alle innbyggere i Bergen over 18 år har hatt like stor sjanse for å bli invitert, uavhengig av hvem de er og hvor de bor. 
-
+Grundigere analyser av representativitet vil bli gjennomført på et senere stadie av forskningsprosjektet som denne rapporten er en del av.
 
 
 ## Hva snakket de om?
