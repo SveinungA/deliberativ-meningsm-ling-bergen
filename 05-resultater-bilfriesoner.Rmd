@@ -4,9 +4,14 @@
 knitr::include_graphics("ordsky-bilfri.png")
 ```
 
+Deltakerne diskuterte spørsmål om Bilfrie områder på ettermiddagen.
+Ordskyen gir et visuelt inntrykk av hva deltakerne snakket om.
+Vi anbefaler interesserte å lese gjennom det rike [transkriberte materialet](https://hdl.handle.net/11250/2827447), som gjengir samtalene i alle gruppene (i anonymisert form).
+For videre kontekstualisering er det også nyttig å lese [informasjonsmaterialet](https://hdl.handle.net/11250/2827447), som viser hvilket felles referansegrunnlag deltakerne diskuterte ut fra.
+
 ## Svarfordeling for alle spørsmål om bilfrie områder 
 
-Under følger svarene deltakerne ga om bilfrie områder, etter at de hadde diskutert sakene i grupper og deltatt på plenumssesjon om temaet.
+Under følger spørsmålsformuleringene deltakerne fikk og svarene de ga om bilfrie områder, etter at de hadde diskutert sakene i grupper og deltatt på plenumssesjon om temaet.
 Vi har gitt søylene ulike gråtoner for å lettere kunne identifisere hva flertallet mener i hver enkelt sak.
 De som har svart den nøytrale midtkategorien "5" eller svart "Vet ikke", har blitt utelatt fra beregningen av flertallet.
 Det er imidlertid viktig å vurdere fra sak til sak hvor mange som har gitt slike svar, da det sier noe om hvor sterke preferanser deltakerne samlet har om saken.
@@ -19,25 +24,24 @@ Andre mener at Bergen sentrum bør bli helt bilfritt med unntak for personer med
 Hva mener du? Bør kommunen gjøre ytterligere tiltak for å gjøre Bergen sentrum mer bilfri?
 
 ```{r Q11}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q11 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q11 %in% 1:5 ~ "Flertall",
                                           Q11 == 6 | Q11 == 12 ~ "Ikke medregnet",
                                           Q11 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q11), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q11), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Bergen sentrum mer bilfritt enn i dag?", x = 'Svarfordeling fra 0 = Mer bilfritt, til 10 = Ikke mer bilfritt', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
- `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent heller mot at Bergen sentrum må bli mer bilfritt enn det er i dag, mens `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener at det ikke skal det.
-Dette er et polariserende spørsmål, hvor de mest hyppige svaret blant deltakerne er at man mener ekstremt sterkt at det må bli mer bilfritt, mens det nest mest hyppige svaret er at man mener ekstremt sterkt at det ikke skal bli mer bilfritt.
+ `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent heller mot at Bergen sentrum må bli mer bilfritt enn det er i dag, mens `r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent mener at det ikke skal det.
 
 ### Sentrumsnære strøk vs. ytre bydeler
 
@@ -47,24 +51,24 @@ Andre mener at bilfrie områder bør utvikles i de ytre bydelene fordi problemet
 Hva mener du, bør kommunen prioritere utvikling av bilfrie områder i sentrumsnære strøk eller i ytre bydeler?
 
 ```{r Q12}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q12 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q12 %in% 1:5 ~ "Flertall",
                                           Q12 == 6 | Q12 == 12 ~ "Ikke medregnet",
                                           Q12 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q12), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q12), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Sentrumsnære strøk vs. ytre bydeler", x = 'Svarfordeling fra 0 = Prioritere sentrum, til 10 = Prioritere ytre bydeler', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
-Av de som uttrykte en prioritering mener et klart flertall på `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent at sentrum skal prioriteres framfor de ytre bydelene, mens  `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
+Av de som uttrykte en prioritering mener et klart flertall på `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent at sentrum skal prioriteres framfor de ytre bydelene, mens  `r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
 Mange er også usikker på hvordan den geografiske prioriteringen bør gjøres.
 
 ### Store eller små områder?
@@ -74,26 +78,25 @@ Andre mener at kommunen bør lage noen få, store bilfrie områder, som for ekse
 Hva mener du, bør kommunen satse på å lage mange små eller noen få store bilfrie områder?
 
 ```{r Q13}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q13 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q13 %in% 1:5 ~ "Flertall",
                                           Q13 == 6 | Q13 == 12 ~ "Ikke medregnet",
                                           Q13 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q13), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q13), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Mange små vs. store få bilfrie områder", x = 'Svarfordeling fra 0 = Mange små, til 10 = Store få', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
-Flertallet på `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker mange små bilfrie områder heller enn store, få områder. 
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
-Forslaget er noe mindre polariserende enn flere av de andre spørsmålene om bilfrie soner, men blant de som støtter forslaget er det mange sterke tilhengere.
+Flertallet på `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent ønsker mange små bilfrie områder heller enn store, få områder. 
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent mener det motsatte.
 
 ### Fleksibel bruk av parkeringsplasser
 
@@ -102,25 +105,25 @@ Andre mener parkeringsplassene alltid må være åpne for parkering, fordi de so
 Hva mener du?
 
 ```{r Q14}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q14 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q14 %in% 1:5 ~ "Flertall",
                                           Q14 == 6 | Q14 == 12 ~ "Ikke medregnet",
                                           Q14 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q14), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q14), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Stenge parkeringsplasser i helgene", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
-`r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent motsetter seg at parkeringsplasser skal kunne stenges for annen bruk i helgene, mens
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent mener de kan stenges.
+`r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent motsetter seg at parkeringsplasser skal kunne stenges for annen bruk i helgene, mens
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent mener de kan stenges.
 Det klart mest hyppige svaret er at man motsetter seg ekstremt sterkt at parkeringsplasser skal kunne stenges i helgene.
 
 
@@ -133,18 +136,18 @@ Andre mener dette ikke er bra fordi færre parkeringsplasser for privatbiler gj�
 Hva mener du, hvordan skal andelen parkeringsplasser fordeles mellom privatbiler og bildeleordninger?
 
 ```{r Q15}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q15 %in% 1:5 ~ "Mindretall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q15 %in% 1:5 ~ "Mindretall",
                                           Q15 == 6 | Q15 == 12 ~ "Ikke medregnet",
                                           Q15 %in% 7:11 ~ "Flertall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q15), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q15), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Andel parkeringsplasser til private biler vs. bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 ```
@@ -152,8 +155,8 @@ plot
 
 Svaralternativ 5 betyr at fordelingen mellom private parkeringsplasser og bildelingsplasser skal være som i dag.
 Dette er det mest foretrukne alternativet, og støttes av nesten en tredjedel av deltakerne.
-Av de som ønsker en endring fra dagens situasjon vil `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent øke andelen parkeringsplasser til bildeling, mens
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker å øke andelen til privatbiler.
+Av de som ønsker en endring fra dagens situasjon vil `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent øke andelen parkeringsplasser til bildeling, mens
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent ønsker å øke andelen til privatbiler.
 
 ### Begrense bilkjøring
 
@@ -162,13 +165,13 @@ Likevel finnes det tiltak som kan begrense biltrafikken, og vi ber deg indikere 
 
 ```{r Q16}
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q16))) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q16))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(labels = c('Skilt med gjennomkjøring forbudt', 'Fysiske hindringer \nsom tvinger ned farten', 'Fysiske sperrer \nsom kan fjernes for nødvendig trafikk', 'Lavest mulig fartsgrense (30 km/t)'), drop = FALSE, guide = guide_axis(n.dodge=2)) +
    labs(title = "Reservere parkering til bildeling", x = 'Svarfordeling fra 0 = Flere plasser til privatbiler, til 10 = Flere plasser til bildeling', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 ```
@@ -185,60 +188,60 @@ De tre andre alternativene skiller det lite mellom.
 
 ```{r Q17}
 
-p1 <- ggplot(dp_t_post, aes(x = factor(Q17_1))) +
+p1 <- ggplot(post_t_delib, aes(x = factor(Q17_1))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Biler', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
 
 
-p2 <- ggplot(dp_t_post, aes(x = factor(Q17_2))) +
+p2 <- ggplot(post_t_delib, aes(x = factor(Q17_2))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
    scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Sykler', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
 
-p3 <- ggplot(dp_t_post, aes(x = factor(Q17_3))) +
+p3 <- ggplot(post_t_delib, aes(x = factor(Q17_3))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
    scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Elsykler', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
 
-p4 <- ggplot(dp_t_post, aes(x = factor(Q17_4))) +
+p4 <- ggplot(post_t_delib, aes(x = factor(Q17_4))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
    scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Elsparkesykler', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
 
-p5 <- ggplot(dp_t_post, aes(x = factor(Q17_5))) +
+p5 <- ggplot(post_t_delib, aes(x = factor(Q17_5))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Sykkelparkering', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
 
-p6 <- ggplot(dp_t_post, aes(x = factor(Q17_6))) +
+p6 <- ggplot(post_t_delib, aes(x = factor(Q17_6))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
    scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')) +
    labs(title = 'Sykkelverksted', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 patchwork <- p1 + p2 + p3 +  p4 + p5 + p6
 patchwork + plot_annotation(title = 'Villighet til å dele transportmidler', caption = 'Svarfordeling fra 0 = Ikke villig, til 10 = Villig')
@@ -256,51 +259,52 @@ Andre foretrekker å ha bilparkering like ved boligen, selv om det betyr at det 
 Om du måtte velge, hva foretrekker du?
 
 ```{r Q18}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q18 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q18 %in% 1:5 ~ "Flertall",
                                           Q18 == 6 | Q18 == 12 ~ "Ikke medregnet",
                                           Q18 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q18), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q18), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Avstand til parkering", x = 'Svarfordeling fra 0 = Gåavstand til fasiliterer, til 10 = Parkering like ved bolig', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
 I dette spørsmålet har de fleste gjort seg opp en helt klar mening.
-Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som foretrekker gåavstand til skole, matbutikk, offentlige grøntområder, og kollektivtilbud på under 10 minutter, selv om det betyr at de har bilparkering mer enn 250 meter fra boligen.
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent foretrekker å ha bilparkering like ved boligen, selv om det betyr at det er mer enn 10 minutter å gå til grøntområder, skole, matbutikk og kollektivtilbud. 
+Av de som har en preferanse er det `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent som foretrekker gåavstand til skole, matbutikk, offentlige grøntområder, og kollektivtilbud på under 10 minutter, selv om det betyr at de har bilparkering mer enn 250 meter fra boligen.
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent foretrekker å ha bilparkering like ved boligen, selv om det betyr at det er mer enn 10 minutter å gå til grøntområder, skole, matbutikk og kollektivtilbud. 
 
 ### Bilfritt nabolag
 
 >Hva er din mening om at nabolaget der du bor skal være bilfritt område?
 
 ```{r Q19}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q19 %in% 1:5 ~ "Flertall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q19 %in% 1:5 ~ "Flertall",
                                           Q19 == 6 | Q19 == 12 ~ "Ikke medregnet",
                                           Q19 %in% 7:11 ~ "Mindretall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q19), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q19), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Bilfritt nabolag", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
-Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+Av de som har en preferanse er det `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+Dette er et polariserende spørsmål, hvor mange plasser seg ytterst på begge sider av holdningsspekteret.
 
 ### Demokrati – hvem bestemmer?
 
@@ -309,25 +313,25 @@ Andre mener at en slik beslutning må tas av kommunen, fordi de ser hva som er b
 Hva mener du?
 
 ```{r Q20}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q20 %in% 1:5 ~ "Mindretall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q20 %in% 1:5 ~ "Mindretall",
                                           Q20 == 6 | Q20 == 12 ~ "Ikke medregnet",
                                           Q20 %in% 7:11 ~ "Flertall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q20), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q20), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Hvem skal bestemme om nabolag skal være bilfritt", x = 'Svarfordeling fra 0 = Nabolaget skal bestemme, til 10 = Kommunen skal bestemme', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
 ```
 
-Av de som har en preferanse er det `r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
-`r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent ønsker det.
+Av de som har en preferanse er det `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent som motsetter seg at deres eget nabolag skal bli bilfritt område, mens
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent ønsker det.
 Meningene her er ikke like sterke som i mange av de andre spørsmålene om bilfrie områder, noe som reflekteres av at det mest typiske svaret er midtkategorien '5'.
 
 
@@ -338,18 +342,18 @@ Meningene her er ikke like sterke som i mange av de andre spørsmålene om bilfr
 Hva mener du om det?
 
 ```{r Q21}
-dp_t_post <- dp_t_post %>% mutate(fill = case_when(Q21 %in% 1:5 ~ "Mindretall",
+post_t_delib <- post_t_delib %>% mutate(fill = case_when(Q21 %in% 1:5 ~ "Mindretall",
                                           Q21 == 6 | Q21 == 12 ~ "Ikke medregnet",
                                           Q21 %in% 7:11 ~ "Flertall")) 
 
-plot <- ggplot(dp_t_post, aes(x = factor(Q21), fill = fill)) +
+plot <- ggplot(post_t_delib, aes(x = factor(Q21), fill = fill)) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L)) +
   scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'),
                    labels = c('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Vet ikke')) +
    labs(title = "Redusere fart", x = 'Svarfordeling fra 0 = Motsetter seg, til 10 = Støtter', y = 'Prosent', fill = '')  +
   theme_classic()+
-  scale_fill_grey()
+  scale_fill_grey(start = 0, end = 0.9)
   
 plot
 
@@ -357,51 +361,133 @@ plot
 
 
 
-Det er høy oppslutning om å redusere farten til 30 km/t i svært tettbygde strøk. `r round(sum((dp_t_post$fill=='Mindretall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent støtter  dette forslaget, og av disse igjen er overvekten på svarkategorien som indikerer ekstremt sterk støtte.
-`r round(sum((dp_t_post$fill=='Flertall') / (sum(dp_t_post$fill=='Mindretall')+(sum(dp_t_post$fill=='Flertall'))))*100, 0)` prosent motsetter seg forslaget.
+Det er svært høy oppslutning om å redusere farten til 30 km/t i svært tettbygde strøk. `r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent støtter  dette forslaget, og av disse igjen er overvekten på svarkategorien som indikerer ekstremt sterk støtte.
+`r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent motsetter seg forslaget.
 
 
 ## Endring i holdninger
 
 ### Gjennomsnittsendringer
-```{r car-results-manage-1}
-Q11_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q11, na.rm=TRUE), se=sd(Q11, na.rm = TRUE)/sqrt(length(Q11))) %>% mutate(group = 'control', question = 'Q11')
-Q12_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q12, na.rm=TRUE), se=sd(Q12, na.rm = TRUE)/sqrt(length(Q12))) %>% mutate(group = 'control', question = 'Q12')
-Q13_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q13, na.rm=TRUE), se=sd(Q13, na.rm = TRUE)/sqrt(length(Q13)))  %>% mutate(group = 'control', question = 'Q13')
-Q14_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q14, na.rm=TRUE), se=sd(Q14, na.rm = TRUE)/sqrt(length(Q14))) %>% mutate(group = 'control', question = 'Q14')
-Q15_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q15, na.rm=TRUE), se=sd(Q15, na.rm = TRUE)/sqrt(length(Q15))) %>% mutate(group = 'control', question = 'Q15')
-Q17_1_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_1, na.rm=TRUE), se=sd(Q17_1, na.rm = TRUE)/sqrt(length(Q17_1))) %>% mutate(group = 'treatment', question = 'Q17_1')
-Q17_2_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_2, na.rm=TRUE), se=sd(Q17_2, na.rm = TRUE)/sqrt(length(Q17_2))) %>% mutate(group = 'treatment', question = 'Q17_2')
-Q17_3_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_3, na.rm=TRUE), se=sd(Q17_3, na.rm = TRUE)/sqrt(length(Q17_3))) %>% mutate(group = 'treatment', question = 'Q17_3')
-Q17_4_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_4, na.rm=TRUE), se=sd(Q17_4, na.rm = TRUE)/sqrt(length(Q17_4))) %>% mutate(group = 'treatment', question = 'Q17_4')
-Q17_5_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_5, na.rm=TRUE), se=sd(Q17_5, na.rm = TRUE)/sqrt(length(Q17_5))) %>% mutate(group = 'treatment', question = 'Q17_5')
-Q17_6_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q17_6, na.rm=TRUE), se=sd(Q17_6, na.rm = TRUE)/sqrt(length(Q17_6))) %>% mutate(group = 'treatment', question = 'Q17_6')
-Q18_c<- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q18, na.rm=TRUE), se=sd(Q18, na.rm = TRUE)/sqrt(length(Q18))) %>% mutate(group = 'control', question = 'Q18')
-Q19_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q19, na.rm=TRUE), se=sd(Q19, na.rm = TRUE)/sqrt(length(Q19))) %>% mutate(group = 'control', question = 'Q19')
-Q20_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q20, na.rm=TRUE), se=sd(Q20, na.rm = TRUE)/sqrt(length(Q20))) %>% mutate(group = 'control', question = 'Q20')
-Q21_c <- dp_c %>% group_by(survey) %>% summarise(mean=mean(Q21, na.rm=TRUE), se=sd(Q21, na.rm = TRUE)/sqrt(length(Q21))) %>% mutate(group = 'control', question = 'Q21')
+```{r results-car-change}
+#Gjør om "Vet ikke" til missing
+demovate_all <- demovate_all %>% mutate(
+Q11 = na_if(Q11, 12),
+Q12 = na_if(Q12, 12),
+Q13 = na_if(Q13, 12),
+Q14 = na_if(Q14,12),
+Q15 = na_if(Q15,12),
+Q17_1 = na_if(Q17_1,12),
+Q17_2 = na_if(Q17_2,12),
+Q17_3 = na_if(Q17_3,12),
+Q17_4 = na_if(Q17_4,12),
+Q17_5 = na_if(Q17_5,12),
+Q17_6 = na_if(Q17_6,12),
+Q18 = na_if(Q18,12),
+Q19 = na_if(Q19,12),
+Q20 = na_if(Q20,12),
+Q21 = na_if(Q21,12)
+)
+demovate_all_srv <- srvyr::as_survey_design(demovate_all, ids = id)
 
-Q11_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q11, na.rm=TRUE), se=sd(Q11, na.rm = TRUE)/sqrt(length(Q11))) %>% mutate(group = 'treatment', question = 'Q11')
-Q12_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q12, na.rm=TRUE), se=sd(Q12, na.rm = TRUE)/sqrt(length(Q12))) %>% mutate(group = 'treatment', question = 'Q12')
-Q13_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q13, na.rm=TRUE), se=sd(Q13, na.rm = TRUE)/sqrt(length(Q13))) %>% mutate(group = 'treatment', question = 'Q13')
-Q14_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q14, na.rm=TRUE), se=sd(Q14, na.rm = TRUE)/sqrt(length(Q14))) %>% mutate(group = 'treatment', question = 'Q14')
-Q15_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q15, na.rm=TRUE), se=sd(Q15, na.rm = TRUE)/sqrt(length(Q15))) %>% mutate(group = 'treatment', question = 'Q15')
-Q17_1_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_1, na.rm=TRUE), se=sd(Q17_1, na.rm = TRUE)/sqrt(length(Q17_1))) %>% mutate(group = 'treatment', question = 'Q17_1')
-Q17_2_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_2, na.rm=TRUE), se=sd(Q17_2, na.rm = TRUE)/sqrt(length(Q17_2))) %>% mutate(group = 'treatment', question = 'Q17_2')
-Q17_3_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_3, na.rm=TRUE), se=sd(Q17_3, na.rm = TRUE)/sqrt(length(Q17_3))) %>% mutate(group = 'treatment', question = 'Q17_3')
-Q17_4_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_4, na.rm=TRUE), se=sd(Q17_4, na.rm = TRUE)/sqrt(length(Q17_4))) %>% mutate(group = 'treatment', question = 'Q17_4')
-Q17_5_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_5, na.rm=TRUE), se=sd(Q17_5, na.rm = TRUE)/sqrt(length(Q17_5))) %>% mutate(group = 'treatment', question = 'Q17_5')
-Q17_6_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q17_6, na.rm=TRUE), se=sd(Q17_6, na.rm = TRUE)/sqrt(length(Q17_6))) %>% mutate(group = 'treatment', question = 'Q17_6')
-Q18_t<- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q18, na.rm=TRUE), se=sd(Q18, na.rm = TRUE)/sqrt(length(Q18))) %>% mutate(group = 'treatment', question = 'Q18')
-Q19_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q19, na.rm=TRUE), se=sd(Q19, na.rm = TRUE)/sqrt(length(Q19))) %>% mutate(group = 'treatment', question = 'Q19')
-Q20_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q20, na.rm=TRUE), se=sd(Q20, na.rm = TRUE)/sqrt(length(Q20))) %>% mutate(group = 'treatment', question = 'Q20')
-Q21_t <- dp_t %>% group_by(survey) %>% summarise(mean=mean(Q21, na.rm=TRUE), se=sd(Q21, na.rm = TRUE)/sqrt(length(Q21))) %>% mutate(group = 'treatment', question = 'Q21')
+Q11 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q11, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q11") %>%
+ungroup()
 
+Q12 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q12, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q12") %>%
+ungroup()
 
-car <- bind_rows(list(Q11_c, Q12_c, Q13_c, Q14_c, Q15_c, Q17_1_c, Q17_2_c, Q17_3_c, Q17_4_c, Q17_5_c, Q17_6_c, Q18_c, Q19_c, Q20_c, Q21_c, Q11_t, Q12_t, Q13_t, Q14_t, Q15_t,  Q17_1_t, Q17_2_t, Q17_3_t, Q17_4_t, Q17_5_t, Q17_6_t, Q18_t, Q19_t, Q20_t, Q21_t), .id = "group") %>% 
- mutate(group = (case_when(group %in% c(1:15) ~ 'Kontrollgruppe',
-                                               group %in% c(16:30) ~ 'Deltakergruppe')),
-                            question = (case_when(question == 'Q11' ~ 'Bergen sentrum mer bilfritt',
+Q13 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q13, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q13") %>%
+ungroup()
+
+Q14 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q14, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q14") %>%
+ungroup()
+
+Q15 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q15, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q15") %>%
+ungroup()
+
+Q17_1 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_1, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_1") %>%
+ungroup()
+
+Q17_2 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_2, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_2") %>%
+ungroup()
+
+Q17_3 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_3, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_3") %>%
+ungroup()
+
+Q17_4 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_4, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_4") %>%
+ungroup()
+
+Q17_5 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_5, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_5") %>%
+ungroup()
+
+Q17_6 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q17_6, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q17_6") %>%
+ungroup()
+
+Q18 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q18, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q18") %>%
+ungroup()
+
+Q19 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q19, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q19") %>%
+ungroup()
+
+Q20 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q20, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q20") %>%
+ungroup()
+
+Q21 <- demovate_all_srv %>%
+group_by(time, treated) %>%
+summarise(mean = survey_mean(Q21, na.rm = T, vartype = c("ci", "se"))) %>%
+mutate(question = "Q21") %>%
+ungroup()
+
+bilfri <- bind_rows(list(Q11, Q12, Q13, Q14, Q15, Q17_1, Q17_2, Q17_3, Q17_4, Q17_5, Q17_6, Q18, Q19, Q20, Q21)) %>%
+mutate(Undersøkelse = case_when(
+  time == 0 ~ "Før",
+time == 1 ~ "Etter"),
+Gruppe = case_when(
+  treated == 0 ~ "Kontrollgruppe",
+treated == 1 ~ "Deltakergruppe"),
+Sak = case_when(
+  question == 'Q11' ~ 'Bergen sentrum mer bilfritt',
                                                   question == 'Q12' ~ 'Sentrum vs. ytre bydeler',
                                                   question == 'Q13' ~ 'Mange små vs. store, få bilfrie områder',
                                                   question == 'Q14' ~ 'Stenge parkeringsplasser i helgene',
@@ -415,132 +501,498 @@ car <- bind_rows(list(Q11_c, Q12_c, Q13_c, Q14_c, Q15_c, Q17_1_c, Q17_2_c, Q17_3
                                                   question == 'Q18' ~ 'Gåavstand til fasiliteter vs. parkering like ved bolig',
                                                   question == 'Q19' ~ 'Bo i bilfritt nabolag',
                                                   question == 'Q20' ~ 'Hvem skal bestemme om nabolag skal være bilfritt',
-                                                  question == 'Q21' ~ 'Redusere fart i tettbygde strøk')),
-                            survey = case_when(survey == 'pre'~ 'pre',
-                                               survey == 'post_c' ~ 'post',
-                                               survey == 'post_t' ~ 'post'
-                                               )) %>%
-  mutate(avg=mean) %>% 
-  mutate(conf.low = avg-se) %>% 
-  mutate(conf.high = avg+se) %>% 
-  select(-mean) %>% 
-  arrange(question) %>% 
-  relocate(c(question, group, survey, avg, se))
-
+                                                  question == 'Q21' ~ 'Redusere fart i tettbygde strøk'))
+                 
+                 
+# Gjør om Undersøkelse til faktor og endre rekkefølgen
+bilfri <- bilfri %>%
+mutate(Undersøkelse = factor(Undersøkelse,
+levels = c("Før",
+"Etter")))
 ```
-Tabellen viser gjennomsnittlig score for spørsmålene om bilfrie områder, før og etter arrangementet den 12. juni.
+
+Tabellen 'Gjennomsnitt for deltakergruppen' viser gjennomsnittlig score for spørsmålene om bilfrie områder, før og etter arrangementet den 12. juni.
 
 ```{r car-results-table1}
-car %>% filter(group == 'Deltakergruppe') %>% 
-  mutate(survey = case_when(survey == 'pre' ~ 'Før',
-                                  survey == 'post' ~ 'Etter')) %>% 
-  select(Sak = question, Undersøkelse = survey, Gj.snitt = avg, Standardfeil = se) %>% 
-  kableExtra::kable(., booktabs = T, digits = 1, caption = 'Gjennomsnitt for deltakergruppen før og etter deliberasjon') %>% kable_styling(c('striped', 'hover'))%>% 
-  collapse_rows(columns = 1)  
+bilfri %>% arrange(Sak, Gruppe, Undersøkelse) %>%
+  filter(Gruppe == 'Deltakergruppe') %>% 
+select(Sak, Undersøkelse, Gj.snitt = mean) %>%
+kableExtra::kable(., booktabs = T, digits = 1, caption = 'Gjennomsnitt for deltakergruppen') %>% kable_styling(c('striped', 'hover'), font_size = 10) %>%
+collapse_rows(columns = 1)
+```
+Tabellen 'Gjennomsnitt for kontrollgruppen' viser tilsvarende gjennomsnittlig score for spørsmålene om bilfrie områder for kontrollgruppen som ikke deltok på arrangementet.
 
-write.csv(car, file = "Data/car.csv")
+```{r car-results-table2}
+bilfri %>% arrange(Sak, Gruppe, Undersøkelse) %>%
+  filter(Gruppe == 'Kontrollgruppe') %>% 
+select(Sak, Undersøkelse, Gj.snitt = mean) %>%
+kableExtra::kable(., booktabs = T, digits = 1, caption = 'Gjennomsnitt for kontrollgruppen') %>% kable_styling(c('striped', 'hover'), font_size = 10) %>%
+collapse_rows(columns = 1)
 ```
 
-Figuren under viser hvordan deltakergruppen endret holdninger etter å ha diskutert sakene.
-Den stiplete linjen viser til gjennomsnittet i undersøkelsen før arrangementet.
-De svarte prikkene indikerer gjennomsnittet for deltakergruppen.
-Hvis linjene som er trukket gjennom prikkene ikke overlapper den stiplete linjen er endringen før og etter arrangementet statistisk signifikant.
-De motsvarende grå prikkene og strekene viser kontrollgruppens endring fra før og etter arrangementet (som de ikke deltok på).
-Hvis de svarte og grå strekene overlapper, er endringene mellom kontrollgruppen og deltakergruppen ikke signifikant forskjellige.
-Dersom de ikke overlapper, betyr det at gruppene har endret seg forskjellig, enten ved at de har endret seg mer eller at de har gått i motsatt retning av hverandre.
+
+
+> Hvordan lese figuren:
+Figuren "Holdningsendringer før og etter arrangementet" viser hvordan gruppene har endret holdninger mellom første og andre undersøkelse.
+De svarte prikkene indikerer gjennomsnittlig holdningsendring for deltakergruppen før og etter deliberasjon.
+De motsvarende grå prikkene viser kontrollgruppens endring fra før og etter arrangementet (som de ikke deltok på).
+Den stiplete linjen er utgangspunktet, som var gjennomsnittene for spørsmålene i førundersøkelsen.
+Dersom prikkene ligger til venstre, har gjennomsnittet blitt lavere.
+Dersom prikkene ligger til høyre, har gjennomsnittet blitt høyere.
+Hvis linjene som er trukket gjennom prikkene *ikke overlapper den stiplete linjen* kan vi med høy grad av sikkerhet konkludere at endringen før og etter arrangementet er reell, og ikke et utslag av tilfeldigheter.
+
+Figuren viser i likhet med spørsmålene om Dokken at deltakerne en tendens til at deltakerne i sterkere grad endrer oppfatning i etterundersøkelsen.
+Spesielt markert er holdningsendringen til store vs. små bilfrie områder (større oppslutning for små områder), og angående hvem som skal bestemme hvilke områder som skal være bilfrie (større oppslutning for at kommunen skal bestemme).
 
 ```{r car-results-manage-2}
-postpre <- read_csv('Data/Car-postpre.csv')
-postpre <- postpre %>% filter(!is.na(postpre))
+
+#Q11
+change_Q11_c <- demovate_all %>% select(time, treated, Q11) %>%
+filter(treated == 0)
+
+Q11_lm_c <- lm(Q11 ~ time, data = change_Q11_c)
+Q11_lm_c <- tidy(Q11_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q11",
+Gruppe = "Kontrollgruppe")
+
+change_Q11_t <- demovate_all %>% select(time, treated, Q11) %>%
+filter(treated == 1)
+
+Q11_lm_t <- lm(Q11 ~ time, data = change_Q11_t)
+Q11_lm_t <- tidy(Q11_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q11",
+Gruppe = "Deltakergruppe")
+
+#Q12
+change_Q12_c <- demovate_all %>% select(time, treated, Q12) %>%
+filter(treated == 0)
+
+Q12_lm_c <- lm(Q12 ~ time, data = change_Q12_c)
+Q12_lm_c <- tidy(Q12_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q12",
+Gruppe = "Kontrollgruppe")
+
+change_Q12_t <- demovate_all %>% select(time, treated, Q12) %>%
+filter(treated == 1)
+
+Q12_lm_t <- lm(Q12 ~ time, data = change_Q12_t)
+Q12_lm_t <- tidy(Q12_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q12",
+Gruppe = "Deltakergruppe")
+
+#Q13
+change_Q13_c <- demovate_all %>% select(time, treated, Q13) %>%
+filter(treated == 0)
+
+Q13_lm_c <- lm(Q13 ~ time, data = change_Q13_c)
+Q13_lm_c <- tidy(Q13_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q13",
+Gruppe = "Kontrollgruppe")
+
+change_Q13_t <- demovate_all %>% select(time, treated, Q13) %>%
+filter(treated == 1)
+
+Q13_lm_t <- lm(Q13 ~ time, data = change_Q13_t)
+Q13_lm_t <- tidy(Q13_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q13",
+Gruppe = "Deltakergruppe")
+
+#Q14
+change_Q14_c <- demovate_all %>% select(time, treated, Q14) %>%
+filter(treated == 0)
+
+Q14_lm_c <- lm(Q14 ~ time, data = change_Q14_c)
+Q14_lm_c <- tidy(Q14_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q14",
+Gruppe = "Kontrollgruppe")
+
+change_Q14_t <- demovate_all %>% select(time, treated, Q14) %>%
+filter(treated == 1)
+
+Q14_lm_t <- lm(Q14 ~ time, data = change_Q14_t)
+Q14_lm_t <- tidy(Q14_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q14",
+Gruppe = "Deltakergruppe")
+
+#Q15
+change_Q15_c <- demovate_all %>% select(time, treated, Q15) %>%
+filter(treated == 0)
+
+Q15_lm_c <- lm(Q15 ~ time, data = change_Q15_c)
+Q15_lm_c <- tidy(Q15_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q15",
+Gruppe = "Kontrollgruppe")
+
+change_Q15_t <- demovate_all %>% select(time, treated, Q15) %>%
+filter(treated == 1)
+
+Q15_lm_t <- lm(Q15 ~ time, data = change_Q15_t)
+Q15_lm_t <- tidy(Q15_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q15",
+Gruppe = "Deltakergruppe")
+
+#Q17_1
+change_Q17_1_c <- demovate_all %>% select(time, treated, Q17_1) %>%
+filter(treated == 0)
+
+Q17_1_lm_c <- lm(Q17_1 ~ time, data = change_Q17_1_c)
+Q17_1_lm_c <- tidy(Q17_1_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_1",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_1_t <- demovate_all %>% select(time, treated, Q17_1) %>%
+filter(treated == 1)
+
+Q17_1_lm_t <- lm(Q17_1 ~ time, data = change_Q17_1_t)
+Q17_1_lm_t <- tidy(Q17_1_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_1",
+Gruppe = "Deltakergruppe")
+
+#Q17_2
+change_Q17_2_c <- demovate_all %>% select(time, treated, Q17_2) %>%
+filter(treated == 0)
+
+Q17_2_lm_c <- lm(Q17_2 ~ time, data = change_Q17_2_c)
+Q17_2_lm_c <- tidy(Q17_2_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_2",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_2_t <- demovate_all %>% select(time, treated, Q17_2) %>%
+filter(treated == 1)
+
+Q17_2_lm_t <- lm(Q17_2 ~ time, data = change_Q17_2_t)
+Q17_2_lm_t <- tidy(Q17_2_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_2",
+Gruppe = "Deltakergruppe")
+
+#Q17_3
+change_Q17_3_c <- demovate_all %>% select(time, treated, Q17_3) %>%
+filter(treated == 0)
+
+Q17_3_lm_c <- lm(Q17_3 ~ time, data = change_Q17_3_c)
+Q17_3_lm_c <- tidy(Q17_3_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_3",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_3_t <- demovate_all %>% select(time, treated, Q17_3) %>%
+filter(treated == 1)
+
+Q17_3_lm_t <- lm(Q17_3 ~ time, data = change_Q17_3_t)
+Q17_3_lm_t <- tidy(Q17_3_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_3",
+Gruppe = "Deltakergruppe")
+
+#Q17_4
+change_Q17_4_c <- demovate_all %>% select(time, treated, Q17_4) %>%
+filter(treated == 0)
+
+Q17_4_lm_c <- lm(Q17_4 ~ time, data = change_Q17_4_c)
+Q17_4_lm_c <- tidy(Q17_4_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_4",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_4_t <- demovate_all %>% select(time, treated, Q17_4) %>%
+filter(treated == 1)
+
+Q17_4_lm_t <- lm(Q17_4 ~ time, data = change_Q17_4_t)
+Q17_4_lm_t <- tidy(Q17_4_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_4",
+Gruppe = "Deltakergruppe")
+
+#Q17_5
+change_Q17_5_c <- demovate_all %>% select(time, treated, Q17_5) %>%
+filter(treated == 0)
+
+Q17_5_lm_c <- lm(Q17_5 ~ time, data = change_Q17_5_c)
+Q17_5_lm_c <- tidy(Q17_5_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_5",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_5_t <- demovate_all %>% select(time, treated, Q17_5) %>%
+filter(treated == 1)
+
+Q17_5_lm_t <- lm(Q17_5 ~ time, data = change_Q17_5_t)
+Q17_5_lm_t <- tidy(Q17_5_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_5",
+Gruppe = "Deltakergruppe")
+
+#Q17_6
+change_Q17_6_c <- demovate_all %>% select(time, treated, Q17_6) %>%
+filter(treated == 0)
+
+Q17_6_lm_c <- lm(Q17_6 ~ time, data = change_Q17_6_c)
+Q17_6_lm_c <- tidy(Q17_6_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q17_6",
+Gruppe = "Kontrollgruppe")
+
+change_Q17_6_t <- demovate_all %>% select(time, treated, Q17_6) %>%
+filter(treated == 1)
+
+Q17_6_lm_t <- lm(Q17_6 ~ time, data = change_Q17_6_t)
+Q17_6_lm_t <- tidy(Q17_6_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q17_6",
+Gruppe = "Deltakergruppe")
+
+#Q18
+change_Q18_c <- demovate_all %>% select(time, treated, Q18) %>%
+filter(treated == 0)
+
+Q18_lm_c <- lm(Q18 ~ time, data = change_Q18_c)
+Q18_lm_c <- tidy(Q18_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q18",
+Gruppe = "Kontrollgruppe")
+
+change_Q18_t <- demovate_all %>% select(time, treated, Q18) %>%
+filter(treated == 1)
+
+Q18_lm_t <- lm(Q18 ~ time, data = change_Q18_t)
+Q18_lm_t <- tidy(Q18_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q18",
+Gruppe = "Deltakergruppe")
+
+#Q19
+change_Q19_c <- demovate_all %>% select(time, treated, Q19) %>%
+filter(treated == 0)
+
+Q19_lm_c <- lm(Q19 ~ time, data = change_Q19_c)
+Q19_lm_c <- tidy(Q19_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q19",
+Gruppe = "Kontrollgruppe")
+
+change_Q19_t <- demovate_all %>% select(time, treated, Q19) %>%
+filter(treated == 1)
+
+Q19_lm_t <- lm(Q19 ~ time, data = change_Q19_t)
+Q19_lm_t <- tidy(Q19_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q19",
+Gruppe = "Deltakergruppe")
+
+#Q20
+change_Q20_c <- demovate_all %>% select(time, treated, Q20) %>%
+filter(treated == 0)
+
+Q20_lm_c <- lm(Q20 ~ time, data = change_Q20_c)
+Q20_lm_c <- tidy(Q20_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q20",
+Gruppe = "Kontrollgruppe")
+
+change_Q20_t <- demovate_all %>% select(time, treated, Q20) %>%
+filter(treated == 1)
+
+Q20_lm_t <- lm(Q20 ~ time, data = change_Q20_t)
+Q20_lm_t <- tidy(Q20_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q20",
+Gruppe = "Deltakergruppe")
+
+#Q21
+change_Q21_c <- demovate_all %>% select(time, treated, Q21) %>%
+filter(treated == 0)
+
+Q21_lm_c <- lm(Q21 ~ time, data = change_Q21_c)
+Q21_lm_c <- tidy(Q21_lm_c, conf.int = TRUE) %>%
+mutate(Question = "Q21",
+Gruppe = "Kontrollgruppe")
+
+change_Q21_t <- demovate_all %>% select(time, treated, Q21) %>%
+filter(treated == 1)
+
+Q21_lm_t <- lm(Q21 ~ time, data = change_Q21_t)
+Q21_lm_t <- tidy(Q21_lm_t, conf.int = TRUE) %>%
+mutate(Question = "Q21",
+Gruppe = "Deltakergruppe")
+
+endring_kontroll_treatment <- rbind(
+Q11_lm_c, Q11_lm_t,
+Q12_lm_c, Q12_lm_t,
+Q13_lm_c, Q13_lm_t,
+Q14_lm_c, Q14_lm_t,
+Q15_lm_c, Q15_lm_t,
+Q17_1_lm_c, Q17_1_lm_t,
+Q17_2_lm_c, Q17_2_lm_t,
+Q17_3_lm_c, Q17_3_lm_t,
+Q17_4_lm_c, Q17_4_lm_t,
+Q17_5_lm_c, Q17_5_lm_t,
+Q17_6_lm_c, Q17_6_lm_t,
+Q18_lm_c, Q18_lm_t,
+Q19_lm_c, Q19_lm_t,
+Q20_lm_c, Q20_lm_t,
+Q21_lm_c, Q21_lm_t
+)
+
+endring_kontroll_treatment <- endring_kontroll_treatment %>%
+mutate(Sak = case_when(Question == 'Q11' ~ 'Bilfritt sentrum',
+                                                  Question == 'Q12' ~ 'Sentrum vs. ytre bydeler',
+                                                  Question == 'Q13' ~ 'Små vs. store bilfrie områder',
+                                                  Question == 'Q14' ~ 'Stenge parkeringsplasser',
+                                                  Question == 'Q15' ~ 'Private biler vs. bildeling',
+                                                   Question == 'Q17_1' ~ 'Dele biler',
+                                                   Question == 'Q17_2' ~ 'Dele sykler',
+                                                   Question == 'Q17_3' ~ 'Dele elsykler',
+                                                   Question == 'Q17_4' ~ 'Dele elsparkesykler',
+                                                   Question == 'Q17_5' ~ 'Dele sykkelparkering',
+                                                   Question == 'Q17_6' ~ 'Dele sykkelverksted',
+                                                  Question == 'Q18' ~ 'Gåavstand vs. parkering',
+                                                  Question == 'Q19' ~ 'Bo i bilfritt nabolag',
+                                                  Question == 'Q20' ~ 'Hvem skal bestemme',
+                                                  Question == 'Q21' ~ 'Redusere fart')) %>%
+         filter(term != "(Intercept)")
 ```
+
 
 ```{r car-results-figure2}
-plot2 <- ggplot(postpre, aes(x = question, y = postpre, colour = group)) +
-  geom_errorbar(aes(ymin = postpre-se, ymax = postpre+se), size = 1, width = 0.1) +
-  geom_point(size=3) +
-  coord_flip() +
-   labs(title = 'Holdningsendringer før og etter arrangement', subtitle = 'Bilfrie områder', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) + 
-  geom_hline(aes(yintercept=0), linetype = 'dotted') +
-  theme_classic() +
-  scale_colour_grey()
+plot_endring_bilfri <- ggplot(endring_kontroll_treatment,
+mapping = aes(
+x = Sak,
+y = estimate,
+ymin = conf.low,
+ymax = conf.high,
+colour = Gruppe
+)) +
+geom_hline(aes(yintercept=0), linetype = 'dotted') +
+geom_pointrange(position = position_dodge(width = 1/2), size = 0.5, width = 0.1) +
+  scale_color_grey()+
+coord_flip() +
+labs(title = 'Holdningsendringer før og \netter arrangement', subtitle = 'Bilfrie områder', y = 'Endring i gjennomsnitt', x = ' ', colour = ' ' ) +
+theme_minimal() +
+theme(
+axis.text = element_text(colour = "black",
+size = 12),
+title = element_text(size = 14),
+axis.title.x = element_text(size = 12, color = 'black'),
+axis.line.x = element_line()
+)
 
-plot2
+plot_endring_bilfri
+```
+Vi har også undersøkt absolutte endringer i de to gruppene.  Med noen få unntak er tendensen at det er noe større absolutte holdningsendringer i deltakergruppen enn i kontrollgruppen i spørsmålene om bilfrie soner.
+
+```{r, bilfri-absolute-change}
+
+#billfri absolutt  endring
+
+Q11 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q11_1 - Q11_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q11")
+
+Q12<- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q12_1 - Q12_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q12")
+
+Q13<- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q13_1 - Q13_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q13")
+
+Q14 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q14_1 - Q14_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q14")
+
+Q15 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q15_1 - Q15_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q15")
+
+Q17_1 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_1_1 - Q17_1_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_1")
+
+Q17_2 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_2_1 - Q17_2_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_2")
+
+Q17_3 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_3_1 - Q17_3_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_3")
+
+Q17_4 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_4_1 - Q17_4_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_4")
+
+Q17_5 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_5_1 - Q17_5_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_5")
+
+Q17_6 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q17_6_1 - Q17_6_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q17_6")
+
+Q18 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q18_1 - Q18_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q18")
+
+Q19 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q19_1 - Q19_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q19")
+
+Q20 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q20_1 - Q20_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q20")
+
+Q21 <- demovate_wide_srv %>% group_by(treated) %>%
+  summarise(diff = survey_mean(
+    sqrt((Q21_1 - Q21_0)^2), vartype = c("ci"), na.rm = T)) %>% 
+  mutate(question = "Q21")
+
+
+
+bilfri_absolutt_individuell_endring <- bind_rows(list(Q11, Q12, Q13, Q14, Q15, Q17_1, Q17_2, Q17_3, Q17_4, Q17_5, Q17_6, Q18, Q19, Q20, Q21)) %>% 
+  mutate(Gruppe = case_when(treated == 0 ~ "Kontrollgruppe",
+                            treated == 1 ~ "Deltakergruppe"),
+         Sak = (case_when(question == 'Q11' ~ 'Bilfritt sentrum',
+                                                  question == 'Q12' ~ 'Sentrum vs. ytre bydeler',
+                                                  question == 'Q13' ~ 'Små vs. store bilfrie områder',
+                                                  question == 'Q14' ~ 'Stenge parkeringsplasser',
+                                                  question == 'Q15' ~ 'Private biler vs. bildeling',
+                                                   question == 'Q17_1' ~ 'Dele biler',
+                                                   question == 'Q17_2' ~ 'Dele sykler',
+                                                   question == 'Q17_3' ~ 'Dele elsykler',
+                                                   question == 'Q17_4' ~ 'Dele elsparkesykler',
+                                                   question == 'Q17_5' ~ 'Dele sykkelparkering',
+                                                   question == 'Q17_6' ~ 'Dele sykkelverksted',
+                                                  question == 'Q18' ~ 'Gåavstand parkering',
+                                                  question == 'Q19' ~ 'Bo i bilfritt nabolag',
+                                                  question == 'Q20' ~ 'Hvem skal bestemme',
+                                                  question == 'Q21' ~ 'Redusere fart')))
+
 ```
 
-Mønsteret er mindre tydelig for bilfrie områder enn for Dokken, men også for disse spørsmålene ser vi at deltakerne har større bevegelser enn kontrollgruppen.
-Der det er signifikant forskjell mellom gruppene er det alltid fordi deltakerne har endret holdning fra før og etter deliberasjon.
+```{r, plot-absolutt-bilfri}
 
-<!-- ### Eksperiment om hvem som skal bestemme over bilfritt nabolag -->
-<!-- Spørsmålet om hvem som skal bestemme over bilfrie områder er også et eksperiment, hvor vi har bedt halvparten av deltakerne om å se for seg at det er flertall i nabolaget for bilfritt område men at kommunen er imot, og andre halvparten at det er flertall i nabolaget for, mens kommunen er imot. -->
-<!-- Spørsmålet er stilt til deltakerne både før og etter arrangementet, med hensikt å måle om deltakerne er mindre påvirket av egeninteresse etter deliberasjonen. -->
+plot_absolutt_individuell_endring_bilfri <- ggplot(bilfri_absolutt_individuell_endring,
+       mapping = aes(
+         x = Sak,
+         y = diff,
+         ymin = diff_low,
+         ymax = diff_upp,
+         colour = Gruppe
+       )) +
+  geom_hline(aes(yintercept=0), linetype = 'dotted') +
+  geom_pointrange(position = position_dodge(width = 1/2), size = 0.5, width = 0.1) + 
+  scale_color_grey()+
+  coord_flip() + 
+  labs(title = 'Absolutt holdningsendring\nfør og etter arrangement', subtitle = 'Bilfri', y = 'Gjennomsnittlig absolutt holdningsendring', x = ' ', colour = ' ' ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(colour = "black",
+                             size = 12),
+    title = element_text(size = 14),
+    axis.title.x = element_text(size = 12, color = 'black'),
+    axis.line.x = element_line()
 
-<!-- ```{r prosesseksperiment} -->
+  )
 
-<!-- # Før deliberasjon -->
-<!-- demex_pre <- pre %>%  -->
-<!--   filter(Q1 %in% post_t$Q1) %>%  -->
-<!--   select(c('prosess', 'Q19', 'Q20')) %>%  -->
-<!--   mutate(prosess = case_when(prosess == 'Se for deg at det var flertall i ditt nabolag mot å ha bilfri sone der du bor, men at kommunen var for.' ~ 'Nabolag for, kommune mot', -->
-<!--                              prosess == 'Se for deg at det var flertall i ditt nabolag for å ha bilfri sone der du bor, men at kommunen var imot.' ~ 'Nabolag mot, kommune for', -->
-<!--                              prosess == '&nbsp;' ~ 'Ingen info om nabolag eller kommune'), -->
-<!--          Q19 = case_when(Q19 %in% c(1:5) ~ 'Mot bilfritt nabolag', -->
-<!--                          Q19 %in% c(7:11) ~ 'For bilfritt nabolag'))   -->
+plot_absolutt_individuell_endring_bilfri
 
-<!-- demex_pre_ate <- demex_pre %>%  -->
-<!--   filter(!is.na(Q19)) %>%  -->
-<!--   group_by(prosess, Q19) %>%  -->
-<!--   summarise(smean = mean(Q20, na.rm = TRUE), -->
-<!--             ssd = sd(Q20, na.rm = TRUE), -->
-<!--             count = n()) %>% -->
-<!--   mutate(se = ssd / sqrt(count), -->
-<!--          lower_ci = lower_ci(smean, se, count), -->
-<!--          upper_ci = upper_ci(smean, se, count)) -->
-
-
-<!-- p1 <- ggplot(demex_pre_ate, aes(x = prosess, y = smean, colour=Q19)) + -->
-<!--   geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), size = 1, width = 0.1) + -->
-<!--   geom_point(size = 3) + -->
-<!--   coord_flip() + -->
-<!--   scale_y_continuous(limits = c(1, 11), -->
-<!--                      breaks = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), -->
-<!--                      labels = c('0\n Nabolag', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10\n Kommunen'))  + -->
-<!--   labs(title = 'Før deliberasjon', y = 'Gjennomsnitt', x = ' ', colour = 'Egen holdning' ) + -->
-<!--   theme_classic() + -->
-<!--   scale_colour_grey()  -->
-
-<!-- # Etter deliberasjon -->
-<!-- demex_post <- post_t %>%  -->
-<!--   filter(Q1 %in% post_t$Q1) %>%  -->
-<!--   select(c('prosess', 'Q19', 'Q20')) %>%  -->
-<!--   mutate(prosess = case_when(prosess == 'Se for deg at det var flertall i ditt nabolag mot å ha bilfri sone der du bor, men at kommunen var for.' ~ 'Nabolag for, kommune mot', -->
-<!--                              prosess == 'Se for deg at det var flertall i ditt nabolag for å ha bilfri sone der du bor, men at kommunen var imot.' ~ 'Nabolag mot, kommune for', -->
-<!--                              prosess == '&nbsp;' ~ 'Ingen info om nabolag eller kommune'), -->
-<!--          Q19 = case_when(Q19 %in% c(1:5) ~ 'Mot bilfritt nabolag', -->
-<!--                          Q19 %in% c(7:11) ~ 'For bilfritt nabolag'))   -->
-
-<!-- demex_post_ate <- demex_post %>%  -->
-<!--   filter(!is.na(Q19)) %>%  -->
-<!--   group_by(prosess, Q19) %>%  -->
-<!--   summarise(smean = mean(Q20, na.rm = TRUE), -->
-<!--             ssd = sd(Q20, na.rm = TRUE), -->
-<!--             count = n()) %>% -->
-<!--   mutate(se = ssd / sqrt(count), -->
-<!--          lower_ci = lower_ci(smean, se, count), -->
-<!--          upper_ci = upper_ci(smean, se, count)) -->
-
-
-<!-- p2 <- ggplot(demex_post_ate, aes(x = prosess, y = smean, colour=Q19)) + -->
-<!--   geom_errorbar(aes(ymin = lower_ci, ymax = upper_ci), size = 1, width = 0.1) + -->
-<!--   geom_point(size = 3) + -->
-<!--   coord_flip() + -->
-<!--   scale_y_continuous(limits = c(1, 11), -->
-<!--                      breaks = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), -->
-<!--                      labels = c('0\n Nabolag', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10\n Kommunen'))  + -->
-<!--   labs(title = 'Etter deliberasjon', y = 'Gjennomsnitt', x = ' ', colour = 'Egen holdning' ) + -->
-<!--   theme_classic() + -->
-<!--   scale_colour_grey()  -->
-
-<!-- patch <- p1 / p2 -->
-<!-- patch + plot_annotation(title = 'Hvem skal bestemme over bilfritt nabolag') -->
-<!-- ``` -->
-
+```

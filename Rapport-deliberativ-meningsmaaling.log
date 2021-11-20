@@ -1,38 +1,38 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.10.18)  9 NOV 2021 10:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.11.19)  20 NOV 2021 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Rapport-deliberativ-meningsmaaling.tex
 (./Rapport-deliberativ-meningsmaaling.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-10-12> (c:/Users/svein/AppData/Roaming/TinyTeX/texmf
+LaTeX2e <2021-11-15>
+L3 programming layer <2021-11-12> (c:/Users/svein/AppData/Roaming/TinyTeX/texmf
 -dist/tex/latex/base/book.cls
-Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+File: bk10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count178
-\c@chapter=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
 y
-Package: amsmath 2021/04/20 v2.17j AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.st
 y
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
@@ -44,15 +44,15 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen140
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count187
+\inf@bad=\count188
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
+\uproot@=\count189
+\leftroot@=\count190
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
+\classnum@=\count191
+\DOTSCASE@=\count192
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -61,15 +61,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\macc@depth=\count193
+\c@MaxMatrixCols=\count194
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count195
+\dspbrk@lvl=\count196
 \tag@help=\toks17
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count197
+\column@=\count198
+\maxfields@=\count199
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -81,8 +81,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.s
 ty
@@ -137,20 +137,20 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
 de-math.sty
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-10-12 L3 programming layer (loader) 
+Package: expl3 2021-11-12 L3 programming layer (loader) 
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-xetex.def
-File: l3backend-xetex.def 2021-10-12 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-10-18 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count199
-\l__color_backend_stack_int=\count266
-\g__color_backend_stack_int=\count267
-\g__graphics_track_int=\count268
+\c__kernel_sys_dvipdfmx_version_int=\count266
+\l__color_backend_stack_int=\count267
+\g__color_backend_stack_int=\count268
+\g__graphics_track_int=\count269
 \l__pdf_internal_box=\box52
-\g__pdf_backend_object_int=\count269
-\g__pdf_backend_annotation_int=\count270
-\g__pdf_backend_link_int=\count271
+\g__pdf_backend_object_int=\count270
+\g__pdf_backend_annotation_int=\count271
+\g__pdf_backend_link_int=\count272
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -161,11 +161,11 @@ TeX
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
 xparse.sty
-Package: xparse 2021-08-27 L3 Experimental document command parser
+Package: xparse 2021-11-12 L3 Experimental document command parser
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2
 e/l3keys2e.sty
-Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-11-12 LaTeX2e option processing using LaTeX3 keys
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.
 sty
@@ -175,17 +175,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count272
-\l__fontspec_language_int=\count273
-\l__fontspec_strnum_int=\count274
-\l__fontspec_tmp_int=\count275
-\l__fontspec_tmpa_int=\count276
-\l__fontspec_tmpb_int=\count277
-\l__fontspec_tmpc_int=\count278
-\l__fontspec_em_int=\count279
-\l__fontspec_emdef_int=\count280
-\l__fontspec_strong_int=\count281
-\l__fontspec_strongdef_int=\count282
+\l__fontspec_script_int=\count273
+\l__fontspec_language_int=\count274
+\l__fontspec_strnum_int=\count275
+\l__fontspec_tmp_int=\count276
+\l__fontspec_tmpa_int=\count277
+\l__fontspec_tmpb_int=\count278
+\l__fontspec_tmpc_int=\count279
+\l__fontspec_em_int=\count280
+\l__fontspec_emdef_int=\count281
+\l__fontspec_strong_int=\count282
+\l__fontspec_strongdef_int=\count283
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
@@ -200,34 +200,34 @@ Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count283
-\g__um_fonts_used_int=\count284
-\l__um_primecount_int=\count285
+\g__um_fam_int=\count284
+\g__um_fonts_used_int=\count285
+\l__um_primecount_int=\count286
 \g__um_primekern_muskip=\muskip17
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
 de-math-table.tex))) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/lat
 ex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color
 .cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: xetex.def on input line 227.
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex
 .def
 File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
 sty
@@ -284,8 +284,8 @@ s.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen151
-\Hy@linkcounter=\count286
-\Hy@pagecounter=\count287
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
 f
@@ -304,7 +304,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count288
+\Hy@SavedSpaceFactor=\count289
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -317,7 +317,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count289
+\c@Hy@tempcnt=\count290
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -334,7 +334,7 @@ tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count290
+\Fld@menulength=\count291
 \Field@Width=\dimen153
 \Fld@charsize=\dimen154
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -352,9 +352,9 @@ sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count291
-\c@Item=\count292
-\c@Hfootnote=\count293
+\Hy@abspage=\count292
+\c@Item=\count293
+\c@Hfootnote=\count294
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -368,10 +368,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box53
-\c@Hy@AnnotLevel=\count294
-\HyField@AnnotCount=\count295
-\Fld@listcount=\count296
-\c@bookmark@seq@number=\count297
+\c@Hy@AnnotLevel=\count295
+\HyField@AnnotCount=\count296
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
 unfilecheck.sty
@@ -379,8 +379,8 @@ Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx
 .sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/un
@@ -394,22 +394,22 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
 y
-Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count298
+\LTchunksize=\count299
 \LTcapwidth=\dimen155
 \LT@head=\box54
 \LT@firsthead=\box55
 \LT@foot=\box56
 \LT@lastfoot=\box57
 \LT@gbox=\box58
-\LT@cols=\count299
-\LT@rows=\count300
-\c@LT@tables=\count301
-\c@LT@chunks=\count302
+\LT@cols=\count300
+\LT@rows=\count301
+\c@LT@tables=\count302
+\c@LT@chunks=\count303
 \LT@p@ftn=\toks22
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
@@ -425,15 +425,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen163
 \cmidrulekern=\dimen164
 \defaultaddspace=\dimen165
-\@cmidla=\count303
-\@cmidlb=\count304
+\@cmidla=\count304
+\@cmidlb=\count305
 \@aboverulesep=\dimen166
 \@belowrulesep=\dimen167
-\@thisruleclass=\count305
-\@lastruleclass=\count306
+\@thisruleclass=\count306
+\@lastruleclass=\count307
 \@thisrulewidth=\dimen168
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen169
 \ar@mcellbox=\box59
 \extrarowheight=\dimen170
@@ -443,21 +443,21 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \ar@cellbox=\box60
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count307
-\calc@Bcount=\count308
+\calc@Acount=\count308
+\calc@Bcount=\count309
 \calc@Adimen=\dimen171
 \calc@Bdimen=\dimen172
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count309
+\calc@Ccount=\count310
 \calc@Cskip=\skip61
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
 sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count310
+\etb@tempcnta=\count311
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.
 sty
@@ -467,13 +467,13 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
 sty
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
 sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graph
 ics.cfg
@@ -497,8 +497,8 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks29
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.st
 y
-Package: babel 2021/10/13 3.64 The Babel package
-\babel@savecnt=\count311
+Package: babel 2021/11/08 3.66 The Babel package
+\babel@savecnt=\count312
 \U@D=\dimen176
 \l@unhyphenated=\language3
 
@@ -507,7 +507,7 @@ f
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.d
 ef))
 \bbl@readstream=\read2
-\bbl@dirlevel=\count312
+\bbl@dirlevel=\count313
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-norsk/nors
 k.ldf
@@ -522,16 +522,12 @@ Package babel Warning: No hyphenation patterns were preloaded for
 Package babel Info: Hyphen rules for 'norsk' set to \l@english
 (babel)             (\language0). Reported on input line 50.
 Package babel Info: Making " an active character on input line 113.
-)
-(c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-norsk/nors
-k.ldf
-Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
 ))
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.
 sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip65
-\multirow@cntb=\count313
+\multirow@cntb=\count314
 \multirow@dima=\skip66
 \bigstrutjot=\dimen177
 )
@@ -539,13 +535,13 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 y
 \wrapoverhang=\dimen178
 \WF@size=\dimen179
-\c@WF@wrappedlines=\count314
+\c@WF@wrappedlines=\count315
 \WF@box=\box62
 \WF@everypar=\toks30
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count315
+\c@float@type=\count316
 \float@exts=\toks31
 \float@box=\box63
 \@float@everytoks=\toks32
@@ -574,16 +570,16 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box65
-\sift@deathcycles=\count316
+\sift@deathcycles=\count317
 \@vwid@loff=\dimen180
 \@vwid@roff=\dimen181
 )
-\c@taburow=\count317
-\tabu@nbcols=\count318
-\tabu@cnt=\count319
-\tabu@Xcol=\count320
-\tabu@alloc=\count321
-\tabu@nested=\count322
+\c@taburow=\count318
+\tabu@nbcols=\count319
+\tabu@cnt=\count320
+\tabu@Xcol=\count321
+\tabu@alloc=\count322
+\tabu@nested=\count323
 \tabu@target=\dimen182
 \tabu@spreadtarget=\dimen183
 \tabu@naturalX=\dimen184
@@ -625,7 +621,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \UL@skip=\skip70
 \UL@hook=\toks36
 \UL@height=\dimen191
-\UL@pe=\count323
+\UL@pe=\count324
 \UL@pixel=\dimen192
 \ULC@box=\box73
 Package: ulem 2019/11/18
@@ -635,7 +631,7 @@ Package: ulem 2019/11/18
 sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen194
-\c@nlinenum=\count324
+\c@nlinenum=\count325
 \TeXr@lab=\toks37
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.st
 y
@@ -643,7 +639,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip71
 \bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count325
+\c@NAT@ctr=\count326
 ) (./Rapport-deliberativ-meningsmaaling.aux)
 \openout1 = `Rapport-deliberativ-meningsmaaling.aux'.
 
@@ -948,7 +944,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count326
+\c@section@level=\count327
 )
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
@@ -1043,120 +1039,132 @@ Kapittel 2.
 ]
 Kapittel 3.
 
-Underfull \hbox (badness 1033) in paragraph at lines 244--248
+Underfull \hbox (badness 1033) in paragraph at lines 251--255
 \TU/lmr/m/n/10 kommunens personvernombud vurderte dette annerledes. Vurderingen
  var
  []
 
 [11]
-Overfull \hbox (28.24004pt too wide) in alignment at lines 268--272
+Overfull \hbox (28.24004pt too wide) in alignment at lines 276--280
  [] [] [] [] 
  []
 
 
-Overfull \hbox (28.24004pt too wide) in alignment at lines 272--276
+Overfull \hbox (28.24004pt too wide) in alignment at lines 280--284
  [] [] [] [] 
  []
 
 [12]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf Grap
-hic file (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1.pdf>
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1-1.pdf Gr
+aphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-1-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13] [14] [15] [16]
+[13]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-2-1.pdf Gr
+aphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/bakgrunn-2-1.pdf>
+[14] [15] [16] [17] [18
+
+]
 Kapittel 4.
 File: ordsky-dokken.png Graphic file (type bmp)
 <ordsky-dokken.png>
-[17
 
-]
+Underfull \hbox (badness 2103) in paragraph at lines 441--442
+\TU/lmr/m/n/10 Under følger spørsmålsformuleringene deltakerne fikk og svarene 
+de ga
+ []
+
+
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+[19]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q3-1.pdf>
 
-Underfull \vbox (badness 1259) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[18]
+[20]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q4-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--450
-[][]
- []
-
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
-le (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
+Underfull \hbox (badness 10000) in paragraph at lines 472--474
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
+[21]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf Graphic fi
+le (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q5-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[22]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q6-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[20]
+[23]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q7-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[21]
+[24]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q8-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[22]
+[25]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf Graphic fi
 le (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q9-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[23]
+[26] [27] [28]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figu
 re2-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/dokken-results-figur
 e2-1.pdf>
-[24] [25]
-Underfull \hbox (badness 5787) in paragraph at lines 573--576
-[]\TU/lmr/m/n/10 Vi observerer et mønster hvor deltakergruppen har kraftigere h
-old-
- []
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/plot-absolutt-dokke
+n-1.pdf Graphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/plot-absolutt-dokken
+-1.pdf>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 1496) in paragraph at lines 573--576
-\TU/lmr/m/n/10 ningsendringer enn kontrollgruppen har. Det er også flere tilfel
-ler hvor
- []
-
-[26]
+[29] [30]
 Kapittel 5.
 File: ordsky-bilfri.png Graphic file (type bmp)
 <ordsky-bilfri.png>
-[27
+
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+[31
 
 ]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q11-1.pdf>
-
-Underfull \vbox (badness 1460) has occurred while \output is active []
-
-[28]
+[32]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q12-1.pdf>
@@ -1166,60 +1174,20 @@ ile (type pdf)
 
 Overfull \hbox (2.19003pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 29
+r/m/n/10 33
  []
 
-[29]
+[33]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q14-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30]
+[34]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q15-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 31
- []
-
-[31]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf Graphic f
-ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[32]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf Graphic f
-ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (2.19003pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
-r/m/n/10 33
- []
-
-[33]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf Graphic f
-ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[34]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf Graphic f
-ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1230,16 +1198,16 @@ r/m/n/10 35
  []
 
 [35]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf Graphic f
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf Graphic f
 ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf>
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q16-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [36]
-File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf Graphic f
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf Graphic f
 ile (type pdf)
-<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf>
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q17-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1250,35 +1218,96 @@ r/m/n/10 37
  []
 
 [37]
-Overfull \hbox (75.38pt too wide) in paragraph at lines 769--834
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf Graphic f
+ile (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q18-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[38]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf Graphic f
+ile (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q19-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 39
+ []
+
+[39]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf Graphic f
+ile (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q20-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[40]
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf Graphic f
+ile (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q21-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (2.19003pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 5.1.  SVARFORDELING FOR ALLE SPØRSMÅL OM BILFRIE OMRÅDER \TU/lm
+r/m/n/10 41
+ []
+
+[41]
+Overfull \hbox (10.27pt too wide) in paragraph at lines 837--902
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 2.13824pt on input line 834.
+LaTeX Warning: Float too large for page by 2.13824pt on input line 902.
 
+
+Overfull \hbox (10.27pt too wide) in paragraph at lines 911--976
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 2.13824pt on input line 976.
+
+[42] [43] [44]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2
 -1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/car-results-figure2-
 1.pdf>
-[38] [39] [40]
+
+Underfull \hbox (badness 10000) in paragraph at lines 992--994
+[][]
+ []
+
+File: Rapport-deliberativ-meningsmaaling_files/figure-latex/plot-absolutt-bilfr
+i-1.pdf Graphic file (type pdf)
+<use Rapport-deliberativ-meningsmaaling_files/figure-latex/plot-absolutt-bilfri
+-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[45] [46]
 Kapittel 6.
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q85-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--864
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1012
 [][]
  []
 
-[41
+[47
 
 ]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q86-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--874
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1022
 [][]
  []
 
@@ -1287,21 +1316,21 @@ manage-1-1.pdf Graphic file (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/political-efficacy-m
 anage-1-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--881
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1029
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[42]
+[48]
 File: Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf Graphic f
 ile (type pdf)
 <use Rapport-deliberativ-meningsmaaling_files/figure-latex/Q91-1.pdf>
 
-Underfull \vbox (badness 5175) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43] [44] [45] (./Rapport-deliberativ-meningsmaaling.bbl [46]) [47
+[49] [50] [51] (./Rapport-deliberativ-meningsmaaling.bbl [52]) [53
 
 ] (./Rapport-deliberativ-meningsmaaling.aux)
 Package rerunfilecheck Info: File `Rapport-deliberativ-meningsmaaling.out' has 
@@ -1309,12 +1338,12 @@ not changed.
 (rerunfilecheck)             Checksum: 2F29A061C92BD707E15C861DEFFE8DE9;3144.
  ) 
 Here is how much of TeX's memory you used:
- 19006 strings out of 478492
- 344228 string characters out of 5860434
- 823474 words of memory out of 5000000
- 38975 multiletter control sequences out of 15000+600000
+ 19750 strings out of 478274
+ 372637 string characters out of 5854886
+ 835899 words of memory out of 5000000
+ 39936 multiletter control sequences out of 15000+600000
  409987 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,11n,120p,401b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,11n,121p,401b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Rapport-deliberativ-meningsmaaling.pdf (47 pages).
+Output written on Rapport-deliberativ-meningsmaaling.pdf (53 pages).

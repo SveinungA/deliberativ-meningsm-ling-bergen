@@ -2,15 +2,16 @@
 
 Tidligere byrådsleder Harald Schjelderup satte i 2017 ned et utvalg, ledet av Prof. Anne Lise Fimreite, med formål å vurdere demokratiets tilstand i Bergen. 
 Utvalget vurderte blant annet hvilke muligheter innbyggerne i Bergen hadde for å påvirke politiske beslutninger i kommunen, og anbefalte at man søkte å utvikle og forbedre disse mulighetene. 
-I utvalgets rapport “Byen og nærdemokratiet” ble såkalte borgerpaneler anbefalt gjennomført, hvor vanlige innbyggere velges ut etter vitenskapelige prinsipper som etterstreber representativ deltakelse. 
+I utvalgets rapport [*Byen og nærdemokratiet*](https://www.bergen.kommune.no/politikere-utvalg/api/fil/206337/Rapport-Byen-og-Naerdemokratiet) ble såkalte borgerpaneler anbefalt gjennomført, hvor vanlige innbyggere velges ut etter vitenskapelige prinsipper som etterstreber representativ deltakelse.
+En pilot med borgerpanel ble gjennomført i 2018 [@arnesenloddet].
 I etterkant av forsøket med borgerpaneler vedtok Bergen bystyre å søke eksterne midler for å videreutvikle bruken av borgerpaneler i byen.
 
-Prosjektets etablering har altså blitt til dels for å dekke lokal politisk etterspørsel etter demokratisk innovasjon. 
+Prosjektets etablering har blitt til dels for å dekke lokal politisk etterspørsel etter demokratisk innovasjon. 
 Også underveis har politikere fulgt opp prosjektet:
 Oppstartsseminaret ble åpnet av daværende byutviklingsbyråd Rune Bakervik i 2019, med deltakelse fra byråds- og bystyrepolitikere og lokalpolitikere utenfor kommunen. 
 Prosjektet har også blitt presentert for Bergensalliansen, som følger prosjektet med interesse av muligheten for å gjennomføre lignende tiltak i egne kommuner. 
 
-En sentral motivasjon for prosjektet er nettopp å høste erfaringer i Bergen som kan komme til nytte for andre norske kommuner.
+En sentral motivasjon for prosjektet er å høste erfaringer i Bergen som kan komme til nytte for andre norske kommuner.
 I en tid hvor demokratiet settes på prøve også i etablerte, vestlige demokratier, er viktigheten av å forske på demokratiske prosesser kanskje viktigere enn noen gang [@dahlberg2015democratic; @norris2011democratic]. 
 Internasjonalt ser vi lav, og ofte synkende tillit til grunnleggende demokratiske institusjoner som politiske partier og regjeringer [@dalton2004democratic]. 
 Samtidig eksisterer det store forskjeller mellom innbyggerne med tanke på hvem som involverer seg i politikk. 

@@ -16,6 +16,7 @@ description: "Rapport til Byrådet i Bergen om gjennomføringen av deliberativ m
 ---
 
 ```{r setup, include=FALSE}
+if(!require("broom")){install.packages("broom");  library(broom)}
 if(!require("here")){install.packages("here");  library(here)}
 if(!require("haven")){install.packages("haven");  library(haven)}
 if(!require("kableExtra")){install.packages("kableExtra");  library(kableExtra)}
@@ -27,6 +28,7 @@ if(!require("readxl")){install.packages("readxl");  library(readxl)}
 if(!require("sjlabelled")){install.packages("sjlabelled");  library(sjlabelled)}
 if(!require("spacyr")){install.packages("spacyr");  library(spacyr)}
 if(!require("stringr")){install.packages("stringr");  library(stringr)}
+if(!require("srvyr")){install.packages("srvyr");  library(srvyr)}
 if(!require("text2vec")){install.packages("text2vec");  library(text2vec)}
 if(!require("tidytext")){install.packages("tidytext");  library(tidytext)}
 if(!require("tidyverse")){install.packages("tidyverse");  library(tidyverse)}
@@ -39,32 +41,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, digits = 0
 ```
 
 ```{r import-dp-surveys}
-#last inn data fra spørreundersøkelsene
-pre <- sjlabelled::read_spss(here("Data", "presurvey.sav"))
-post_c <- sjlabelled::read_spss(here("Data", "post-survey-control.sav"))
-post_t <- sjlabelled::read_spss(here("Data", "post-survey-treatment.sav"))
+load('Data/demovate.Rdata')
 ```
-
-```{r merge-dp-surveys}
-#slå sammen undersøkelsene til en fil
-post_c <- post_c %>% mutate(survey = 'post_c') %>% var_labels(survey= 'Survey')
-post_t <- post_t %>% mutate(survey = 'post_t') %>% var_labels(survey= 'Survey')
-pre <- pre %>% mutate(survey = 'pre') %>% var_labels(survey= 'Survey')
-
-dp_c <- full_join(post_c, pre)
-dp_t <- full_join(post_t, pre)
-#Alternativt:
-#full_join(post, pre, by = 'Q1', keep=TRUE) %>% filter(Q1.x == Q1.y)
-
-#Filtrer på de som kan bekreftes å ha svart på både pre og post
-#dp_c <- dp_c %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
-#dp_t <- dp_t %>% group_by(Q1) %>% mutate(count=n()) %>% filter(count==2)
-
-# Filtrer bort deltakere som ikke fullførte evalueringen av arrangementet
-dp_t_post <- dp_t %>% 
-  filter(survey == 'post_t', !is.na(Q86_1))
-```
-
 
 
 # Om rapporten
@@ -99,6 +77,11 @@ Til denne rapporten følger også (klikk på lenkene):
 <!-- Den er vedlagt i den [elektroniske versjonen av denne rapporten](https://bookdown.org/sveinungarnesen78/deliberativ-meningsmaaling-bergen/) (bs4-format). -->
 
 ![](cover.png){width='90%'}
+
+Ved referering til denne rapporten, vennligst bruk følgende sitering:
+
+> Arnesen, Sveinung, Anne Lise Fimreite, og Jon Kåre Skiple (2021): "Deliberativ meningsmåling i Bergen". Rapport til bystyret i Bergen, Bergen, 20. november 2021, url: https://bookdown.org/connect/#/apps/8cc01bc4-19c9-444e-93e5-a616021760bb/access
+
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

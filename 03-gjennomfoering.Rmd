@@ -68,9 +68,6 @@ Ved siden av at flere ble invitert (1500 nye invitasjoner fra reservelisten ble 
 Det ble også foretatt to purringer via brev og sms. I underkant av 10 prosent av de inviterte meldte seg til deltakelse i undersøkelsen (168), mens rundt 5 prosent av de inviterte meldte seg til panelet (138).
 124 personer i kontrollgruppen svarte på forundersøkelsen, og 118 personer gjorde det samme i deltakergruppen.
 På selve deliberasjonsarrangementet den 12. juni var det 90 deltakere.
-Kriteriet for å bli del av analysene er at man har deltatt i deliberasjonen og svart på etterundersøkelsen.
-Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
-
 
 
 | Gruppe       | Forundersøkelse | Deliberasjon | Etterundersøkelse  |
@@ -78,82 +75,84 @@ Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
 | Kontrollgruppe     |  N=124     | N=0          | N=108       | 
 | Deltakergruppe   |  N=118     | N=90         | N=101       |
 
-```{r bakgrunn}
+
+```{r bakgrunn-1}
+
 #Alder
-#Filtrer på deltakere, og som kan bekreftes å ha fullført både pre og post
-alder <- pre %>% 
-  filter(Q1 %in% post_t$Q1) %>% 
-  select(Q32) %>% 
-  filter(!is.na(Q32))
+alder <- bakgrunn %>%
+select(Q32) %>%
+filter(!is.na(Q32))
 
 p1 <- ggplot(alder, aes(x = factor(Q32))) +
-  geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
-  scale_x_discrete(labels = c('<1940', '1940-1949', '1950-1959', '1960-1969', '1970-1979', '1980-1989', '>1989'), guide = guide_axis(n.dodge = 2)) +
-   labs(title = "Aldersfordeling", x = '', y = '', fill = '')  +
-  theme_classic() +
-  scale_fill_grey()
-  
+geom_bar(aes(y = (..count..) / sum(..count..))) +
+scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
+scale_x_discrete(labels = c('<1940', '1940-1949', '1950-1959', '1960-1969', '1970-1979', '1980-1989', '>1989'), guide = guide_axis(n.dodge = 2)) + #LABEL OK
+labs(title = "Aldersfordeling", x = '', y = '', fill = '') +
+theme_classic() +
+scale_fill_grey(start = 0.8, end = 0)
 
 # Kjønn
-kjonn <- pre %>% 
-  filter(Q1 %in% post_t$Q1) %>% 
-  select(Q31) %>% 
-  filter(!is.na(Q31))
+kjonn <- bakgrunn %>%
+select(Q31) %>%
+filter(!is.na(Q31))
 
 p2 <- ggplot(kjonn, aes(x = factor(Q31))) +
-  geom_bar(aes(y = (..count..) / sum(..count..))) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.5)) +
-  scale_x_discrete(labels = c('Kvinne', 'Mann')) +
-   labs(title = "Kjønnsfordeling", x = '', y = '', fill = '')  +
-  theme_classic() +
-  scale_fill_grey()
-  
+geom_bar(aes(y = (..count..) / sum(..count..))) +
+scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.5)) +
+scale_x_discrete(labels = c('Kvinne', 'Mann')) + #LABEL OK
+labs(title = "Kjønnsfordeling", x = '', y = '', fill = '') +
+theme_classic() +
+scale_fill_grey(start = 0.8, end = 0)
+
+patchwork <- p1 / p2
+patchwork + plot_annotation(title = 'Deltakernes bakgrunn', subtitle = 'Alder og kjønn')
+```
+
+```{r bakgrunn-2}
+
 # Statsborgerskap
-statsborger <- pre %>% 
-  filter(Q1 %in% post_t$Q1) %>% 
-  select(Q33) %>% 
-  filter(!is.na(Q33))
+statsborger <- bakgrunn %>%
+select(Q33) %>%
+filter(!is.na(Q33))
 
 p3 <- ggplot(statsborger, aes(x = factor(Q33))) +
-  geom_bar(aes(y = (..count..) / sum(..count..))) +
-   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.75)) +
-  scale_x_discrete(labels = c('Norsk statsborger', 'Statsborger i annet land', 'Begge deler'), guide = guide_axis(n.dodge = 2)) +
-   labs(title = "Statsborgerskap", x = '', y = '', fill = '')  +
-  theme_classic() +
-  scale_fill_grey()
+geom_bar(aes(y = (..count..) / sum(..count..))) +
+scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.75)) +
+scale_x_discrete(labels = c('Norsk statsborger', 'Statsborger i annet land', 'Begge deler'), guide = guide_axis(n.dodge = 2)) + 
+labs(title = "Statsborgerskap", x = '', y = '', fill = '') +
+theme_classic() +
+scale_fill_grey(start = 0.8, end = 0)
 
 #Inntekt
-inntekt <- pre %>% 
-  filter(Q1 %in% post_t$Q1) %>% 
-  select(Q30) %>% 
-  filter(!is.na(Q30))
+inntekt <- bakgrunn %>%
+select(Q30) %>%
+filter(!is.na(Q30))
 
 p4 <- ggplot(inntekt, aes(x = factor(Q30))) +
-  geom_bar(aes(y = (..count..) / sum(..count..))) +
-   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
-  scale_x_discrete(labels = c('<150K', '150K-300K', '300K-400K', '400K-500K', '500K-600K', '600K-700k', '700K-800K', '800K-900K', '900K-1M', '>1M'), guide = guide_axis(n.dodge = 3)) +
-   labs(title = "Inntekt", x = '', y = '', fill = '')  +
-  theme_classic() +
-  scale_fill_grey()
+geom_bar(aes(y = (..count..) / sum(..count..))) +
+scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.2)) +
+scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8'),  labels = c('<150K', '150K-300K', '300K-400K', '400K-500K', '500K-600K', '600K-700k', '700K-800K', '800K-900K', '900K-1M', '>1M'), guide = guide_axis(n.dodge = 3)) + 
+labs(title = "Inntekt", x = '', y = '', fill = '') +
+theme_classic() +
+scale_fill_grey(start = 0.8, end = 0)
 
 #Bydel
-bydel <- pre %>% 
-  filter(Q1 %in% post_t$Q1) %>% 
-  select(Q27) %>% 
-  filter(!is.na(Q27)) 
+bydel <- bakgrunn %>%
+select(Q27) %>%
+filter(!is.na(Q27))
 
 p5 <- ggplot(bydel, aes(x = factor(Q27))) +
-  geom_bar(aes(y = (..count..) / sum(..count..)),
-           position = position_dodge()) +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.25)) +
-  scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8'), labels = c('Arna', 'Åsane', 'Ytrebygda', 'Fana', 'Laksevåg', 'Fyllingsdalen', 'Årstad', 'Bergenhus'), guide = guide_axis(n.dodge = 2)) +
-   labs(title = "Bosted", x = '', y = '', fill = '')  +
-  theme_classic() +
-  scale_fill_grey()
-  
-(p5 + p2 + p3 + p4) / p1 +
-  plot_annotation(title = 'Bakgrunnen til deltakerne i den deliberative meningsmålingen')
+geom_bar(aes(y = (..count..) / sum(..count..)),
+position = position_dodge()) +
+scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.25)) +
+scale_x_discrete(limits = c('1', '2', '3', '4', '5', '6', '7', '8'), labels = c('Arna', 'Åsane', 'Ytrebygda', 'Fana', 'Laksevåg', 'Fyllingsdalen', 'Årstad', 'Bergenhus'), guide = guide_axis(n.dodge = 2)) +
+labs(title = "Bosted", x = '', y = '', fill = '') +
+theme_classic() +
+scale_fill_grey(start = 0.8, end = 0)
+ 
+patchwork <- p3 / p4 / p5
+patchwork + plot_annotation(title = 'Deltakernes bakgrunn', subtitle = 'Bosted, inntekt og statsborgerskap' )
+
 ```
 
 Vi besitter ikke direkte sammeliknbare tall for hele populasjonen, og kan derfor ikke med sikkerhet bekrefte nøyaktig hvor representativ gruppen er med tanke på sosial bakgrunn.
@@ -218,7 +217,7 @@ dagsplan  %>%  select (-beskrivelse) %>% kable(linesep = "",
 Det var på plass teknisk kompetent personale i den fysiske «operasjonssentralen» ved NORCE. 
 Noen tekniske problem støtte vi på, men gitt at det var ca 100 deltakere, var det få alvorlige problem som ikke enkelt lot seg løse.
 
-De 100 deltakerne ble ønsket velkommen i plenum og gitt praktisk informasjon om dagsorden og planene for dagen. 
+Deltakerne ble ønsket velkommen i plenum og gitt praktisk informasjon om dagsorden og planene for dagen. 
 De ble deretter umiddelbart delt inn i mindre grupper på 9-10 deltakere hver med moderator. 
 Breakout-funksjonen i Zoom ble brukt her.
 Det fungerte rimelig godt, selv om noen deltakere kom litt sent inn i gruppen sin.
@@ -239,7 +238,7 @@ Arrangementet startet opp igjen etter lunsj med nye gruppesamlinger.
 Denne gangen var temaet bilfrie områder. 
 Opplegget her var nøyaktig repetisjon av det før lunsj. 
 Ekspertene denne gangen var representanter for planmyndigheter og trafikketaten. 
-Inntrykket er at det kom noe færre spørsmål til ekspertene i denne delen av meningsmålingen og tilbakemeldingen fra gruppemoderatorene var også at samtalene fløte noe tregere enn i sesjonene før lunsj. 
+Inntrykket er at det kom noe færre spørsmål til ekspertene i denne delen av meningsmålingen og tilbakemeldingen fra gruppemoderatorene var også at samtalene fløt noe tregere enn i sesjonene før lunsj. 
 
 Etter siste gruppesamling om bilfrie områder, var det en kort fellessamling, der informasjon om hvordan kommunen vil bruke de synspunkt og anbefalinger som kom frem i den deliberative meningsmålingen ble redegjort for. 
 I den forbindelse ble viktigheten av at deltakerne svarte på den siste undersøkelsen understreket. 
@@ -247,10 +246,8 @@ Deltakerne ble takket for innsatsen.
 Umiddelbart kom det her en del positive tilbakemeldinger i chat-funksjonen fra deltakere som uttrykte entusiasme for å ha fått være med på denne muligheten og for det opplegget som var valgt. 
 Hvor representative disse er for deltakerne lærer vi mer om i kapittel \@ref(refleksjoner). 
 
-Kriteriene for å bli inkludert i analysene er at man har fullført begge undersøkelsene.
-Deltakerne i deliberasjonen må også kunne bekreftes å ha deltatt på denne.
-108 respondenter fra kontrollgruppen fullførte begge undersøkelsene. 
-90 personer deltok på arrangementet, og alle disse fullførte både før- og etterundersøkelsen.
+Kriteriet for å bli del av analysene av deltakergruppen er at man har deltatt i deliberasjonen og svart på etterundersøkelsen.
+Vi har identifisert 85 personer som tilfredsstiller dette kriteriet.
 Svarene som presenteres i de følgende kapitlene baserer seg på *etterundersøkelsen* til *deltakerne*, med mindre annet er eksplisitt nevnt.
 
 
