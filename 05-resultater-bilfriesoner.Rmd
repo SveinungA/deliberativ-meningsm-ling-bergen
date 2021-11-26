@@ -336,7 +336,7 @@ Meningene her er ikke like sterke som i mange av de andre spørsmålene om bilfr
 
 
 
-### Redusere farten svært tettbygde strøk.
+### Redusere farten i svært tettbygde strøk.
 
 >Det har vært diskutert om fartsgrensen i alle tett befolkede gater bør senkes til 30 km/t. 
 Hva mener du om det?
@@ -361,8 +361,8 @@ plot
 
 
 
-Det er svært høy oppslutning om å redusere farten til 30 km/t i svært tettbygde strøk. `r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent støtter  dette forslaget, og av disse igjen er overvekten på svarkategorien som indikerer ekstremt sterk støtte.
-`r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent motsetter seg forslaget.
+Det er svært høy oppslutning om å redusere farten til 30 km/t i svært tettbygde strøk. `r round(sum((post_t_delib$fill=='Flertall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent støtter  dette forslaget, og av disse igjen er overvekten på svarkategorien som indikerer ekstremt sterk støtte.
+`r round(sum((post_t_delib$fill=='Mindretall') / (sum(post_t_delib$fill=='Mindretall')+(sum(post_t_delib$fill=='Flertall'))))*100, 0)` prosent motsetter seg forslaget.
 
 
 ## Endring i holdninger
