@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.11.19)  20 NOV 2021 19:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.12.6)  10 DEC 2021 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Rapport-deliberativ-meningsmaaling.tex
 (./Rapport-deliberativ-meningsmaaling.tex
 LaTeX2e <2021-11-15>
-L3 programming layer <2021-11-12> (c:/Users/svein/AppData/Roaming/TinyTeX/texmf
+L3 programming layer <2021-11-22> (c:/Users/svein/AppData/Roaming/TinyTeX/texmf
 -dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/bk10.clo
@@ -137,7 +137,7 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
 de-math.sty
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-11-12 L3 programming layer (loader) 
+Package: expl3 2021-11-22 L3 programming layer (loader) 
 
 (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-xetex.def
@@ -497,7 +497,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks29
 ) (c:/Users/svein/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.st
 y
-Package: babel 2021/11/08 3.66 The Babel package
+Package: babel 2021/11/29 3.67 The Babel package
 \babel@savecnt=\count312
 \U@D=\dimen176
 \l@unhyphenated=\language3
@@ -1338,10 +1338,10 @@ not changed.
 (rerunfilecheck)             Checksum: 2F29A061C92BD707E15C861DEFFE8DE9;3144.
  ) 
 Here is how much of TeX's memory you used:
- 19750 strings out of 478274
- 372637 string characters out of 5854886
- 835899 words of memory out of 5000000
- 39936 multiletter control sequences out of 15000+600000
+ 19753 strings out of 478256
+ 372682 string characters out of 5854460
+ 836312 words of memory out of 5000000
+ 39957 multiletter control sequences out of 15000+600000
  409987 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,11n,121p,401b,430s stack positions out of 5000i,500n,10000p,200000b,80000s

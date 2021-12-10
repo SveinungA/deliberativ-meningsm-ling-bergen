@@ -73,8 +73,8 @@ Til denne rapporten følger også (klikk på lenkene):
 
 2. [Transkribert materiale](https://hdl.handle.net/11250/2827447) av diskusjonene deltakerne hadde i gruppediskusjonene.
 
-<!-- 3. Koden som ble laget for å analysere dataene i rapporten. -->
-<!-- Den er vedlagt i den [elektroniske versjonen av denne rapporten](https://bookdown.org/sveinungarnesen78/deliberativ-meningsmaaling-bergen/) (bs4-format). -->
+3. Koden som ble laget for å analysere dataene i rapporten.
+Den er vedlagt i den [elektroniske versjonen av denne rapporten](https://bookdown.org/sveinungarnesen78/deliberativ-meningsmaaling-bergen/) (bs4-format).
 
 ![](cover.png){width='90%'}
 

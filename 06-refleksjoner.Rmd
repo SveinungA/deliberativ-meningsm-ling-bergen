@@ -67,8 +67,10 @@ Tilbakemeldingene fra deltakerne var i stor grad at de hadde nytte av den delibe
 p1 <- ggplot(post_t_delib, aes(x = factor(Q86_1))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.5)) +
- scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'Gruppelederne ga alle mulighet \ntil å delta', x = ' ', y = 'Prosent', fill = '')  +
+ scale_x_discrete(limits = c('1', '2', '3', '4', '5'),
+                                    labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'),
+                                    guide = guide_axis(n.dodge = 2), drop = FALSE) +
+     labs(title = 'Gruppelederne ga alle mulighet \ntil å delta', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey(start = 0, end = 0.9)
 
@@ -76,7 +78,10 @@ p1 <- ggplot(post_t_delib, aes(x = factor(Q86_1))) +
 p2 <- ggplot(post_t_delib, aes(x = factor(Q86_2))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.3)) +
-  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5'),
+                                    labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'),
+                                    guide = guide_axis(n.dodge = 2), drop = FALSE) +
+  
    labs(title = 'Gruppemedlemmene deltok \nlike mye', x = ' ', y = 'Prosent', fill = '')  +
   theme_classic()+
   scale_fill_grey(start = 0, end = 0.9)
@@ -85,18 +90,22 @@ p2 <- ggplot(post_t_delib, aes(x = factor(Q86_2))) +
 p3 <- ggplot(post_t_delib, aes(x = factor(Q86_3))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.4)) +
-  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5'),
+                                    labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'),
+                                    guide = guide_axis(n.dodge = 2), drop = FALSE) +
   labs(title = 'Motstridende argumenter \nble vurdert', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()+
+  theme_classic() +
   scale_fill_grey(start = 0, end = 0.9)
 
 
 p4 <- ggplot(post_t_delib, aes(x = factor(Q86_4))) +
   geom_bar(aes(y = (..count..) / sum(..count..))) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1L), breaks = seq(0,1, by = 0.4)) +
-  scale_x_discrete(labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'), guide = guide_axis(n.dodge = 2), drop = FALSE) +
-   labs(title = 'De viktigste aspektene \nble dekket', x = ' ', y = 'Prosent', fill = '')  +
-  theme_classic()+
+  scale_x_discrete(limits = c('1', '2', '3', '4', '5'),
+                                    labels = c('Sterkt uenig', 'Litt uenig', 'Verken eller', 'Litt enig', 'Sterkt enig'),
+                                    guide = guide_axis(n.dodge = 2), drop = FALSE) +
+                     labs(title = 'De viktigste aspektene \nble dekket', x = ' ', y = 'Prosent', fill = '')  +
+  theme_classic() +
   scale_fill_grey(start = 0, end = 0.9)
 
 
